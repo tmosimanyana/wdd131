@@ -1,0 +1,12 @@
+.gallery-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+nav ul {
+    justify-content: space-around;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
