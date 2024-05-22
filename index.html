@@ -3,60 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Tinny.B.Mosimanyana - Botswana - Responsive web development and JavaScript fundamentals">
+    <meta name="author" content="Tinny.B.Mosimanyana">
     <title>WDD 131 - Dynamic Web Fundamentals - Tinny.B.Mosimanyana</title>
-    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals. Tinny.B.Mosimanyana. Keyword summary of page content: HTML, CSS, JavaScript, web development, design principles, Google Fonts, layout, navigation, footer, meta tags.">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-    <style>
-        /* Your CSS styles */
-    </style>
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>WDD 131 - Dynamic Web Fundamentals - Tinny.B.Mosimanyana</h1>
+        <h1>WDD 131 - Dynamic Web Fundamentals</h1>
         <nav>
-            <a href="#">LinkedIn</a>
-            <a href="https://byui.instructure.com/">I-Learn</a>
-            <a href="https://www.churchofjesuschrist.org/study/scriptures">Scripture</a>
-            <a href="#">Final Project</a>
-            <a href="#about">About Me</a>
-            <a href="#webresources">Web Resources</a>
+            <ul class="nav-links">
+                <li><a href="https://www.linkedin.com">LinkedIn</a></li>
+                <li><a href="https://byui.instructure.com/">I-Learn</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures">Favorite Scripture</a></li>
+                <li><a href="#">Final Project</a></li>
+            </ul>
         </nav>
     </header>
     <main>
-        <div class="main-container">
-            <section class="section">
-                <h2>About Me</h2>
-                <p>
-                    My name is Tinny Mosimanyana and I am a web developer based in Botswana. I am passionate about creating
-                    engaging and user-friendly websites. I enjoy learning new technologies and implementing them in my projects.
-                    In my free time, I like to explore the beautiful landscapes of Botswana and spend time with my family.
-                </p>
-                <img src="images/about_me_image.jpg" alt="Tinny Mosimanyana's Profile Image" width="200">
-                <h2>Botswana</h2>
-                <p>
-                    Botswana is a landlocked country located in Southern Africa. It is known for its diverse wildlife, including
-                    the famous Okavango Delta, Chobe National Park, and the Kalahari Desert. Botswana is also recognized for its
-                    stable economy and political system.
-                </p>
-                <img src="images/botswana_image.jpg" alt="Botswana Landscape" width="200">
-            </section>
-            <section class="section">
-                <h2>Web Resources</h2>
-                <p>Explore some useful web development resources:</p>
-                <ul>
-                    <li><a href="#">Dev.to Community</a></li>
-                    <li><a href="#">Smashing Magazine</a></li>
-                    <li><a href="#">CSSTricks</a></li>
-                    <li><a href="#">W3 Schools</a></li>
-                    <li><a href="#">Udemy</a></li>
-                    <li><a href="#">Lorem Picsum Image Placeholder</a></li>
-                </ul>
-            </section>
-        </div>
+        <section class="card">
+            <h2>Section 1 Heading</h2>
+            <img src="images/placeholder.png" alt="Placeholder Image">
+            <p>Content for section 1. Include at least three resource links:</p>
+            <ul>
+                <li><a href="https://resource1.com">Resource 1</a></li>
+                <li><a href="https://resource2.com">Resource 2</a></li>
+                <li><a href="https://resource3.com">Resource 3</a></li>
+            </ul>
+        </section>
+        <section class="card">
+            <h2>Section 2 Heading</h2>
+            <img src="images/placeholder.png" alt="Placeholder Image">
+            <p>Content for section 2. Include at least three resource links:</p>
+            <ul>
+                <li><a href="https://resource4.com">Resource 4</a></li>
+                <li><a href="https://resource5.com">Resource 5</a></li>
+                <li><a href="https://resource6.com">Resource 6</a></li>
+            </ul>
+        </section>
     </main>
     <footer>
-        <p>&copy; <span id="currentyear"></span> Tinny Mosimanyana, Botswana</p>
+        <p>&copy; <span id="currentyear"></span> Tinny.B.Mosimanyana, Botswana</p>
         <p id="lastModified"></p>
     </footer>
-    <script>
-        //
+</body>
+</html>
+
