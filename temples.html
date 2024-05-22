@@ -3,71 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131 - Dynamic Web Fundamentals - Temple Album - Tinny.B.Mosimanyana</title>
-    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals. Temple Album. Tinny.B.Mosimanyana. Keyword summary of page content: temples, album, gallery, photos, HTML, CSS, JavaScript">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap">
+    <title>Temple Album</title>
+    <meta name="description" content="A responsive picture album showcasing beautiful temples from around the world.">
+    <meta name="author" content="Tinny.B.Mosimanyana">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/temples.css">
-    <link rel="stylesheet" href="styles/temples-large.css" media="(min-width: 768px)">
+    <link rel="stylesheet" href="styles/temples-large.css" media="screen and (min-width: 768px)">
+    <script src="scripts/temples.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>Temple Album - Tinny.B.Mosimanyana</h1>
+        <h1>Temple Album</h1>
         <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Old</a></li>
-                <li><a href="#">New</a></li>
-                <li><a href="#">Large</a></li>
-                <li><a href="#">Small</a></li>
+            <button class="hamburger" aria-label="Toggle menu">
+                ☰
+            </button>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#old">Old</a></li>
+                <li><a href="#new">New</a></li>
+                <li><a href="#large">Large</a></li>
+                <li><a href="#small">Small</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <h2>Temple Album</h2>
-        <div class="gallery-container">
-            <figure>
-                <img src="images/temple1.jpg" alt="Temple 1" width="200">
-                <figcaption>Temple 1</figcaption>
-            </figure>
-            <figure>
-                <img src="images/temple2.jpg" alt="Temple 2" width="200">
-                <figcaption>Temple 2</figcaption>
-            </figure>
-            <!-- Add more figure elements for other temple images -->
-            <figure>
-                <img src="images/temple3.png" alt="Temple 3" width="200">
-                <figcaption>Temple 3</figcaption>
-            </figure>
-            <figure>
-                <img src="images/temple4.jpg" alt="Temple 4" width="200">
-                <figcaption>Temple 4</figcaption>
-            </figure>
-            <figure>
-                <img src="images/temple5.jpg" alt="Temple 5" width="200">
-                <figcaption>Temple 5</figcaption>
-            </figure>
-            <figure>
-                <img src="images/temple6.jpg" alt="Temple 6" width="200">
-                <figcaption>Temple 6</figcaption>
-            </figure>
-            <figure>
-                <img src="images/temple7.jpg" alt="Temple 7" width="200">
-                <figcaption>Temple 7</figcaption>
-            </figure>
-            <figure>
-                <img src="images/temple8.jpg" alt="Temple 8" width="200">
-                <figcaption>Temple 8</figcaption>
-            </figure>
-            <figure>
-                <img src="images/temple9.jpg" alt="Temple 9" width="200">
-                <figcaption>Temple 9</figcaption>
-            </figure>
-        </div>
+        <section id="home">
+            <h2>Home</h2>
+            <div class="gallery">
+                <figure>
+                    <img src="images/temple1.jpg" alt="Temple 1">
+                    <figcaption>Temple 1</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/temple2.jpg" alt="Temple 2">
+                    <figcaption>Temple 2</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/temple3.jpg" alt="Temple 3">
+                    <figcaption>Temple 3</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/temple4.jpg" alt="Temple 4">
+                    <figcaption>Temple 4</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/temple5.jpg" alt="Temple 5">
+                    <figcaption>Temple 5</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/temple6.jpg" alt="Temple 6">
+                    <figcaption>Temple 6</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/temple7.jpg" alt="Temple 7">
+                    <figcaption>Temple 7</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/temple8.jpg" alt="Temple 8">
+                    <figcaption>Temple 8</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/temple9.jpg" alt="Temple 9">
+                    <figcaption>Temple 9</figcaption>
+                </figure>
+            </div>
+        </section>
     </main>
     <footer>
-        <p>&copy; <span id="currentyear"></span> Tinny.B.Mosimanyana</p>
-        <p id="lastModified"></p>
+        <p>&copy; <span id="currentYear"></span> Temple Album</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+        <p>Author: Tinny.B.Mosimanyana</p>
     </footer>
-    <script src="scripts/temples.js" defer></script>
 </body>
 </html>

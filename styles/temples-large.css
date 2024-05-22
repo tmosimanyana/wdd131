@@ -1,12 +1,4 @@
-.gallery-container {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-}
-
-nav ul {
-    justify-content: space-around;
-}
-
-nav ul li {
-    margin: 0 10px;
+/* Large screen styles */
+.gallery figure {
+    flex: 1 1 calc(25% - 2em);
 }
