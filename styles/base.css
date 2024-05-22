@@ -49,7 +49,7 @@ nav {
 main {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
     padding: 1em;
@@ -62,23 +62,15 @@ main {
     overflow: hidden;
     margin: 1em;
     padding: 1em;
-    flex: 1 1 45%;
     box-sizing: border-box;
+    flex: 1 1 calc(50% - 2em);
 }
 
 .card img {
-    width: 100%;
+    width: 200px;
     height: auto;
-    margin-bottom: 1em;
-}
-
-/* Specific Section Styles */
-.about-me, .country {
-    flex: 1 1 100%;
-}
-
-.resources {
-    flex: 1 1 100%;
+    display: block;
+    margin: 0 auto 1em;
 }
 
 /* Footer Styles */
@@ -88,4 +80,5 @@ footer {
     text-align: center;
     padding: 1em 0;
 }
+
 
