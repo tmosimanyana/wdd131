@@ -20,6 +20,7 @@ header {
 nav {
     display: flex;
     justify-content: center;
+    background-color: #007ACC;
 }
 
 .nav-links {
@@ -46,7 +47,10 @@ nav {
 
 /* Main Styles */
 main {
-    max-width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 1em;
 }
@@ -56,14 +60,25 @@ main {
     border: 1px solid #ccc;
     border-radius: 8px;
     overflow: hidden;
-    margin-bottom: 1em;
+    margin: 1em;
     padding: 1em;
+    flex: 1 1 45%;
+    box-sizing: border-box;
 }
 
 .card img {
     width: 100%;
     height: auto;
     margin-bottom: 1em;
+}
+
+/* Specific Section Styles */
+.about-me, .country {
+    flex: 1 1 100%;
+}
+
+.resources {
+    flex: 1 1 100%;
 }
 
 /* Footer Styles */
@@ -73,3 +88,4 @@ footer {
     text-align: center;
     padding: 1em 0;
 }
+
