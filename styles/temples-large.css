@@ -2,3 +2,4 @@
 .gallery figure {
     flex: 1 1 calc(25% - 2em);
 }
+
