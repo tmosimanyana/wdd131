@@ -8,6 +8,31 @@
     <title>WDD 131 - Dynamic Web Fundamentals - Tinny.B.Mosimanyana</title>
     <link rel="stylesheet" href="styles/base.css">
     <script src="scripts/getdates.js" defer></script>
+    <style>
+        /* Additional CSS for matching colors */
+        body {
+            background-color: #f4f4f4; /* Match background color */
+            color: #333; /* Match text color */
+        }
+        header {
+            background-color: #212529; /* Match header background color */
+            color: #fff; /* Match header text color */
+        }
+        main {
+            background-color: #fff; /* Match main background color */
+            color: #333; /* Match main text color */
+        }
+        footer {
+            background-color: #212529; /* Match footer background color */
+            color: #fff; /* Match footer text color */
+        }
+        .card {
+            border: 1px solid #dee2e6; /* Match card border color */
+            border-radius: .25rem;
+            background-color: #fff; /* Match card background color */
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -22,29 +47,16 @@
         </nav>
     </header>
     <main>
-        <section class="card about-me">
+        <section class="card about-me" style="width: 45%;">
             <h2>About Me</h2>
             <img src="images/about-me.jpg" alt="Picture of Tinny.B.Mosimanyana" width="200">
             <p>Hi, I'm Tinny.B.Mosimanyana, a web development enthusiast passionate about creating dynamic and responsive web pages.</p>
+        </section>
+        <section class="card about-botswana" style="width: 45%;">
             <h2>About Botswana</h2>
             <img src="images/botswana.jpg" alt="Picture of Botswana" width="200">
             <p>Botswana, located in Southern Africa, is known for its beautiful landscapes and rich cultural heritage. It is a great place to explore wildlife and nature.</p>
         </section>
-        <aside class="card resources">
-            <h2>Resources</h2>
-            <ul>
-                <li><a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a></li>
-                <li><a href="https://www.w3schools.com/">W3Schools</a></li>
-                <li><a href="https://www.freecodecamp.org/">freeCodeCamp</a></li>
-                <li><a href="https://www.codecademy.com/">Codecademy</a></li>
-                <li><a href="https://css-tricks.com/">CSS-Tricks</a></li>
-                <li><a href="https://stackoverflow.com/">Stack Overflow</a></li>
-                <li><a href="https://github.com/">GitHub</a></li>
-                <li><a href="https://www.theodinproject.com/">The Odin Project</a></li>
-                <li><a href="https://www.udacity.com/course/front-end-web-developer-nanodegree--nd0011">Front-End Web Developer Nanodegree by Udacity</a></li>
-                <li><a href="https://www.coursera.org/">Coursera</a></li>
-            </ul>
-        </aside>
     </main>
     <footer>
         <p>&copy; <span id="currentyear"></span> Tinny.B.Mosimanyana, Botswana.</p>
