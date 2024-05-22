@@ -1,61 +1,62 @@
-/* styles.css */
 :root {
-    --primary-color: #4CAF50;
-    --secondary-color: #FF9800;
+    --primary-color: #003580;
+    --secondary-color: #007ACC;
+    --background-color: #F0F0F0;
+    --text-color: #333;
+    --highlight-color: #FFD700;
 }
 
 body {
     font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
 }
 
 header {
     background-color: var(--primary-color);
     color: white;
-    padding: 10px 0;
     text-align: center;
+    padding: 1em 0;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
 }
 
 main {
     padding: 20px;
 }
 
-.intro {
-    margin-bottom: 20px;
+.weather-icon::after {
+    content: url('images/weather-icon.svg');
+    display: none;
 }
 
-.intro h2 {
-    font-size: 24px;
-}
-
-.intro p {
-    font-size: 16px;
-}
-
-.images {
-    margin-bottom: 20px;
-}
-
-.images img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-}
-
-.description h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.description p {
-    font-size: 16px;
+.weather-icon {
+    font-size: 1.5em;
+    margin-left: 0.5em;
 }
 
 footer {
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     color: white;
     text-align: center;
-    padding: 10px 0;
+    padding: 1em 0;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
 }
+
+@media (min-width: 768px) {
+    .weather-icon::after {
+        display: inline-block;
+    }
+
+    .weather-icon {
+        display: none;
+    }
+}
+
