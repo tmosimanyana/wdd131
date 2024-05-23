@@ -3,63 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Tinny.B.Mosimanyana - Responsive web development and JavaScript fundamentals">
+    <title>WDD 131 - Dynamic Web Fundamentals - John Doe</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals course homepage. Includes links to LinkedIn, I-Learn, favorite scripture, and final project folder. Features sections with resource links. Created by John Doe.">
     <meta name="author" content="Tinny.B.Mosimanyana">
-    <title>WDD 131 - Dynamic Web Fundamentals - Tinny.B.Mosimanyana</title>
-    <link rel="stylesheet" href="styles/base.css">
-    <script src="scripts/getdates.js" defer></script>
-    <style>
-        /* Additional CSS for matching colors */
-        body {
-            background-color: #f4f4f4; /* Match background color */
-            color: #333; /* Match text color */
-        }
-        header {
-            background-color: #212529; /* Match header background color */
-            color: #fff; /* Match header text color */
-        }
-        main {
-            background-color: #fff; /* Match main background color */
-            color: #333; /* Match main text color */
-        }
-        footer {
-            background-color: #212529; /* Match footer background color */
-            color: #fff; /* Match footer text color */
-        }
-        .card {
-            border: 1px solid #dee2e6; /* Match card border color */
-            border-radius: .25rem;
-            background-color: #fff; /* Match card background color */
-            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="base.css">
+    <script src="getdates.js" defer></script>
 </head>
 <body>
     <header>
         <h1>WDD 131 - Dynamic Web Fundamentals</h1>
         <nav>
-            <ul class="nav-links">
-                <li><a href="https://www.linkedin.com">LinkedIn</a></li>
-                <li><a href="https://byui.instructure.com/">I-Learn</a></li>
-                <li><a href="https://www.churchofjesuschrist.org/study/scriptures">Favorite Scripture</a></li>
-                <li><a href="#">Final Project</a></li>
-            </ul>
+            <a href="https://www.linkedin.com/in/johndoe">LinkedIn</a>
+            <a href="https://byui.instructure.com/">I-Learn</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7">Favorite Scripture</a>
+            <a href="#">Final Project Folder</a>
         </nav>
     </header>
     <main>
-        <section class="card about-me" style="width: 45%;">
-            <h2>About Me</h2>
-            <img src="images/about-me.jpg" alt="Picture of Tinny.B.Mosimanyana" width="200">
-            <p>Hi, I'm Tinny.B.Mosimanyana, a web development enthusiast passionate about creating dynamic and responsive web pages.</p>
+        <section class="card">
+            <h2>Introduction to Web Development</h2>
+            <img src="https://via.placeholder.com/150" alt="Web Development">
+            <p>This section introduces the basics of web development, including HTML, CSS, and JavaScript. Here are three useful resources:</p>
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">MDN HTML Documentation</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">MDN CSS Documentation</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">MDN JavaScript Documentation</a></li>
+            </ul>
         </section>
-        <section class="card about-botswana" style="width: 45%;">
-            <h2>About Botswana</h2>
-            <img src="images/botswana.jpg" alt="Picture of Botswana" width="200">
-            <p>Botswana, located in Southern Africa, is known for its beautiful landscapes and rich cultural heritage. It is a great place to explore wildlife and nature.</p>
+        <section class="card">
+            <h2>Advanced Web Techniques</h2>
+            <img src="https://via.placeholder.com/150" alt="Advanced Techniques">
+            <p>This section covers more advanced web techniques such as responsive design, flexbox, and CSS grid. Here are three useful resources:</p>
+            <ul>
+                <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">CSS-Tricks Flexbox Guide</a></li>
+                <li><a href="https://css-tricks.com/snippets/css/complete-guide-grid/">CSS-Tricks Grid Guide</a></li>
+                <li><a href="https://www.freecodecamp.org/learn/responsive-web-design/">FreeCodeCamp Responsive Web Design</a></li>
+            </ul>
         </section>
     </main>
     <footer>
-        <p>&copy; <span id="currentyear"></span> Tinny.B.Mosimanyana, Botswana.</p>
+        <p>&copy; <span id="currentyear"></span> John Doe, Idaho, USA</p>
         <p id="lastModified"></p>
     </footer>
 </body>
