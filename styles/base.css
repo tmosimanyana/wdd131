@@ -83,6 +83,11 @@ h2 {
     padding-bottom: 0.5rem;
 }
 
+.small-card {
+    max-width: 400px; /* Smaller width for the web resources section */
+    justify-self: end; /* Align to the right */
+}
+
 footer {
     background-color: #2C3E50; /* Dark blue */
     color: #fff; /* White text */
@@ -94,6 +99,7 @@ footer {
 footer p {
     margin: 0.5rem 0;
 }
+
 
 
 
