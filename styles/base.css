@@ -85,6 +85,7 @@ h2 {
 
 .small-card {
     max-width: 400px; /* Smaller width for the web resources section */
+    border-radius: 10px; /* Reduce the border-radius for small-card */
     justify-self: end; /* Align to the right */
 }
 
