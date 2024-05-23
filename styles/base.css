@@ -10,7 +10,7 @@ body {
 }
 
 header {
-    background-color: #2C3E50; /* Dark blue */
+    background-image: linear-gradient(to right, #3498db, #000); /* Gradient from sky blue to black */
     color: #fff; /* White text */
     padding: 1rem;
     text-align: center;
@@ -92,7 +92,6 @@ footer p {
     margin: 0.5rem 0;
 }
 
-p
 
 
 
