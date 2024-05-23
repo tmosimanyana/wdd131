@@ -53,14 +53,14 @@ main {
     gap: 1rem;
     max-width: 1200px;
     margin: 2rem auto;
-    padding: 0;
+    padding: 0 1rem;
 }
 
 .card {
     background-color: #fff; /* White */
-    padding: 1rem;
-    border-radius: 15px; /* Reduced border-radius */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Reduced box-shadow */
+    padding: 2rem; /* Increased padding for better spacing */
+    border-radius: 20px; /* Increased border-radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -70,7 +70,7 @@ main {
     width: 200px;
     height: 200px;
     object-fit: cover;
-    border-radius: 50%;
+    border-radius: 50%; /* Circular border for images */
     margin-bottom: 1rem;
 }
 
@@ -99,6 +99,7 @@ footer {
 footer p {
     margin: 0.5rem 0;
 }
+
 
 
 
