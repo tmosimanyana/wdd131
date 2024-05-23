@@ -14,6 +14,7 @@ header {
     color: #fff; /* White text */
     padding: 1rem;
     text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for header */
 }
 
 header h1 {
@@ -42,7 +43,8 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #3498db; /* Light blue on hover */
+    background-color: #FFD700; /* Yellow on hover */
+    color: #000; /* Black text on hover */
 }
 
 main {
@@ -57,7 +59,7 @@ main {
 .card {
     background-color: #fff; /* White */
     padding: 1rem;
-    border-radius: 4px; /* Reduced border-radius */
+    border-radius: 15px; /* Reduced border-radius */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Reduced box-shadow */
     display: flex;
     flex-direction: column;
@@ -66,9 +68,10 @@ main {
 
 .card img {
     width: 200px;
-    height: auto;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
     margin-bottom: 1rem;
-    border-radius: 8px;
 }
 
 h2 {
@@ -81,7 +84,16 @@ h2 {
 }
 
 footer {
-    background-color: #2
+    background-color: #2C3E50; /* Dark blue */
+    color: #fff; /* White text */
+    padding: 1rem;
+    text-align: center;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
 
 
 
