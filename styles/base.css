@@ -23,7 +23,7 @@ header h1 {
 }
 
 header .highlight {
-    color: #FF5733; /* Orange color */
+    color: #FFD700; /* Yellow */
 }
 
 nav {
@@ -71,26 +71,8 @@ main {
     border-radius: 8px;
 }
 
-h2 {
-    color: #333; /* Dark gray */
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    text-align: center;
-    border-bottom: 2px solid #2C3E50; /* Dark blue underline */
-    padding-bottom: 0.5rem;
-}
+h2
 
-footer {
-    background-color: #2C3E50; /* Dark blue */
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
-    margin-top: auto;
-}
-
-footer p {
-    margin: 0.5rem 0;
-}
 
 
 
