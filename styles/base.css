@@ -90,19 +90,8 @@ h2 {
 }
 
 footer {
-    background-color: #2C3E50; /* Dark blue */
-    color: #fff; /* White text */
-    padding: 1rem;
-    text-align: center;
-    margin-top: auto;
-    border-top: 4px solid #3498db; /* Sky blue top border */
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2); /* Shadow for footer */
-    border-radius: 20px 20px 0 0; /* Rounded top corners */
-}
+    background-color: #2C3E50; /* Da
 
-footer p {
-    margin: 0.5rem 0;
-}
 
 
 
