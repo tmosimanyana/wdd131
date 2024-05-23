@@ -47,7 +47,7 @@ nav a:hover {
 
 main {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1rem;
     max-width: 1200px;
     margin: 2rem auto;
@@ -91,6 +91,7 @@ footer {
 footer p {
     margin: 0.5rem 0;
 }
+
 
 
 
