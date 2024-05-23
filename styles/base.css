@@ -10,8 +10,8 @@ body {
 }
 
 header {
-    background-color: #000; /* Black from Botswana flag */
-    color: #fff;
+    background-color: rgba(135, 206, 235, 0.9); /* Sky blue color with a little black (90% opacity) */
+    color: #fff; /* Text color */
     padding: 1rem;
     text-align: center;
 }
@@ -19,6 +19,7 @@ header {
 header h1 {
     font-family: 'Pacifico', cursive;
     font-size: 2rem;
+    color: #A8CFFF; /* Light blue */
 }
 
 header .highlight {
