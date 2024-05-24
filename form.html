@@ -6,7 +6,7 @@
     <title>Product Review Form</title>
     <meta name="description" content="This page contains a product review form.">
     <meta name="author" content="Tinny Bothepha Mosimanyana">
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -15,60 +15,12 @@
 
     <main>
         <form action="review.html" method="get">
-            <div class="form-group">
-                <label for="product">Product Name: <span class="required">*</span></label>
-                <select id="product" name="product" required>
-                    <option value="" disabled selected>Select a Product ...</option>
-                </select>
+            <div>
+                <label for="example">Let's submit some text</label>
+                <input id="example" type="text" name="text" />
             </div>
-
-            <div class="form-group">
-                <label>Overall Rating: <span class="required">*</span></label>
-                <div class="rating-inputs">
-                    <input type="radio" id="rating1" name="rating" value="1" required>
-                    <label for="rating1">1</label>
-                    <input type="radio" id="rating2" name="rating" value="2" required>
-                    <label for="rating2">2</label>
-                    <input type="radio" id="rating3" name="rating" value="3" required>
-                    <label for="rating3">3</label>
-                    <input type="radio" id="rating4" name="rating" value="4" required>
-                    <label for="rating4">4</label>
-                    <input type="radio" id="rating5" name="rating" value="5" required>
-                    <label for="rating5">5</label>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label for="installationDate">Date of Installation: <span class="required">*</span></label>
-                <input type="date" id="installationDate" name="installationDate" required>
-            </div>
-
-            <div class="form-group">
-                <label>Useful Features:</label>
-                <div class="checkbox-group">
-                    <input type="checkbox" id="feature1" name="features" value="Feature 1">
-                    <label for="feature1">Feature 1</label>
-                    <input type="checkbox" id="feature2" name="features" value="Feature 2">
-                    <label for="feature2">Feature 2</label>
-                    <input type="checkbox" id="feature3" name="features" value="Feature 3">
-                    <label for="feature3">Feature 3</label>
-                    <input type="checkbox" id="feature4" name="features" value="Feature 4">
-                    <label for="feature4">Feature 4</label>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label for="review">Written Review:</label>
-                <textarea id="review" name="review" placeholder="Write your review here..."></textarea>
-            </div>
-
-            <div class="form-group">
-                <label for="userName">User Name:</label>
-                <input type="text" id="userName" name="userName" placeholder="Enter your username...">
-            </div>
-
-            <div class="form-group">
-                <input type="submit" value="Submit">
+            <div>
+                <input type="submit" value="Send" />
             </div>
         </form>
     </main>
