@@ -1,75 +1,40 @@
-/* Body Styles */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    color: #333333;
-    margin: 0;
-    padding: 0;
-}
+/* styles.css */
+/* Add your CSS styles here */
 
-/* Form Container Styles */
+/* Example styles for form elements */
 form {
-    max-width: 500px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
-/* Form Element Styles */
 label {
     display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 input[type="text"],
 input[type="date"],
-select,
 textarea {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 8px;
+    margin-bottom: 10px;
     box-sizing: border-box;
 }
 
-input[type="radio"],
-input[type="checkbox"] {
-    margin-right: 5px;
-}
-
 input[type="submit"] {
-    background-color: #2ecc71;
+    padding: 10px 20px;
+    background-color: #007bff;
     color: #fff;
     border: none;
-    padding: 15px 20px;
-    border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    transition: background-color 0.3s;
 }
 
 input[type="submit"]:hover {
-    background-color: #27ae60;
+    background-color: #0056b3;
 }
 
 footer {
-    text-align: center;
     margin-top: 20px;
-    font-size: 14px;
-    color: #777777;
-}
-
-/* Additional Styles */
-hr {
-    border: 0;
-    height: 1px;
-    background-color: #ccc;
-    margin: 20px 0;
+    text-align: center;
 }
 
 

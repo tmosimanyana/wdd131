@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,6 +18,7 @@
             <label for="product">Product Name:</label>
             <select id="product" name="product" required>
                 <option value="" disabled selected>Select a Product ...</option>
+                <!-- Product options will be dynamically populated via JavaScript -->
             </select><br><br>
 
             <label>Overall Rating:</label><br>
@@ -25,7 +26,22 @@
                 <input type="radio" id="rating1" name="rating" value="1" required>
                 Rating 1
             </label>
-            <!-- Repeat for other rating levels -->
+            <label for="rating2">
+                <input type="radio" id="rating2" name="rating" value="2" required>
+                Rating 2
+            </label>
+            <label for="rating3">
+                <input type="radio" id="rating3" name="rating" value="3" required>
+                Rating 3
+            </label>
+            <label for="rating4">
+                <input type="radio" id="rating4" name="rating" value="4" required>
+                Rating 4
+            </label>
+            <label for="rating5">
+                <input type="radio" id="rating5" name="rating" value="5" required>
+                Rating 5
+            </label><br><br>
 
             <label for="installationDate">Date of Installation:</label>
             <input type="date" id="installationDate" name="installationDate" required><br><br>
@@ -35,7 +51,18 @@
                 <input type="checkbox" id="feature1" name="features" value="Feature 1">
                 Feature 1
             </label>
-            <!-- Repeat for other features -->
+            <label for="feature2">
+                <input type="checkbox" id="feature2" name="features" value="Feature 2">
+                Feature 2
+            </label>
+            <label for="feature3">
+                <input type="checkbox" id="feature3" name="features" value="Feature 3">
+                Feature 3
+            </label>
+            <label for="feature4">
+                <input type="checkbox" id="feature4" name="features" value="Feature 4">
+                Feature 4
+            </label><br><br>
 
             <label for="review">Written Review:</label><br>
             <textarea id="review" name="review"></textarea><br><br>
@@ -49,11 +76,11 @@
 
     <footer>
         <hr>
-        <p>&copy; 2024 Jackalin Investments. All rights reserved.</p>
-        <p>Bobididi Ward, Gaborone , Botswana</p>
+        <p>&copy; 2024 Jakalin Investments. All rights reserved.</p>
+        <p>Bobididi Ward, Gaborone, Botswana</p>
         <p>Email:tinnymosimanyana@gmail.com | Phone: +267 76376661</p>
     </footer>
 
-    <script src="script.js" defer></script>
+    <script src="scripts/script.js" defer></script>
 </body>
 </html>
