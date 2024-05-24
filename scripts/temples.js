@@ -11,5 +11,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Responsive hamburger menu
     var hamburger = document.querySelector("#hamburger");
-    var nav = document.querySelector
+    var nav = document.querySelector("nav");
 
+    // Initially hide navigation menu
+    nav.style.display = "none";
+
+    // Add click event listener to hamburger button
+    hamburger.addEventListener("click", function() {
+        if (nav.style.display === "none") {
+            nav.style.display = "flex";
+        } else {
+            nav.style.display = "none";
+        }
+    });
+});
