@@ -1,30 +1,24 @@
-// script.js
-// Add your JavaScript code here
-
-// This is just a placeholder for any JavaScript functionality required
-// such as dynamically populating the product options or tracking form submissions
-
-// Example code for dynamically populating product options
-window.addEventListener('DOMContentLoaded', (event) => {
-    const productSelect = document.getElementById('product');
+document.addEventListener("DOMContentLoaded", function() {
     const products = [
-        { id: '1', name: 'Product 1' },
-        { id: '2', name: 'Product 2' },
-        { id: '3', name: 'Product 3' },
-        { id: '4', name: 'Product 4' }
+        { id: "fc-1888", name: "flux capacitor" },
+        { id: "fc-2050", name: "power laces" },
+        { id: "fs-1987", name: "time circuits" },
+        { id: "ac-2000", name: "low voltage reactor" },
+        { id: "jj-1969", name: "warp equalizer" }
     ];
 
+    const productSelect = document.getElementById("product");
+
     products.forEach(product => {
-        const option = document.createElement('option');
+        const option = document.createElement("option");
         option.value = product.id;
         option.textContent = product.name;
         productSelect.appendChild(option);
     });
-});
 
-// Example code for tracking form submissions
-document.querySelector('form').addEventListener('submit', (event) => {
-    // Add code to track form submissions
-    // For example, you can use localStorage to keep track of form submissions
-    // Increment a counter every time the form is submitted
+    if (localStorage.getItem("reviewCount")) {
+        localStorage.setItem("reviewCount", parseInt(localStorage.getItem("reviewCount")) + 1);
+    } else {
+        localStorage.setItem("reviewCount", 1);
+    }
 });
