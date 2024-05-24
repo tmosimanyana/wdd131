@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album</title>
+    <meta name="description" content="A collection of temple images">
+    <meta name="author" content="Tinny Bothepha Mosimanyana">
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" media="screen and (min-width: 768px)" href="styles/filtered-temples-large.css">
+</head>
+<body>
+    <header>
+        <h1>Temple Album</h1>
+        <button id="hamburger">&#9776;</button>
+        <nav>
+            <ul>
+                <li><a href="#" data-filter="Home">Home</a></li>
+                <li><a href="#" data-filter="Old">Old</a></li>
+                <li><a href="#" data-filter="New">New</a></li>
+                <li><a href="#" data-filter="Large">Large</a></li>
+                <li><a href="#" data-filter="Small">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Main Content Heading</h2>
+        <!-- Temple cards will be generated here by JavaScript -->
+    </main>
+    <footer>
+        <p>&copy; <span id="footer-year"></span> Temple Album. Last modified: <span id="last-modified"></span></p>
+    </footer>
+
+    <script defer src="scripts/filtered-temples.js"></script>
+</body>
+</html>

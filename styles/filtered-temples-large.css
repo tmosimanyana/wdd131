@@ -1,30 +1,17 @@
-/* Media query for larger view */
+/* Styles for larger screens */
 @media screen and (min-width: 768px) {
-    /* Header adjustments */
-    header {
-        padding: 20px 40px;
-    }
-
-    /* Navigation adjustments */
-    nav {
-        flex: 1;
-        justify-content: flex-end;
+    #hamburger {
+        display: none;
     }
 
     nav ul {
         flex-direction: row;
     }
 
-    nav a {
-        padding: 10px 20px;
+    nav ul li {
+        margin: 0 10px;
     }
 
-    /* Main Content adjustments */
-    main {
-        max-width: 80%;
-    }
-
-    /* Grid layout adjustments for larger view */
     main {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
