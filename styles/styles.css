@@ -1,68 +1,89 @@
-:root {
-    --primary-color: #003580;
-    --secondary-color: #007ACC;
-    --background-color: #F0F0F0;
-    --text-color: #333;
-    --highlight-color: #FFD700;
-}
-
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
 header {
-    background-color: var(--primary-color);
+    background-color: #4CAF50;
     color: white;
     text-align: center;
-    padding: 1em 0;
-}
-
-.hero img {
-    width: 100%;
-    height: auto;
+    padding: 1rem 0;
 }
 
 main {
+    margin: 20px;
+    max-width: 600px;
+    background-color: white;
     padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.weather-icon img {
-    display: none;
-    width: 24px;
-    height: 24px;
+.form-group {
+    margin-bottom: 1rem;
 }
 
-.weather-icon {
-    font-size: 1.5em;
-    margin-left: 0.5em;
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="date"], textarea, select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+.rating-inputs {
+    display: flex;
+    gap: 1rem;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
 }
 
 footer {
-    background-color: var(--secondary-color);
+    background-color: #333;
     color: white;
     text-align: center;
-    padding: 1em 0;
-    position: relative;
+    padding: 1rem 0;
+    position: fixed;
     width: 100%;
     bottom: 0;
 }
 
-@media (max-width: 767px) {
-    .weather-icon::after {
-        content: '';
-        display: none;
-    }
+footer p {
+    margin: 0.5rem 0;
+}
 
-    .weather-icon img {
-        display: inline-block;
-    }
-
-    .weather-icon {
-        display: none;
-    }
+.required {
+    color: red;
 }
 

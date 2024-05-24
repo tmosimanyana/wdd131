@@ -16,10 +16,13 @@ document.addEventListener("DOMContentLoaded", function() {
         productSelect.appendChild(option);
     });
 
-    if (localStorage.getItem("reviewCount")) {
-        localStorage.setItem("reviewCount", parseInt(localStorage.getItem("reviewCount")) + 1);
-    } else {
-        localStorage.setItem("reviewCount", 1);
-    }
+    const form = document.querySelector('form');
+    form.addEventListener('submit', function() {
+        if (localStorage.getItem("reviewCount")) {
+            localStorage.setItem("reviewCount", parseInt(localStorage.getItem("reviewCount")) + 1);
+        } else {
+            localStorage.setItem("reviewCount", 1);
+        }
+    });
 });
 
