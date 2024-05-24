@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <!-- Common header content -->
+    </header>
+
+    <main>
+        <form action="review.html" method="get">
+            <label for="product">Product Name:</label>
+            <select id="product" name="product" required>
+                <option value="" disabled selected>Select a Product ...</option>
+            </select><br><br>
+
+            <label>Overall Rating:</label><br>
+            <input type="radio" id="rating1" name="rating" value="1" required>
+            <label for="rating1">&#9733;</label>
+            <!-- Repeat for other rating levels -->
+
+            <label for="installationDate">Date of Installation:</label>
+            <input type="date" id="installationDate" name="installationDate" required><br><br>
+
+            <label>Useful Features:</label><br>
+            <input type="checkbox" id="feature1" name="features" value="Feature 1">
+            <label for="feature1">Feature 1</label>
+            <!-- Repeat for other features -->
+
+            <label for="review">Written Review:</label><br>
+            <textarea id="review" name="review"></textarea><br><br>
+
+            <label for="userName">User Name:</label>
+            <input type="text" id="userName" name="userName"><br><br>
+
+            <input type="submit" value="Submit Review">
+        </form>
+    </main>
+
+    <footer>
+        <!-- Common footer content -->
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

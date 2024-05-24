@@ -1,27 +1,44 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Function to calculate wind chill factor
-    function calculateWindChill(temp, windSpeed) {
-        return (temp <= 10 && windSpeed > 4.8) ? (13.12 + 0.6215 * temp - 11.37 * Math.pow(windSpeed, 0.16) + 0.3965 * temp * Math.pow(windSpeed, 0.16)).toFixed(2) : 'N/A';
-    }
+// JavaScript to populate Product Name options
+document.addEventListener('DOMContentLoaded', function() {
+    const products = [
+        {
+            id: 'fc-1888',
+            name: 'Flux Capacitor',
+            averageRating: 4.5
+        },
+        {
+            id: 'fc-2050',
+            name: 'Power Laces',
+            averageRating: 4.7
+        },
+        {
+            id: 'fs-1987',
+            name: 'Time Circuits',
+            averageRating: 3.5
+        },
+        {
+            id: 'ac-2000',
+            name: 'Low Voltage Reactor',
+            averageRating: 3.9
+        },
+        {
+            id: 'jj-1969',
+            name: 'Warp Equalizer',
+            averageRating: 5.0
+        }
+    ];
 
-    // Static values for temperature and wind speed
-    const temperatureCelsius = 8; // Static temperature in Celsius
-    const windSpeedKmh = 6; // Static wind speed in kilometers per hour
+    const select = document.getElementById('product');
+    products.forEach(function(product) {
+        const option = document.createElement('option');
+        option.text = product.name;
+        option.value = product.id;
+        select.add(option);
+    });
+});
 
-    const windChill = calculateWindChill(temperatureCelsius, windSpeedKmh);
-
-    // Display wind chill factor in the "Weather" section
-    const weatherSection = document.getElementById('weather');
-    const windchillElement = document.createElement('p');
-    windchillElement.textContent = `Windchill: ${windChill} °C`;
-    weatherSection.appendChild(windchillElement);
-
-    // Display current year and last modified date in footer
-    const currentYearElement = document.getElementById('current-year');
-    const currentYear = new Date().getFullYear();
-    currentYearElement.textContent = currentYear;
-
-    const lastModifiedElement = document.getElementById('last-modified');
-    const lastModifiedDate = document.lastModified;
-    lastModifiedElement.textContent = lastModifiedDate;
+// JavaScript to track number of reviews completed
+document.addEventListener('DOMContentLoaded', function() {
+    let counter = localStorage.getItem('reviewCounter') || 0;
+    localStorage.setItem('reviewCounter', parseInt(counter) + 1);
 });
