@@ -1,15 +1,17 @@
+// scripts/getdates.js
+
 document.addEventListener("DOMContentLoaded", function() {
-    // Populate the current year
     const currentYearSpan = document.getElementById("currentyear");
+    const lastModifiedP = document.getElementById("lastModified");
+
+    // Get the current year
     const currentYear = new Date().getFullYear();
     currentYearSpan.textContent = currentYear;
 
-    // Populate the last modified date
-    const lastModifiedSpan = document.getElementById("lastModified");
-    lastModifiedSpan.textContent = `Last Modification: ${document.lastModified}`;
+    // Get the last modified date of the document
+    const lastModifiedDate = new Date(document.lastModified);
+    lastModifiedP.textContent = `Last Modified: ${lastModifiedDate.toLocaleDateString()} ${lastModifiedDate.toLocaleTimeString()}`;
 });
-
-
 
 
 
