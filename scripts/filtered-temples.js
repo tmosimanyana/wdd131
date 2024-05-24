@@ -65,6 +65,27 @@ document.addEventListener("DOMContentLoaded", function() {
             image: "images/temple9.jpg"
         },
         // Add more temple objects here
+        {
+            name: "Temple 10",
+            location: "Location 10",
+            dedicationDate: "10/10/1900",
+            area: 60000,
+            image: "images/temple10.jpg"
+        },
+        {
+            name: "Temple 11",
+            location: "Location 11",
+            dedicationDate: "11/11/1910",
+            area: 92000,
+            image: "images/temple11.jpg"
+        },
+        {
+            name: "Temple 12",
+            location: "Location 12",
+            dedicationDate: "12/12/2012",
+            area: 105000,
+            image: "images/temple12.jpg"
+        }
     ];
 
     // Function to create temple cards
@@ -128,49 +149,38 @@ document.addEventListener("DOMContentLoaded", function() {
                 var card = createTempleCard(temple);
                 main.appendChild(card);
             } else if (filter === "Home") {
-                var card = createTempleCard(temple);
-                main.appendChild(card);
+                displayAllTemples();
             }
         });
     }
 
-    // Event listeners for main navigation menu items
-    var navItems = document.querySelectorAll("nav a");
-    navItems.forEach(function(navItem) {
-        navItem.addEventListener("click", function(event) {
-            event.preventDefault();
-            var filter = this.getAttribute("data-filter");
-            if (filter === "Home") {
-                displayAllTemples();
-            } else {
-                filterAndDisplayTemples(filter);
-            }
-        });
-    });
+    // Update footer with the current year and last modified date
+    var footerYear = document.getElementById("footer-year");
+    footerYear.textContent = new Date().getFullYear();
 
-    // Update footer copyright year
-    var footerYear = document.querySelector("#footer-year");
-    var currentYear = new Date().getFullYear();
-    footerYear.textContent = currentYear;
-
-    // Update last modified date
-    var lastModified = document.querySelector("#last-modified");
-    var lastModifiedDate = new Date(document.lastModified);
-    lastModified.textContent = lastModifiedDate.toLocaleDateString();
+    var lastModified = document.getElementById("last-modified");
+    lastModified.textContent = new Date(document.lastModified).toLocaleDateString();
 
     // Responsive hamburger menu
     var hamburger = document.getElementById("hamburger");
-    var nav = document.querySelector("nav ul");
+    var navMenu = document.getElementById("nav-menu");
 
     hamburger.addEventListener("click", function() {
-        if (nav.style.display === "block") {
-            nav.style.display = "none";
-        } else {
-            nav.style.display = "block";
-        }
+        navMenu.classList.toggle("show");
+    });
+
+    // Event listeners for filtering temples
+    var filterLinks = document.querySelectorAll("nav ul li a");
+    filterLinks.forEach(function(link) {
+        link.addEventListener("click", function(event) {
+            event.preventDefault();
+            var filter = event.target.getAttribute("data-filter");
+            filterAndDisplayTemples(filter);
+        });
     });
 
     // Initial display of all temples
     displayAllTemples();
 });
+
 
