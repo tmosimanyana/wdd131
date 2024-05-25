@@ -3,18 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discover Botswana</title>
-    <meta name="description" content="Explore the beauty and culture of Botswana with our comprehensive travel guide. Find information on attractions, activities, and more.">
+    <title>Botswana Page</title>
     <link rel="stylesheet" href="styles/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Define global CSS variables for color schema */
+        :root {
+            --primary-color: #007bff; /* Example primary color */
+            --secondary-color: #6c757d; /* Example secondary color */
+        }
+        /* Additional CSS styling for specific elements */
+        /* Implement alignment, color contrast, proximity, repetition, and usability principles */
+    </style>
 </head>
 <body>
-    <!-- Page content goes here -->
+    <!-- Content structure and layout follows wireframe provided -->
+
+    <!-- Hero image using srcset for responsive design -->
+    <img srcset="path-to-botswana-image-mobile.webp 480w,
+                 path-to-botswana-image-desktop.webp 1024w"
+         sizes="(max-width: 600px) 480px,
+                1024px"
+         src="path-to-default-image.jpg" alt="Botswana Flag">
+
+    <!-- Weather section with SVG icon -->
+    <section id="weather">
+        <h2>Weather</h2>
+        <svg class="weather-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <!-- SVG icon code for weather -->
+        </svg>
+        <p>Current weather conditions: Sunny</p>
+        <!-- JavaScript to display wind chill factor -->
+        <p>Wind chill factor: <span id="wind-chill">N/A</span></p>
+    </section>
+
+    <!-- Footer with current year and last modified date using JavaScript -->
     <footer>
-        <p>&copy; <span id="currentYear"></span> Discover Botswana. Last updated: <span id="lastModified"></span></p>
-        
-        <p>Author: Tinny B. Mosimanyana</p>
+        <p>&copy; <span id="current-year"></span> Botswana Page. Last modified: <span id="last-modified"></span></p>
     </footer>
+
     <script src="scripts/script.js" defer></script>
 </body>
 </html>
