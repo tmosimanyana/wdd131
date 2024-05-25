@@ -1,186 +1,121 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Array of temple objects
-    var temples = [
-        {
-            name: "Temple 1",
-            location: "Location 1",
-            dedicationDate: "01/01/1800",
-            area: 80000,
-            image: "images/temple1.jpg"
-        },
-        {
-            name: "Temple 2",
-            location: "Location 2",
-            dedicationDate: "02/02/1950",
-            area: 50000,
-            image: "images/temple2.jpg"
-        },
-        {
-            name: "Temple 3",
-            location: "Location 3",
-            dedicationDate: "03/03/2005",
-            area: 120000,
-            image: "images/temple3.jpg"
-        },
-        {
-            name: "Temple 4",
-            location: "Location 4",
-            dedicationDate: "04/04/1990",
-            area: 30000,
-            image: "images/temple4.jpg"
-        },
-        {
-            name: "Temple 5",
-            location: "Location 5",
-            dedicationDate: "05/05/1890",
-            area: 70000,
-            image: "images/temple5.jpg"
-        },
-        {
-            name: "Temple 6",
-            location: "Location 6",
-            dedicationDate: "06/06/2010",
-            area: 95000,
-            image: "images/temple6.jpg"
-        },
-        {
-            name: "Temple 7",
-            location: "Location 7",
-            dedicationDate: "07/07/1980",
-            area: 85000,
-            image: "images/temple7.jpg"
-        },
-        {
-            name: "Temple 8",
-            location: "Location 8",
-            dedicationDate: "08/08/1880",
-            area: 40000,
-            image: "images/temple8.jpg"
-        },
-        {
-            name: "Temple 9",
-            location: "Location 9",
-            dedicationDate: "09/09/2015",
-            area: 150000,
-            image: "images/temple9.jpg"
-        },
-        // Add more temple objects here
-        {
-            name: "Temple 10",
-            location: "Location 10",
-            dedicationDate: "10/10/1900",
-            area: 60000,
-            image: "images/temple10.jpg"
-        },
-        {
-            name: "Temple 11",
-            location: "Location 11",
-            dedicationDate: "11/11/1910",
-            area: 92000,
-            image: "images/temple11.jpg"
-        },
-        {
-            name: "Temple 12",
-            location: "Location 12",
-            dedicationDate: "12/12/2012",
-            area: 105000,
-            image: "images/temple12.jpg"
-        }
-    ];
-
-    // Function to create temple cards
-    function createTempleCard(temple) {
-        var card = document.createElement("div");
-        card.classList.add("temple-card");
-
-        var img = document.createElement("img");
-        img.src = temple.image;
-        img.alt = temple.name;
-        img.loading = "lazy"; // Lazy loading
-        card.appendChild(img);
-
-        var name = document.createElement("h2");
-        name.textContent = temple.name;
-        card.appendChild(name);
-
-        var location = document.createElement("p");
-        location.textContent = "Location: " + temple.location;
-        card.appendChild(location);
-
-        var dedicationDate = document.createElement("p");
-        dedicationDate.textContent = "Dedication Date: " + temple.dedicationDate;
-        card.appendChild(dedicationDate);
-
-        var area = document.createElement("p");
-        area.textContent = "Area: " + temple.area + " sq ft";
-        card.appendChild(area);
-
-        return card;
+const temples = [
+    {
+        templeName: "Aba Nigeria",
+        location: "Aba, Nigeria",
+        dedicated: "2005, August, 7",
+        area: 11500,
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/aba-nigeria/400x250/aba-nigeria-temple-lds-273999-wallpaper.jpg"
+    },
+    {
+        templeName: "Manti Utah",
+        location: "Manti, Utah, United States",
+        dedicated: "1888, May, 21",
+        area: 74792,
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/manti-utah/400x250/manti-temple-768192-wallpaper.jpg"
+    },
+    {
+        templeName: "Payson Utah",
+        location: "Payson, Utah, United States",
+        dedicated: "2015, June, 7",
+        area: 96630,
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x225/payson-utah-temple-exterior-1416671-wallpaper.jpg"
+    },
+    {
+        templeName: "Yigo Guam",
+        location: "Yigo, Guam",
+        dedicated: "2020, May, 2",
+        area: 6861,
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/yigo-guam/400x250/yigo_guam_temple_2.jpg"
+    },
+    {
+        templeName: "Washington D.C.",
+        location: "Kensington, Maryland, United States",
+        dedicated: "1974, November, 19",
+        area: 156558,
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-dc/400x250/washington_dc_temple-exterior-2.jpeg"
+    },
+    {
+        templeName: "Lima Perú",
+        location: "Lima, Perú",
+        dedicated: "1986, January, 10",
+        area: 9600,
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/lima-peru/400x250/lima-peru-temple-evening-1075606-wallpaper.jpg"
+    },
+    {
+        templeName: "Mexico City Mexico",
+        location: "Mexico City, Mexico",
+        dedicated: "1983, December, 2",
+        area: 116642,
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
+    },
+    {
+        templeName: "Salt Lake City Utah",
+        location: "Salt Lake City, Utah, United States",
+        dedicated: "1893, April, 6",
+        area: 253015,
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/salt-lake-city-utah/400x250/salt-lake-temple-lds-244739-wallpaper.jpg"
+    },
+    {
+        templeName: "Logan Utah",
+        location: "Logan, Utah, United States",
+        dedicated: "1884, May, 17",
+        area: 119620,
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/logan-utah/400x250/logan-utah-temple-lds-232755-wallpaper.jpg"
     }
+];
 
-    // Function to display all temples
-    function displayAllTemples() {
-        var main = document.querySelector("main");
-        main.innerHTML = ""; // Clear previous content
+function createTempleCard(temple) {
+    const card = document.createElement('figure');
+    card.innerHTML = `
+        <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
+        <figcaption>
+            <h3>${temple.templeName}</h3>
+            <p>Location: ${temple.location}</p>
+            <p>Dedicated: ${temple.dedicated}</p>
+            <p>Area: ${temple.area} sq ft</p>
+        </figcaption>
+    `;
+    return card;
+}
 
-        temples.forEach(function(temple) {
-            var card = createTempleCard(temple);
-            main.appendChild(card);
-        });
-    }
-
-    // Function to filter and display temples based on menu selection
-    function filterAndDisplayTemples(filter) {
-        var main = document.querySelector("main");
-        main.innerHTML = ""; // Clear previous content
-
-        temples.forEach(function(temple) {
-            var dedicationYear = parseInt(temple.dedicationDate.split("/")[2]);
-            if (filter === "Old" && dedicationYear < 1900) {
-                var card = createTempleCard(temple);
-                main.appendChild(card);
-            } else if (filter === "New" && dedicationYear > 2000) {
-                var card = createTempleCard(temple);
-                main.appendChild(card);
-            } else if (filter === "Large" && temple.area > 90000) {
-                var card = createTempleCard(temple);
-                main.appendChild(card);
-            } else if (filter === "Small" && temple.area < 10000) {
-                var card = createTempleCard(temple);
-                main.appendChild(card);
-            } else if (filter === "Home") {
-                displayAllTemples();
-            }
-        });
-    }
-
-    // Update footer with the current year and last modified date
-    var footerYear = document.getElementById("footer-year");
-    footerYear.textContent = new Date().getFullYear();
-
-    var lastModified = document.getElementById("last-modified");
-    lastModified.textContent = new Date(document.lastModified).toLocaleDateString();
-
-    // Responsive hamburger menu
-    var hamburger = document.getElementById("hamburger");
-    var navMenu = document.getElementById("nav-menu");
-
-    hamburger.addEventListener("click", function() {
-        navMenu.classList.toggle("show");
+function displayTemples(filterFn) {
+    const gallery = document.getElementById('temple-gallery');
+    gallery.innerHTML = '';
+    temples.filter(filterFn).forEach(temple => {
+        gallery.appendChild(createTempleCard(temple));
     });
+}
 
-    // Event listeners for filtering temples
-    var filterLinks = document.querySelectorAll("nav ul li a");
-    filterLinks.forEach(function(link) {
-        link.addEventListener("click", function(event) {
-            event.preventDefault();
-            var filter = event.target.getAttribute("data-filter");
-            filterAndDisplayTemples(filter);
-        });
-    });
-
-    // Initial display of all temples
-    displayAllTemples();
+document.getElementById('home').addEventListener('click', () => {
+    displayTemples(() => true);
+    document.getElementById('selection-title').textContent = 'All Temples';
 });
+
+document.getElementById('old').addEventListener('click', () => {
+    displayTemples(temple => new Date(temple.dedicated).getFullYear() < 1900);
+    document.getElementById('selection-title').textContent = 'Old Temples';
+});
+
+document.getElementById('new').addEventListener('click', () => {
+    displayTemples(temple => new Date(temple.dedicated).getFullYear() > 2000);
+    document.getElementById('selection-title').textContent = 'New Temples';
+});
+
+document.getElementById('large').addEventListener('click', () => {
+    displayTemples(temple => temple.area > 90000);
+    document.getElementById('selection-title').textContent = 'Large Temples';
+});
+
+document.getElementById('small').addEventListener('click', () => {
+    displayTemples(temple => temple.area < 10000);
+    document.getElementById('selection-title').textContent = 'Small Temples';
+});
+
+// Initialize with all temples displayed
+displayTemples(() => true);
+
+document.getElementById('current-year').textContent = new Date().getFullYear();
+document.getElementById('last-modified').textContent = document.lastModified;
+
 
 

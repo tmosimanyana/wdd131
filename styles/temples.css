@@ -1,109 +1,72 @@
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/* temples.css */
 
-/* Reset default margin and padding */
-body, h1, h2, h3, p, ul, li {
-    margin: 0;
-    padding: 0;
-}
-
-/* Set font family and basic styling */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f2f2f2;
-    color: #333;
-}
-
-/* Header */
-header {
-    background-color: #007bff;
-    color: white;
-    padding: 20px;
+    margin: 0;
+    padding: 0;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
 }
 
-/* Navigation */
+header {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 1em 0;
+}
+
+header h1 {
+    text-align: center;
+}
+
 nav ul {
-    list-style-type: none;
     display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 1em;
 }
 
 nav a {
-    text-decoration: none;
     color: white;
-    padding: 10px;
-    transition: color 0.3s ease;
+    text-decoration: none;
 }
 
 nav a:hover {
-    color: #ffcc00;
+    text-decoration: underline;
 }
 
-/* Main Content */
 main {
-    max-width: 90%;
-    margin: 20px auto;
-    padding: 0 10px;
+    max-width: 1200px;
+    margin: 2em auto;
+    padding: 1em;
 }
 
-/* Grid layout for main content */
-main {
+.grid-container {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 1em;
 }
 
 figure {
     margin: 0;
-    padding: 0;
-    text-align: center;
+    padding: 1em;
+    border: 1px solid #ccc;
 }
 
 figure img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
 
-figcaption {
-    margin-top: 10px;
-    font-weight: bold;
+footer {
+    background-color: #333;
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 1em 0;
 }
-
-/* Responsive styles */
-@media screen and (min-width: 768px) {
-    /* Header adjustments */
-    header {
-        padding: 20px 40px;
-    }
-
-    /* Navigation adjustments */
-    nav {
-        flex: 1;
-        justify-content: flex-end;
-    }
-
-    nav ul {
-        flex-direction: row;
-    }
-
-    nav a {
-        padding: 10px 20px;
-    }
-
-    /* Main Content adjustments */
-    main {
-        max-width: 80%;
-    }
-
-    /* Grid layout adjustments for larger view */
-    main {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
-}
-
-
-    
-
-
