@@ -1,29 +1,28 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Update current year in footer
+// Add your JavaScript code here
+document.addEventListener('DOMContentLoaded', function() {
+    // Get the current year and display it
     var currentYear = new Date().getFullYear();
     document.getElementById('current-year').textContent = currentYear;
 
-    // Update last modified date in footer
-    var lastModified = new Date(document.lastModified);
-    document.getElementById('last-modified').textContent = lastModified.toLocaleDateString();
+    // Get the last modified date of the document and display it
+    var lastModified = document.lastModified;
+    document.getElementById('last-modified').textContent = lastModified;
 
-    // Calculate and display wind chill factor
-    var temperature = 10; // Example temperature in Celsius
-    var windSpeed = 5; // Example wind speed in km/h
+    // Calculate and display wind chill
+    var temperature = 28; // in Celsius
+    var windSpeed = 10; // in km/h
 
-    var windChillElement = document.getElementById('wind-chill');
-    var windChill = calculateWindChill(temperature, windSpeed);
-    windChillElement.textContent = (windChill !== null) ? windChill.toFixed(1) + ' °C' : 'N/A';
+    if (temperature <= 10 && windSpeed > 4.8) {
+        var windChill = calculateWindChill(temperature, windSpeed);
+        document.getElementById('wind-chill').textContent = windChill.toFixed(2) + '°C';
+    } else {
+        document.getElementById('wind-chill').textContent = 'N/A';
+    }
 });
 
 function calculateWindChill(temperature, windSpeed) {
-    // Check if conditions for wind chill calculation are met
-    if (temperature <= 10 && windSpeed > 4.8) {
-        // Calculate wind chill factor
-        var windChill = 13.12 + (0.6215 * temperature) - (11.37 * Math.pow(windSpeed, 0.16)) + (0.3965 * temperature * Math.pow(windSpeed, 0.16));
-        return windChill;
-    } else {
-        return null; // Conditions not met, return N/A
-    }
+    // Formula for calculating wind chill factor
+    return 13.12 + (0.6215 * temperature) - (11.37 * Math.pow(windSpeed, 0.16)) + (0.3965 * temperature * Math.pow(windSpeed, 0.16));
 }
+
 

@@ -1,49 +1,33 @@
-/* Global styles */
+/* Add your CSS styles here */
 body {
-    font-family: 'Open Sans', sans-serif; /* Use the main font */
-    color: var(--primary-color); /* Set primary text color */
-    background-color: #fff; /* Set background color */
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: var(--secondary-color); /* Set secondary background color */
+    background-color: #00704a;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+section {
+    padding: 20px;
+}
+
+footer {
+    background-color: #f4f4f4;
     padding: 20px;
     text-align: center;
 }
 
-header h1 {
-    font-family: 'Montserrat', sans-serif; /* Use heading font */
-    color: #fff; /* Set heading color */
-}
-
-section {
-    margin: 20px;
-}
-
-h2 {
-    color: var(--primary-color); /* Set heading color */
-}
-
-footer {
-    background-color: var(--secondary-color); /* Set secondary background color */
-    padding: 10px;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-/* Weather icon */
 .weather-icon {
-    fill: var(--primary-color); /* Set icon color */
     width: 50px;
     height: 50px;
-}
-
-/* JavaScript-generated content */
-#wind-chill {
-    font-weight: bold;
 }
 

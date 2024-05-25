@@ -1,46 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Botswana Page</title>
     <link rel="stylesheet" href="styles/style.css">
-    <style>
-        /* Define global CSS variables for color schema */
-        :root {
-            --primary-color: #007bff; /* Example primary color */
-            --secondary-color: #6c757d; /* Example secondary color */
-        }
-        /* Additional CSS styling for specific elements */
-        /* Implement alignment, color contrast, proximity, repetition, and usability principles */
-    </style>
+    <script src="scripts/script.js" defer></script>
 </head>
+
 <body>
-    <!-- Content structure and layout follows wireframe provided -->
+    <header>
+        <h1>Welcome to Botswana</h1>
+    </header>
 
-    <!-- Hero image using srcset for responsive design -->
-    <img srcset="path-to-botswana-image-mobile.webp 480w,
-                 path-to-botswana-image-desktop.webp 1024w"
-         sizes="(max-width: 600px) 480px,
-                1024px"
-         src="path-to-default-image.jpg" alt="Botswana Flag">
-
-    <!-- Weather section with SVG icon -->
-    <section id="weather">
-        <h2>Weather</h2>
-        <svg class="weather-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <!-- SVG icon code for weather -->
-        </svg>
-        <p>Current weather conditions: Sunny</p>
-        <!-- JavaScript to display wind chill factor -->
-        <p>Wind chill factor: <span id="wind-chill">N/A</span></p>
+    <section id="hero">
+        <img src="images/botswana-national-park.webp" srcset="images/botswana-national-park.webp 500w, images/botswana-national-park-large.webp 1000w" alt="Botswana National Park">
     </section>
 
-    <!-- Footer with current year and last modified date using JavaScript -->
-    <footer>
-        <p>&copy; <span id="current-year"></span> Botswana Page. Last modified: <span id="last-modified"></span></p>
-    </footer>
+    <section id="weather">
+        <h2>Weather</h2>
+        <img src="images/sun.svg" alt="Sun Icon" class="weather-icon">
+        <p>Temperature: 28°C</p>
+        <p>Wind Speed: 10 km/h</p>
+        <p>Wind Chill: <span id="wind-chill"></span></p>
+    </section>
 
-    <script src="scripts/script.js" defer></script>
+    <footer>
+        <p>&copy; Tinny Bothepha Mosimanyana</p>
+        <p>Last Modified: <span id="last-modified"></span></p>
+        <p id="current-year"></p>
+    </footer>
 </body>
+
 </html>
