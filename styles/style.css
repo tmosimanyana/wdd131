@@ -1,46 +1,48 @@
-/* styles/style.css */
-
-/* General Styles */
+/* Global styles */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif; /* Use the main font */
+    color: var(--primary-color); /* Set primary text color */
+    background-color: #fff; /* Set background color */
     margin: 0;
     padding: 0;
-    line-height: 1.6;
 }
 
-header, footer {
-    background-color: #333;
-    color: #fff;
+header {
+    background-color: var(--secondary-color); /* Set secondary background color */
+    padding: 20px;
     text-align: center;
-    padding: 1rem 0;
 }
 
-main {
-    padding: 2rem;
+header h1 {
+    font-family: 'Montserrat', sans-serif; /* Use heading font */
+    color: #fff; /* Set heading color */
 }
 
 section {
-    margin-bottom: 2rem;
+    margin: 20px;
 }
 
-h1, h2 {
-    margin: 0;
+h2 {
+    color: var(--primary-color); /* Set heading color */
 }
 
-.hero img {
+footer {
+    background-color: var(--secondary-color); /* Set secondary background color */
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
     width: 100%;
-    height: auto;
 }
 
-footer p {
-    margin: 0;
+/* Weather icon */
+.weather-icon {
+    fill: var(--primary-color); /* Set icon color */
+    width: 50px;
+    height: 50px;
 }
 
-/* Responsive Styles */
-@media screen and (min-width: 768px) {
-    main {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-    }
+/* JavaScript-generated content */
+#wind-chill {
+    font-weight: bold;
 }

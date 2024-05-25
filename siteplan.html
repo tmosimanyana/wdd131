@@ -3,50 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Plan - Remote Work Resources and Tools</title>
-    <link rel="stylesheet" href="css/siteplan.css">
+    <title>Project Site Plan</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <style>
+        /* Define global CSS variables for color schema */
+        :root {
+            --primary-color: #007bff; /* Example primary color */
+            --secondary-color: #6c757d; /* Example secondary color */
+        }
+        /* Additional CSS styling for specific elements */
+        /* Implement alignment, color contrast, proximity, repetition, and usability principles */
+    </style>
 </head>
 <body>
+    <!-- Content structure follows the provided guidelines -->
+
     <header>
-        <h1>Site Name: Remote Work Resources and Tools</h1>
-        <p>Reason for selection: With the rise of remote work trends, there is a growing demand for centralized resources and tools to support individuals and businesses in optimizing their remote work experience. This project aligns well with my interests and allows me to contribute to a meaningful and practical resource for remote workers worldwide.</p>
+        <h1>Botswana Travel Hub</h1>
+        <p>Welcome to the Botswana Travel Hub, your ultimate guide to exploring Botswana!</p>
     </header>
-    <main>
-        <section>
-            <h2>Site Purpose</h2>
-            <p>The site will serve as a comprehensive platform offering resources, guides, and tools for individuals and businesses transitioning to or currently engaged in remote work. It will feature curated articles, productivity tools, remote job listings, community forums, events/webinars, resource libraries, interactive tools, expert interviews/podcasts, and more. The content will cover topics such as setting up a home office, managing remote teams, effective communication strategies, remote job opportunities, and productivity enhancement.</p>
-        </section>
-        <section>
-            <h2>Scenarios</h2>
-            <ul>
-                <li>What are the best tools for managing remote teams?</li>
-                <li>Where can I find remote job listings?</li>
-            </ul>
-        </section>
-        <section>
-            <h2>Color Schema</h2>
-            <p>Primary Color: <span class="color-box" style="background-color: #4CAF50;">#4CAF50</span> (used for headings)</p>
-            <p>Secondary Color: <span class="color-box" style="background-color: #333;">#333</span> (used for accents)</p>
-        </section>
-        <section>
-            <h2>Typography</h2>
-            <p>Main Font: Arial (used for body text)</p>
-            <p>Heading Font: Helvetica (used for headings)</p>
-        </section>
-        <section>
-            <h2>Wireframe</h2>
-            <p>Mobile View:</p>
-            <img src="images/mobile-wireframe.png" alt="Wireframe for mobile view">
-            <p>Desktop View:</p>
-            <img src="images/desktop-wireframe.png" alt="Wireframe for desktop view">
-        </section>
-    </main>
+
+    <section id="purpose">
+        <h2>Site Purpose</h2>
+        <p>The Botswana Travel Hub is designed to provide comprehensive information about travel destinations, attractions, accommodations, and travel tips for visitors planning a trip to Botswana.</p>
+    </section>
+
+    <section id="scenarios">
+        <h2>Scenarios</h2>
+        <ul>
+            <li>What are the top safari destinations in Botswana?</li>
+            <li>Where can I find reliable information about visa requirements for visiting Botswana?</li>
+        </ul>
+    </section>
+
+    <section id="color-schema">
+        <h2>Color Schema</h2>
+        <p>Primary color: #007bff (used for headings and links)</p>
+        <p>Secondary color: #6c757d (used for background and accents)</p>
+    </section>
+
+    <section id="typography">
+        <h2>Typography</h2>
+        <p>Main font: Open Sans (used for body text)</p>
+        <p>Heading font: Montserrat (used for headings)</p>
+    </section>
+
+    <section id="wireframes">
+        <h2>Wireframes</h2>
+        <p>Mobile view wireframe:</p>
+        <img src="path-to-mobile-wireframe.png" alt="Mobile Wireframe">
+        <p>Larger view wireframe:</p>
+        <img src="path-to-desktop-wireframe.png" alt="Desktop Wireframe">
+    </section>
+
     <footer>
-        <p>&copy; <span id="currentYear"></span> Remote Work Resources and Tools. Last updated: <span id="lastModified"></span></p>
+        <!-- Footer content with current year and last modified date -->
+        <p>&copy; <span id="current-year"></span> Project Site Plan. Last modified: <span id="last-modified"></span></p>
     </footer>
-    <script>
-        document.getElementById("currentYear").textContent = new Date().getFullYear();
-        document.getElementById("lastModified").textContent = document.lastModified;
-    </script>
+
+    <script src="scripts/script.js" defer></script>
 </body>
 </html>
