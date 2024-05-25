@@ -3,46 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Plan</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Project Site Plan</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/colors.css">
+    <link rel="stylesheet" href="styles/typography.css">
 </head>
 <body>
     <header>
-        <div class="logo">My Travel Site</div>
+        <h1>Project Site Plan</h1>
         <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+            <a href="#overview">Overview</a>
+            <a href="#target-audience">Target Audience</a>
+            <a href="#site-structure">Site Structure</a>
+            <a href="#design">Design</a>
+            <a href="#functionality">Functionality</a>
+            <a href="#content-plan">Content Plan</a>
+            <a href="#development-specs">Development Specifications</a>
         </nav>
     </header>
 
-    <section class="hero">
-        <img src="hero-image.webp" alt="Hero Image">
-        <div class="hero-text">Explore the World with Us</div>
+    <section id="overview">
+        <h2>Overview</h2>
+        <p>This project aims to create a dynamic and responsive website that demonstrates mastery of HTML, CSS, and JavaScript. The site will consist of three main pages with a cohesive design and navigation.</p>
     </section>
 
-    <section class="weather">
-        <img src="weather-icon.svg" alt="Weather Icon" class="weather-icon">
-        <div class="weather-details">
-            <h2>Weather</h2>
-            <p>Temperature: <span id="temperature">20°C</span></p>
-            <p>Wind Speed: <span id="wind-speed">15 km/h</span></p>
-            <p>Wind Chill: <span id="wind-chill">N/A</span></p>
+    <section id="target-audience">
+        <h2>Target Audience</h2>
+        <p>The website is intended for users interested in [your topic], including beginners and enthusiasts looking for information, resources, and community engagement.</p>
+    </section>
+
+    <section id="site-structure">
+        <h2>Site Structure</h2>
+        <h3>Main Pages</h3>
+        <ul>
+            <li>Home Page - Introduction and latest updates.</li>
+            <li>About Page - Information about the topic and the purpose of the site.</li>
+            <li>Contact Page - A form for users to reach out with questions or feedback.</li>
+        </ul>
+        <h3>Navigation</h3>
+        <p>Consistent navigation menu across all pages, including links to Home, About, and Contact pages.</p>
+    </section>
+
+    <section id="design">
+        <h2>Design</h2>
+        <h3>Color Schema</h3>
+        <p>The color scheme for the website will include the following:</p>
+        <ul>
+            <li>Primary Color: #004080 (Navy Blue) - used for the header, navigation, and footer backgrounds.</li>
+            <li>Secondary Color: #f0f0f0 (Light Gray) - used for the background of the main content area.</li>
+        </ul>
+        <h3>Typography</h3>
+        <p>The primary font for the website will be Arial, applied to all text elements for readability and consistency.</p>
+    </section>
+
+    <section id="functionality">
+        <h2>Functionality</h2>
+        <p>The site will feature dynamic elements powered by JavaScript. This includes:</p>
+        <ul>
+            <li>Interactive form validation.</li>
+            <li>Dynamic content updates without page reloads.</li>
+            <li>LocalStorage to save user preferences.</li>
+        </ul>
+    </section>
+
+    <section id="content-plan">
+        <h2>Content Plan</h2>
+        <p>All content will be original and relevant to the site's purpose. This includes:</p>
+        <ul>
+            <li>Text content providing valuable information and resources.</li>
+            <li>Optimized images related to the topic.</li>
+            <li>Links to external resources with proper citations on the attributions page.</li>
+        </ul>
+    </section>
+
+    <section id="development-specs">
+        <h2>Development Specifications</h2>
+        <ul>
+            <li>Hosting on GitHub and rendering via GitHub Pages.</li>
+            <li>Valid HTML, CSS, and JavaScript adhering to web standards.</li>
+            <li>Responsive design for mobile and desktop views.</li>
+            <li>Lazy loading for images.</li>
+            <li>JavaScript features including functions, DOM interaction, event handling, conditional branching, objects, arrays, and localStorage.</li>
+        </ul>
+    </section>
+
+    <section id="wireframes">
+        <h2>Wireframes</h2>
+        <div class="wireframe">
+            <h3>Mobile View</h3>
+            <img src="wireframes/mobile-homepage.png" alt="Wireframe of Home Page for Mobile View">
+        </div>
+        <div class="wireframe">
+            <h3>Desktop View</h3>
+            <img src="wireframes/desktop-homepage.png" alt="Wireframe of Home Page for Desktop View">
         </div>
     </section>
 
-    <section class="content">
-        <h2>About the Place</h2>
-        <p>Discover amazing places around the world. Whether you're looking for adventure, relaxation, or culture, we have something for everyone.</p>
-    </section>
-
     <footer>
-        <p>&copy; <span id="current-year"></span> My Travel Site | Last Updated: <span id="last-modified"></span></p>
+        <p>&copy; 2024 Your Name. All Rights Reserved.</p>
     </footer>
-
-    <script src="scripts.js" defer></script>
 </body>
 </html>
+
