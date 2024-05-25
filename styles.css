@@ -1,61 +1,190 @@
-/* CSS code for styling the form */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+/* Global CSS Variables */
+:root {
+    --primary-color: #00a859; /* Inspired by Botswana's natural landscapes */
+    --secondary-color: #333;
+    --text-color: #fff;
+    --bg-color: #f0f0f0;
+    --font-family: 'Arial', sans-serif;
 }
 
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--secondary-color);
+}
+
+/* Header Styles */
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 10px 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero Section Styles */
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero picture img {
+    width: 100%;
+    height: auto;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Section Styles */
+section {
     padding: 20px;
     text-align: center;
 }
 
-main {
-    max-width: 600px;
+section h2 {
+    color: var(--primary-color);
+}
+
+section#destinations .destination {
+    margin-bottom: 20px;
+}
+
+/* Travel Tips Section */
+section#tips ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
     margin: 0 auto;
-    padding: 20px;
+    max-width: 600px;
 }
 
-form {
-    border: 1px solid #ccc;
-    padding: 20px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-input[type="text"],
-input[type="date"],
-textarea,
-select {
-    width: 100%;
-    padding: 8px;
+section#tips ul li {
+    background: var(--primary-color);
+    color: var(--text-color);
+    padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+    border-radius: 5px;
 }
 
-input[type="radio"],
-input[type="checkbox"] {
-    margin-right: 5px;
+/* Contact Section */
+section#contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-input[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
+section#contact form label {
+    margin-top: 10px;
+    text-align: left;
+    width: 100%;
+    max-width: 600px;
+}
+
+section#contact form input, 
+section#contact form textarea {
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+section#contact form button {
+    margin-top: 15px;
     padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-input[type="submit"]:hover {
-    background-color: #45a049;
+section#contact form button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Footer Styles */
+footer p {
+    margin: 5px 0;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Weather Section */
+#weather {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#weather h3 {
+    margin-top: 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+    }
+
+    .hero-text {
+        width: 90%;
+        font-size: 1.2em;
+    }
+}
+
+/* Pseudo-element for Weather Icon */
+#weather h3::after {
+    content: ' ⛅';
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 1.2em;
 }
 
 
