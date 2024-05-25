@@ -26,3 +26,4 @@ function calculateWindChill(temperature, windSpeed) {
         return null; // Conditions not met, return N/A
     }
 }
+
