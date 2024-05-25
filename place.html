@@ -3,46 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Botswana</title>
-    <meta name="description" content="Learn about Botswana, a beautiful country in Southern Africa, known for its diverse wildlife and stunning landscapes.">
-    <meta name="author" content="Tinny.B.Mosimanyana">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/styles.css">
-    <script src="scripts/script.js" defer></script>
+    <title>Site Plan - Remote Work Resources and Tools</title>
+    <link rel="stylesheet" href="css/siteplan.css">
 </head>
 <body>
     <header>
-        <h1>Welcome to Botswana</h1>
+        <h1>Site Name: Remote Work Resources and Tools</h1>
+        <p>Reason for selection: With the rise of remote work trends, there is a growing demand for centralized resources and tools to support individuals and businesses in optimizing their remote work experience. This project aligns well with my interests and allows me to contribute to a meaningful and practical resource for remote workers worldwide.</p>
     </header>
     <main>
-        <section class="hero">
-            <img
-                src="images/hero-small.webp"
-                srcset="
-                    images/hero-small.webp 480w,
-                    images/hero-medium.webp 768w,
-                    images/hero-large.webp 1024w
-                "
-                sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, 1024px"
-                alt="Beautiful landscape of Botswana">
+        <section>
+            <h2>Site Purpose</h2>
+            <p>The site will serve as a comprehensive platform offering resources, guides, and tools for individuals and businesses transitioning to or currently engaged in remote work. It will feature curated articles, productivity tools, remote job listings, community forums, events/webinars, resource libraries, interactive tools, expert interviews/podcasts, and more. The content will cover topics such as setting up a home office, managing remote teams, effective communication strategies, remote job opportunities, and productivity enhancement.</p>
         </section>
-        <section class="content">
-            <h2>About Botswana</h2>
-            <p>Botswana is a landlocked country located in Southern Africa. Known for its beautiful landscapes and diverse wildlife...</p>
+        <section>
+            <h2>Scenarios</h2>
+            <ul>
+                <li>What are the best tools for managing remote teams?</li>
+                <li>Where can I find remote job listings?</li>
+            </ul>
         </section>
-        <section class="weather">
-            <h2>Weather <span class="weather-icon"><img src="images/weather-icon.svg" alt="Weather icon"></span></h2>
-            <p>Temperature: <span id="temperature">25°C</span></p>
-            <p>Wind Speed: <span id="windSpeed">10 km/h</span></p>
-            <p>Wind Chill: <span id="windChill">N/A</span></p>
+        <section>
+            <h2>Color Schema</h2>
+            <p>Primary Color: <span class="color-box" style="background-color: #4CAF50;">#4CAF50</span> (used for headings)</p>
+            <p>Secondary Color: <span class="color-box" style="background-color: #333;">#333</span> (used for accents)</p>
+        </section>
+        <section>
+            <h2>Typography</h2>
+            <p>Main Font: Arial (used for body text)</p>
+            <p>Heading Font: Helvetica (used for headings)</p>
+        </section>
+        <section>
+            <h2>Wireframe</h2>
+            <p>Mobile View:</p>
+            <img src="images/mobile-wireframe.png" alt="Wireframe for mobile view">
+            <p>Desktop View:</p>
+            <img src="images/desktop-wireframe.png" alt="Wireframe for desktop view">
         </section>
     </main>
     <footer>
-        <p>&copy; <span id="currentYear"></span> Botswana Tourism</p>
-        <p>Last Modified: <span id="lastModified"></span></p>
-        <p>Author: Tinny.B.Mosimanyana</p>
+        <p>&copy; <span id="currentYear"></span> Remote Work Resources and Tools. Last updated: <span id="lastModified"></span></p>
     </footer>
+    <script>
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
+        document.getElementById("lastModified").textContent = document.lastModified;
+    </script>
 </body>
 </html>
+
