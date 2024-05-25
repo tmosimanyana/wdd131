@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener('DOMContentLoaded', () => {
     // Display current year and last modified date in the footer
     const currentYear = new Date().getFullYear();
     const lastModified = document.lastModified;
