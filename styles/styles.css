@@ -148,6 +148,21 @@ footer a {
     color: var(--text-color);
     text-decoration: none;
     margin: 0 10px;
+}
+
+/* Media Queries */
+@media (min-width: 600px) {
+    section {
+        padding: 40px;
+    }
+}
+
+/* Weather Icon */
+#weather::after {
+    content: "⛅";
+    font-size: 24px;
+    margin-left: 10px;
+}
 
 
 
