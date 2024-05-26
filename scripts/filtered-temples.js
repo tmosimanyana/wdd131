@@ -61,6 +61,27 @@ const temples = [
         dedicated: "1884, May, 17",
         area: 119620,
         imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/logan-utah/400x250/logan-utah-temple-lds-232755-wallpaper.jpg"
+    },
+    {
+        templeName: "Provo Utah",
+        location: "Provo, Utah, United States",
+        dedicated: "1972, February, 9",
+        area: 128325,
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/provo-utah/400x250/provo-utah-temple-exterior-1290-wallpaper.jpg"
+    },
+    {
+        templeName: "Nauvoo Illinois",
+        location: "Nauvoo, Illinois, United States",
+        dedicated: "2002, June, 27",
+        area: 54000,
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/nauvoo-illinois/400x250/nauvoo-temple-ldschurch-400x250-1.jpg"
+    },
+    {
+        templeName: "Rome Italy",
+        location: "Rome, Italy",
+        dedicated: "2019, March, 10",
+        area: 41000,
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rome-italy/400x250/rome-italy-temple-exterior-1084-wallpaper.jpg"
     }
 ];
 
@@ -116,6 +137,3 @@ displayTemples(() => true);
 
 document.getElementById('current-year').textContent = new Date().getFullYear();
 document.getElementById('last-modified').textContent = document.lastModified;
-
-
-
