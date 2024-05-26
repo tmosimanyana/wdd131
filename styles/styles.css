@@ -148,32 +148,6 @@ footer a {
     color: var(--text-color);
     text-decoration: none;
     margin: 0 10px;
-}
 
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* Weather Section */
-#weather {
-    background-color: var(--primary-color);
-    color: var(--text-color);
-    padding: 15px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-}
-
-#weather::after {
-    content: "⛅";
-    font-size: 24px;
-    margin-left: 10px;
-}
-
-/* Media Queries */
-@media (min-width: 600px) {
-    section {
-        padding: 40px;
-    }
-}
 
 
