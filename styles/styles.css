@@ -1,8 +1,19 @@
+/* Root variables */
+:root {
+    --primary-color: #ffcc00;
+    --secondary-color: #0066cc;
+    --font-size: 16px;
+    --font-family: 'Roboto', sans-serif;
+}
+
 /* Basic styles */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--font-family);
+    font-size: var(--font-size);
     margin: 0;
     padding: 0;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 header, main, footer {
@@ -44,14 +55,6 @@ header, main, footer {
     .weather-emoticon {
         display: inline;
     }
-}
-
-/* Root variables */
-:root {
-    --primary-color: #ffcc00;
-    --secondary-color: #0066cc;
-    --font-size: 16px;
-    --font-family: 'Roboto', sans-serif;
 }
 
 
