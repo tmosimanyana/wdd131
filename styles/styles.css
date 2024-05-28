@@ -1,91 +1,57 @@
-/* styles.css */
-
-/* Global Styles */
+/* Basic styles */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
 }
 
-/* Header Styles */
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo img {
-    vertical-align: middle;
-}
-
-.topics a {
-    color: #fff;
-    text-decoration: none;
-    margin-right: 20px;
-}
-
-.search input[type="text"] {
-    padding: 5px;
-    border: none;
-    border-radius: 3px;
-}
-
-.search button {
-    padding: 5px 10px;
-    background-color: #4CAF50;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-}
-
-/* Main content styles */
-.hero {
-    position: relative;
-    overflow: hidden;
-}
-
-.hero img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.hero-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: #fff;
-}
-
-.hero-content h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.hero-content p {
-    font-size: 1.25rem;
-}
-
-/* Footer Styles */
-footer {
-    background-color: #333;
-    color: #fff;
+header, main, footer {
     padding: 20px;
     text-align: center;
 }
 
-.external-links a {
-    color: #fff;
-    text-decoration: none;
-    display: block;
-    margin-bottom: 10px;
+/* Hero section */
+.hero img {
+    width: 100%;
+    height: auto;
 }
+
+/* Weather section */
+.weather-icon {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}
+
+.weather-emoticon::after {
+    content: "⛅";
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .weather-icon svg {
+        display: block;
+    }
+    .weather-emoticon {
+        display: none;
+    }
+}
+
+@media (min-width: 601px) {
+    .weather-icon svg {
+        display: none;
+    }
+    .weather-emoticon {
+        display: inline;
+    }
+}
+
+/* Root variables */
+:root {
+    --primary-color: #ffcc00;
+    --secondary-color: #0066cc;
+}
+
 
 
 

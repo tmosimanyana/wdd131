@@ -3,27 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Information</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Explore Botswana</title>
+    <meta name="description" content="Explore the culture, nature, and wildlife of Botswana.">
+    <meta name="author" content="Tinny Bothepha Mosimanyana">
+    <link rel="stylesheet" href="styles/styles.css">
+    <!-- Link to Google Fonts with preconnect relationship -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Weather Information</h1>
+        <h1>Explore Botswana</h1>
     </header>
     <main>
-        <section>
-            <h2>Current Weather</h2>
-            <div id="weather">
-                <p>Temperature: <span id="temperature">25</span>°C</p>
-                <p>Wind Speed: <span id="windSpeed">10</span> km/h</p>
-                <p>Wind Chill: <span id="windChill">N/A</span>°C</p>
+        <section class="hero">
+            <img srcset="images/hero-mobile.webp 320w, images/hero-desktop.webp 1024w" 
+                 sizes="(max-width: 600px) 320px, 1024px" 
+                 src="images/hero-desktop.webp" 
+                 alt="Hero Image of Botswana">
+        </section>
+        <section class="weather">
+            <h2>Weather</h2>
+            <div class="weather-icon">
+                <!-- SVG icon for mobile view -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <!-- SVG icon code -->
+                    <circle cx="12" cy="12" r="10" stroke="black" stroke-width="1" fill="yellow"/>
+                </svg>
+                <!-- Emoticon for wider view (added via CSS) -->
+                <span class="weather-emoticon"></span>
+            </div>
+            <div class="wind-chill">
+                Wind Chill: <span id="wind-chill">N/A</span>
             </div>
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 | Last Modified: January 1, 2024</p>
+        &copy; <span id="copyright-year"></span> | Last modified: <span id="last-modified"></span>
+        <script src="scripts/script.js" defer></script>
     </footer>
-    <script src="script.js" defer></script>
 </body>
 </html>
-
