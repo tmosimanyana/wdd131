@@ -1,113 +1,88 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Botswana Tourism Guide</title>
-    <meta name="description" content="Explore the beauty and diversity of Botswana with our comprehensive tourism guide. Discover top destinations, travel tips, and more.">
-    <meta name="author" content="Your Name">
-    <link rel="stylesheet" href="styles/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <script src="scripts/scripts.js" defer></script>
+    <title>Explore Botswana</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script>
 </head>
 <body>
     <header>
-        <nav>
+        <div class="logo">LOGO</div>
+        <nav class="topics">
+            <a href="#topic1">Topic 1</a>
+            <a href="#topic2">Topic 2</a>
+            <a href="#topic3">Topic 3</a>
+            <a href="#topic4">Topic 4</a>
+        </nav>
+        <div class="search">
+            <input type="text" placeholder="Search">
+            <button>Search</button>
+        </div>
+    </header>
+    <main>
+        <nav class="side-menu">
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#destinations">Destinations</a></li>
-                <li><a href="#tips">Travel Tips</a></li>
-                <li><a href="#accommodations">Accommodations</a></li>
-                <li><a href="#activities">Activities</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#section1">Section 1</a></li>
+                <li><a href="#section2">Section 2</a></li>
+                <li><a href="#section3">Section 3</a></li>
+                <li><a href="#section4">Section 4</a></li>
+                <li><a href="#section5">Section 5</a></li>
+                <li><a href="#section6">Section 6</a></li>
+                <li><a href="#section7">Section 7</a></li>
+                <li><a href="#section8">Section 8</a></li>
+                <li><a href="#section9">Section 9</a></li>
+                <li><a href="#section10">Section 10</a></li>
+                <li><a href="#section11">Section 11</a></li>
+                <li><a href="#section12">Section 12</a></li>
+                <li><a href="#section13">Section 13</a></li>
+                <li><a href="#section14">Section 14</a></li>
+                <li><a href="#section15">Section 15</a></li>
             </ul>
         </nav>
-    </header>
-
-    <section id="home" class="hero">
-        <picture>
-            <source srcset="images/hero-large.webp" media="(min-width: 800px)">
-            <source srcset="images/hero-medium.webp" media="(min-width: 400px)">
-            <img src="images/hero-small.webp" alt="Beautiful landscape of Botswana">
-        </picture>
-        <div class="hero-text">
-            <h1>Welcome to Botswana</h1>
-            <p>Explore the beauty and diversity of Botswana</p>
-        </div>
-    </section>
-
-    <main>
-        <section id="about">
-            <h2>About Botswana</h2>
-            <p>Botswana is a landlocked country in Southern Africa known for its diverse wildlife and stunning landscapes.</p>
-        </section>
-
-        <section id="destinations">
-            <h2>Top Destinations</h2>
-            <div class="destination">
-                <h3>Okavango Delta</h3>
-                <p>The Okavango Delta is a vast inland delta known for its sprawling grassy plains, which flood seasonally, becoming a lush animal habitat.</p>
+        <section class="content">
+            <div class="section-tabs">
+                <button>Section 1</button>
+                <button>Section 2</button>
+                <button>Section 3</button>
+                <button>Section 4</button>
             </div>
-            <div class="destination">
-                <h3>Chobe National Park</h3>
-                <p>Chobe National Park is renowned for its large herds of elephants and Cape buffalo, which converge along the Chobe River in the dry season.</p>
-            </div>
-            <div class="destination">
-                <h3>Makgadikgadi Pans</h3>
-                <p>The Makgadikgadi Pans are a series of large salt pans and are all that remains of the ancient Lake Makgadikgadi.</p>
+            <div class="main-content">
+                <picture>
+                    <source srcset="images/botswana-large.webp" media="(min-width: 800px)">
+                    <source srcset="images/botswana-medium.webp" media="(min-width: 500px)">
+                    <img src="images/botswana-small.webp" alt="Botswana Landscape">
+                </picture>
+                <div class="text-content">
+                    <h2>About Botswana</h2>
+                    <p>Botswana is a landlocked country in Southern Africa known for its diverse ecosystems, including the Kalahari Desert and the Okavango Delta, a vast inland delta that becomes a lush animal habitat during seasonal floods.</p>
+                </div>
             </div>
         </section>
-
-        <section id="tips">
-            <h2>Travel Tips</h2>
-            <div id="weather">
-                <h3>Weather</h3>
-                <p>Temperature: 5°C</p>
-                <p>Wind Speed: 10 km/h</p>
-                <p class="windchill">Wind Chill: Calculating... <img src="images/weather-icon.svg" alt="Weather Icon"></p>
-            </div>
+        <aside class="features">
+            <h3>Features</h3>
             <ul>
-                <li>Best time to visit: May to October</li>
-                <li>Visa requirements: Check with your local embassy</li>
-                <li>Health precautions: Vaccinations recommended</li>
+                <li>Okavango Delta</li>
+                <li>Chobe National Park</li>
+                <li>Moremi Game Reserve</li>
+                <li>Kalahari Desert</li>
+                <li>Tsodilo Hills</li>
+                <li>Gaborone</li>
             </ul>
-        </section>
-
-        <section id="accommodations">
-            <h2>Accommodations</h2>
-            <p>From luxury lodges to budget campsites, Botswana offers a range of accommodations to suit every traveler.</p>
-        </section>
-
-        <section id="activities">
-            <h2>Activities</h2>
-            <ul>
-                <li>Safari tours</li>
-                <li>Bird watching</li>
-                <li>Boat cruises</li>
-            </ul>
-        </section>
-
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email">
-                <label for="message">Message:</label>
-                <textarea id="message" name="message"></textarea>
-                <button type="submit">Submit</button>
-            </form>
-        </section>
+        </aside>
     </main>
-
     <footer>
-        <p>&copy; <span id="currentYear"></span> Botswana Tourism Guide</p>
-        <p>Last Modified: <span id="lastModified"></span></p>
-        <p>Follow us on <a href="#">Facebook</a>, <a href="#">Twitter</a>, and <a href="#">Instagram</a></p>
+        <div class="footer-content">
+            <p>Current year: <span id="current-year"></span></p>
+            <p>Last modified: <span id="last-modified"></span></p>
+        </div>
+        <div class="external-links">
+            <h3>External Links</h3>
+            <a href="https://www.botswanatourism.co.bw/">Botswana Tourism</a>
+            <a href="https://en.wikipedia.org/wiki/Botswana">Wikipedia: Botswana</a>
+            <a href="https://www.lonelyplanet.com/botswana">Lonely Planet: Botswana</a>
+        </div>
     </footer>
 </body>
 </html>
