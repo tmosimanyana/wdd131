@@ -7,9 +7,8 @@
     <meta name="description" content="Explore the culture, nature, and wildlife of Botswana.">
     <meta name="author" content="Your Name">
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <script defer src="scripts/scripts.js"></script>
 </head>
 <body>
     <header>
@@ -126,4 +125,4 @@
             document.querySelector('.weather .wind-chill').textContent = windChill;
 
             function calculateWindChill(temp, speed) {
-                if (temp <=
+                if (temp <= 10 && speed > 4.8)
