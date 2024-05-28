@@ -9,12 +9,14 @@
 </head>
 <body>
     <header>
-        <div class="logo">LOGO</div>
+        <div class="logo">
+            <img src="images/botswana-logo.png" alt="Botswana Logo" width="100" height="auto">
+        </div>
         <nav class="topics">
-            <a href="#topic1">Topic 1</a>
-            <a href="#topic2">Topic 2</a>
-            <a href="#topic3">Topic 3</a>
-            <a href="#topic4">Topic 4</a>
+            <a href="#culture">Culture</a>
+            <a href="#nature">Nature</a>
+            <a href="#history">History</a>
+            <a href="#travel-tips">Travel Tips</a>
         </nav>
         <div class="search">
             <input type="text" placeholder="Search">
@@ -24,39 +26,57 @@
     <main>
         <nav class="side-menu">
             <ul>
-                <li><a href="#section1">Section 1</a></li>
-                <li><a href="#section2">Section 2</a></li>
-                <li><a href="#section3">Section 3</a></li>
-                <li><a href="#section4">Section 4</a></li>
-                <li><a href="#section5">Section 5</a></li>
-                <li><a href="#section6">Section 6</a></li>
-                <li><a href="#section7">Section 7</a></li>
-                <li><a href="#section8">Section 8</a></li>
-                <li><a href="#section9">Section 9</a></li>
-                <li><a href="#section10">Section 10</a></li>
-                <li><a href="#section11">Section 11</a></li>
-                <li><a href="#section12">Section 12</a></li>
-                <li><a href="#section13">Section 13</a></li>
-                <li><a href="#section14">Section 14</a></li>
-                <li><a href="#section15">Section 15</a></li>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#geography">Geography</a></li>
+                <li><a href="#culture">Culture</a></li>
+                <li><a href="#wildlife">Wildlife</a></li>
+                <li><a href="#economy">Economy</a></li>
+                <li><a href="#tourist-attractions">Tourist Attractions</a></li>
+                <li><a href="#history">History</a></li>
+                <li><a href="#people">People</a></li>
+                <li><a href="#cuisine">Cuisine</a></li>
+                <li><a href="#festivals">Festivals</a></li>
+                <li><a href="#language">Language</a></li>
+                <li><a href="#climate">Climate</a></li>
+                <li><a href="#transportation">Transportation</a></li>
+                <li><a href="#accommodation">Accommodation</a></li>
+                <li><a href="#travel-tips">Travel Tips</a></li>
             </ul>
         </nav>
         <section class="content">
             <div class="section-tabs">
-                <button>Section 1</button>
-                <button>Section 2</button>
-                <button>Section 3</button>
-                <button>Section 4</button>
+                <button onclick="showSection('introduction')">Introduction</button>
+                <button onclick="showSection('geography')">Geography</button>
+                <button onclick="showSection('culture')">Culture</button>
+                <button onclick="showSection('wildlife')">Wildlife</button>
             </div>
-            <div class="main-content">
+            <div class="main-content" id="introduction">
                 <picture>
-                    <source srcset="images/hero-large.webp" media="(min-width: 800px)">
-                    <source srcset="images/hero-large.webp" media="(min-width: 500px)">
-                    <img src="images/hero-small.webp" alt="Botswana Landscape">
+                    <source srcset="images/botswana-large.webp" media="(min-width: 800px)">
+                    <source srcset="images/botswana-medium.webp" media="(min-width: 500px)">
+                    <img src="images/botswana-small.webp" alt="Botswana Landscape">
                 </picture>
                 <div class="text-content">
-                    <h2>About Botswana</h2>
-                    <p>Botswana is a landlocked country in Southern Africa known for its diverse ecosystems, including the Kalahari Desert and the Okavango Delta, a vast inland delta that becomes a lush animal habitat during seasonal floods.</p>
+                    <h2>Introduction</h2>
+                    <p>Botswana, a landlocked country in Southern Africa, is renowned for its political stability, multiethnic society, and rich natural resources. It is bordered by Namibia, Zambia, Zimbabwe, and South Africa.</p>
+                </div>
+            </div>
+            <div class="main-content" id="geography" style="display:none;">
+                <div class="text-content">
+                    <h2>Geography</h2>
+                    <p>Botswana is predominantly flat, with up to 70% of its territory being the Kalahari Desert. The Okavango Delta, one of the world's largest inland deltas, is located in the northwest and becomes a lush animal habitat during seasonal floods.</p>
+                </div>
+            </div>
+            <div class="main-content" id="culture" style="display:none;">
+                <div class="text-content">
+                    <h2>Culture</h2>
+                    <p>Botswana's culture is a rich blend of traditional and modern elements. The country is known for its music, dance, and crafts. The Setswana people, who form the majority, have a strong cultural heritage that influences the country's festivals and ceremonies.</p>
+                </div>
+            </div>
+            <div class="main-content" id="wildlife" style="display:none;">
+                <div class="text-content">
+                    <h2>Wildlife</h2>
+                    <p>Botswana is a wildlife paradise. It boasts numerous national parks and reserves, including the famous Chobe National Park, home to one of the largest concentrations of elephants in the world. The Moremi Game Reserve in the Okavango Delta is also notable for its biodiversity.</p>
                 </div>
             </div>
         </section>
@@ -84,5 +104,30 @@
             <a href="https://www.lonelyplanet.com/botswana">Lonely Planet: Botswana</a>
         </div>
     </footer>
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.main-content').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+            document.getElementById('last-modified').textContent = document.lastModified;
+
+            const temperature = 5; // Celsius
+            const windSpeed = 10; // km/h
+            const windChill = calculateWindChill(temperature, windSpeed);
+            document.querySelector('.weather .wind-chill').textContent = windChill;
+
+            function calculateWindChill(temp, speed) {
+                if (temp <= 10 && speed > 4.8) {
+                    return (13.12 + 0.6215 * temp - 11.37 * Math.pow(speed, 0.16) + 0.3965 * temp * Math.pow(speed, 0.16)).toFixed(2);
+                }
+                return 'N/A';
+            }
+        });
+    </script>
 </body>
 </html>
