@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explore Botswana</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="scripts.js"></script>
+    <meta name="description" content="Explore the culture, nature, and wildlife of Botswana.">
+    <meta name="author" content="Your Name">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script defer src="scripts/scripts.js"></script>
 </head>
 <body>
     <header>
@@ -57,7 +61,7 @@
                     <img src="images/hero-small.webp" alt="Botswana Landscape">
                 </picture>
                 <div class="text-content">
-                    <h2>Introduction</h2>
+                    <h1>Welcome to Botswana</h1>
                     <p>Botswana, a landlocked country in Southern Africa, is renowned for its political stability, multiethnic society, and rich natural resources. It is bordered by Namibia, Zambia, Zimbabwe, and South Africa.</p>
                 </div>
             </div>
@@ -122,12 +126,4 @@
             document.querySelector('.weather .wind-chill').textContent = windChill;
 
             function calculateWindChill(temp, speed) {
-                if (temp <= 10 && speed > 4.8) {
-                    return (13.12 + 0.6215 * temp - 11.37 * Math.pow(speed, 0.16) + 0.3965 * temp * Math.pow(speed, 0.16)).toFixed(2);
-                }
-                return 'N/A';
-            }
-        });
-    </script>
-</body>
-</html>
+                if (temp <=
