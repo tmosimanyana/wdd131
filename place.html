@@ -1,52 +1,29 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explore Botswana</title>
-    <meta name="description" content="Explore the culture, nature, and wildlife of Botswana.">
-    <meta name="author" content="Tinny Bothepha Mosimanyana">
-    <link rel="stylesheet" href="styles/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Weather Information</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="images/botswanalogo.jpg" alt="Botswana Logo" width="100">
-        </div>
-        <nav class="topics">
-            <a href="#culture">Culture</a>
-            <a href="#nature">Nature</a>
-            <a href="#history">History</a>
-            <a href="#travel-tips">Travel Tips</a>
-        </nav>
-        <div class="search">
-            <input type="text" placeholder="Search">
-            <button>Search</button>
-        </div>
+        <h1>Weather Information</h1>
     </header>
     <main>
-        <section class="hero">
-            <img src="images/hero-large.webp" alt="Botswana Landscape">
-            <div class="hero-content">
-                <h1>Welcome to Botswana</h1>
-                <p>Explore the rich culture, diverse nature, and amazing wildlife of Botswana.</p>
+        <section>
+            <h2>Current Weather</h2>
+            <div id="weather">
+                <p>Temperature: <span id="temperature">25</span>°C</p>
+                <p>Wind Speed: <span id="windSpeed">10</span> km/h</p>
+                <p>Wind Chill: <span id="windChill">N/A</span>°C</p>
             </div>
         </section>
-        <!-- Other sections go here -->
     </main>
     <footer>
-        <div class="footer-content">
-            <p>Copyright &copy; <span id="current-year"></span> Tinny Bothepha Mosimanyana. All rights reserved.</p>
-            <p>Last modified: <span id="last-modified"></span></p>
-        </div>
-        <div class="external-links">
-            <h3>External Links</h3>
-            <a href="https://www.botswanatourism.co.bw/">Botswana Tourism</a>
-            <a href="https://en.wikipedia.org/wiki/Botswana">Wikipedia: Botswana</a>
-            <a href="https://www.lonelyplanet.com/botswana">Lonely Planet: Botswana</a>
-        </div>
+        <p>&copy; 2024 | Last Modified: January 1, 2024</p>
     </footer>
-    <script src="scripts/scripts.js" defer></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
+
