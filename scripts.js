@@ -1,27 +1,24 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Display the current year and the last modified date in the footer
-    const footer = document.querySelector('footer');
-    const currentYear = new Date().getFullYear();
-    const lastModified = document.lastModified;
+/* scripts.js */
 
-    document.getElementById('currentYear').textContent = currentYear;
-    document.getElementById('lastModified').textContent = lastModified;
+document.addEventListener('DOMContentLoaded', () => {
+    // Display current year and last modified date
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+    document.getElementById('last-modified').textContent = document.lastModified;
 
     // Static values for temperature and wind speed
-    const temperatureC = 5; // example temperature in Celsius
-    const windSpeedKmh = 10; // example wind speed in km/h
+    const temperature = 5; // Celsius
+    const windSpeed = 10; // km/h
 
-    // Calculate and display wind chill factor
-    const windChillElement = document.querySelector('#weather .windchill');
-    if (temperatureC <= 10 && windSpeedKmh > 4.8) {
-        const windChill = calculateWindChill(temperatureC, windSpeedKmh);
-        windChillElement.textContent = `Wind Chill: ${windChill.toFixed(2)} °C`;
-    } else {
-        windChillElement.textContent = 'Wind Chill: N/A';
+    // Calculate and display wind chill
+    const windChill = calculateWindChill(temperature, windSpeed);
+    document.querySelector('.weather .windchill').textContent = `Wind Chill: ${windChill}`;
+
+    // Function to calculate wind chill factor
+    function calculateWindChill(temp, wind) {
+        if (temp <= 10 && wind > 4.8) {
+            return (13.12 + 0.6215 * temp - 11.37 * Math.pow(wind, 0.16) + 0.3965 * temp * Math.pow(wind, 0.16)).toFixed(2);
+        } else {
+            return "N/A";
+        }
     }
 });
-
-// Function to calculate wind chill factor in Celsius
-function calculateWindChill(tempC, windSpeedKmh) {
-    return 13.12 + 0.6215 * tempC - 11.37 * Math.pow(windSpeedKmh, 0.16) + 0.3965 * tempC * Math.pow(windSpeedKmh, 0.16);
-}
