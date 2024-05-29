@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Review Form</title>
     <meta name="description" content="This is a product review form where users can submit their reviews for various products.">
-    <meta name="author" content="Your Name">
+    <meta name="author" content="Tinny Bothepha Mosimanyana">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -20,9 +20,19 @@
                 <!-- Dynamic options will be populated here -->
             </select>
 
-            <fieldset>
+            <fieldset id="rating">
                 <legend>Overall Rating:</legend>
-                <!-- Radio buttons will be populated dynamically -->
+                <!-- Radio buttons for rating -->
+                <input type="radio" id="star1" name="rating" value="1">
+                <label for="star1">☆</label>
+                <input type="radio" id="star2" name="rating" value="2">
+                <label for="star2">☆</label>
+                <input type="radio" id="star3" name="rating" value="3">
+                <label for="star3">☆</label>
+                <input type="radio" id="star4" name="rating" value="4">
+                <label for="star4">☆</label>
+                <input type="radio" id="star5" name="rating" value="5">
+                <label for="star5">☆</label>
             </fieldset>
 
             <label for="installationDate">Date of Installation:</label>
@@ -33,14 +43,8 @@
                 <input type="checkbox" id="feature1" name="features" value="Feature 1">
                 <label for="feature1">Feature 1</label>
 
-                <input type="checkbox" id="feature2" name="features" value="Feature 2">
-                <label for="feature2">Feature 2</label>
+                <!-- Include other checkboxes for features -->
 
-                <input type="checkbox" id="feature3" name="features" value="Feature 3">
-                <label for="feature3">Feature 3</label>
-
-                <input type="checkbox" id="feature4" name="features" value="Feature 4">
-                <label for="feature4">Feature 4</label>
             </fieldset>
         </fieldset>
 
@@ -66,3 +70,4 @@
     <script src="scripts.js"></script>
 </body>
 </html>
+
