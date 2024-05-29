@@ -4,53 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Review Form</title>
+    <meta name="description" content="This is a product review form where users can submit their reviews for various products.">
+    <meta name="author" content="Your Name">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="container">
-        <form id="reviewForm" method="get" action="review.html">
-            <h1>Product Review Form</h1>
-            <div class="form-group">
-                <label for="productName">Product Name:</label>
-                <select id="productName" name="productName" required>
-                    <option value="" disabled selected>Select a Product ...</option>
-                    <!-- Product options will be added dynamically using JavaScript -->
-                </select>
-            </div>
-            <div class="form-group">
-                <fieldset>
-                    <legend>Overall Rating:</legend>
-                    <input type="radio" id="rating1" name="rating" value="1" required>
-                    <label for="rating1">1 ☆</label>
-                    <!-- Add similar radio inputs for other ratings -->
-                </fieldset>
-            </div>
-            <div class="form-group">
-                <label for="dateInstalled">Date of Installation:</label>
-                <input type="date" id="dateInstalled" name="dateInstalled" required>
-            </div>
-            <div class="form-group">
-                <fieldset>
-                    <legend>Useful Features:</legend>
-                    <input type="checkbox" id="feature1" name="features" value="Feature 1">
-                    <label for="feature1">Feature 1</label>
-                    <!-- Add similar checkboxes for other features -->
-                </fieldset>
-            </div>
-            <div class="form-group">
-                <label for="review">Written Review:</label>
-                <textarea id="review" name="review"></textarea>
-            </div>
-            <div class="form-group">
-                <label for="userName">User Name:</label>
-                <input type="text" id="userName" name="userName">
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Submit Review">
-            </div>
-        </form>
-    </div>
+    <form action="review.html" method="get">
+        <fieldset>
+            <legend>Product Information</legend>
+            <label for="productName">Product Name:</label>
+            <select id="productName" name="productName" required>
+                <option value="" disabled selected>Select a Product ...</option>
+                <!-- Dynamic options will be populated here -->
+            </select>
 
-    <script src="js/scripts.js"></script>
+            <label for="rating">Overall Rating:</label>
+            <fieldset id="rating">
+                <!-- Radio buttons will be populated dynamically -->
+            </fieldset>
+
+            <label for="installationDate">Date of Installation:</label>
+            <input type="date" id="installationDate" name="installationDate" required>
+
+            <legend>Useful Features:</legend>
+            <input type="checkbox" id="feature1" name="features" value="Feature 1">
+            <label for="feature1">Feature 1</label>
+
+            <input type="checkbox" id="feature2" name="features" value="Feature 2">
+            <label for="feature2">Feature 2</label>
+
+            <input type="checkbox" id="feature3" name="features" value="Feature 3">
+            <label for="feature3">Feature 3</label>
+
+            <input type="checkbox" id="feature4" name="features" value="Feature 4">
+            <label for="feature4">Feature 4</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Review</legend>
+            <label for="writtenReview">Written Review:</label>
+            <textarea id="writtenReview" name="writtenReview"></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Your Information (Optional)</legend>
+            <label for="userName">Your Name:</label>
+            <input type="text" id="userName" name="userName">
+        </fieldset>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <footer>
+        <!-- Common footer content goes here -->
+    </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
