@@ -35,6 +35,14 @@ select {
     border-radius: 4px;
 }
 
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
 input[type="submit"] {
     background-color: #4CAF50;
     color: white;
@@ -47,4 +55,5 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #45a049;
 }
+
 
