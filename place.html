@@ -9,28 +9,35 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/mobile.css">
+    <link rel="stylesheet" href="styles/desktop.css">
 </head>
 <body>
     <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#weather">Weather</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
         <h1>Explore Botswana</h1>
     </header>
     <main>
-        <section class="hero">
+        <section class="hero" id="home">
             <img srcset="images/hero-mobile.webp 320w, images/hero-desktop.webp 1024w" 
                  sizes="(max-width: 600px) 320px, 1024px" 
                  src="images/hero-desktop.webp" 
-                 alt="Hero Image of Botswana">
+                 alt="Beautiful landscape of Botswana">
         </section>
-        <section class="weather">
+        <section class="weather" id="weather">
             <h2>Weather</h2>
             <div class="weather-icon">
-                <!-- SVG icon for mobile view -->
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <!-- SVG icon code -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-labelledby="weather-icon-title" aria-describedby="weather-icon-desc">
+                    <title id="weather-icon-title">Weather Icon</title>
+                    <desc id="weather-icon-desc">Icon depicting sunny weather</desc>
                     <circle cx="12" cy="12" r="10" stroke="black" stroke-width="1" fill="yellow"/>
                 </svg>
-                <!-- Emoticon for wider view (added via CSS) -->
                 <span class="weather-emoticon"></span>
             </div>
             <div class="wind-chill">
@@ -40,7 +47,12 @@
     </main>
     <footer>
         &copy; <span id="copyright-year"></span> | Last modified: <span id="last-modified"></span>
+        <script>
+            document.getElementById('copyright-year').textContent = new Date().getFullYear();
+            document.getElementById('last-modified').textContent = document.lastModified;
+        </script>
         <script src="scripts/script.js" defer></script>
     </footer>
 </body>
 </html>
+
