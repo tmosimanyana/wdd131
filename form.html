@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Review Form</title>
     <meta name="description" content="This is a product review form where users can submit their reviews for various products.">
-    <meta name="author" content="Tinny Bothepha Mosimanyana">
+    <meta name="author" content="Your Name">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="scripts/scripts.js" defer></script>
 </head>
 <body>
     <h1>Product Review Form</h1>
@@ -14,16 +15,17 @@
     <form action="review.html" method="get">
         <fieldset>
             <legend>Product Information</legend>
+            
             <label for="productName">Product Name:</label>
             <select id="productName" name="productName" required>
                 <option value="" disabled selected>Select a Product ...</option>
-                <!-- Dynamic options will be populated here -->
+                <!-- Dynamic options will be populated here by JavaScript -->
             </select>
 
             <fieldset id="rating">
                 <legend>Overall Rating:</legend>
                 <!-- Radio buttons for rating -->
-                <input type="radio" id="star1" name="rating" value="1">
+                <input type="radio" id="star1" name="rating" value="1" required>
                 <label for="star1">☆</label>
                 <input type="radio" id="star2" name="rating" value="2">
                 <label for="star2">☆</label>
@@ -42,9 +44,12 @@
                 <legend>Useful Features:</legend>
                 <input type="checkbox" id="feature1" name="features" value="Feature 1">
                 <label for="feature1">Feature 1</label>
-
-                <!-- Include other checkboxes for features -->
-
+                <input type="checkbox" id="feature2" name="features" value="Feature 2">
+                <label for="feature2">Feature 2</label>
+                <input type="checkbox" id="feature3" name="features" value="Feature 3">
+                <label for="feature3">Feature 3</label>
+                <input type="checkbox" id="feature4" name="features" value="Feature 4">
+                <label for="feature4">Feature 4</label>
             </fieldset>
         </fieldset>
 
@@ -66,8 +71,5 @@
     <footer>
         <!-- Common footer content goes here -->
     </footer>
-
-    <script src="scripts.js"></script>
 </body>
 </html>
-
