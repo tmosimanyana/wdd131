@@ -1,76 +1,70 @@
-/* Global Styles */
-:root {
-    --primary-color: #003580;
-    --secondary-color: #FFB300;
-    --font-family: 'Arial', sans-serif;
-    --heading-font-family: 'Helvetica', sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 body {
-    font-family: var(--font-family);
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    color: #333;
 }
 
 header {
-    background-color: var(--primary-color);
+    background-color: #007bff;
     color: white;
     padding: 10px 0;
     text-align: center;
 }
 
-header nav ul {
-    list-style: none;
-    padding: 0;
+section {
+    margin: 20px;
 }
 
-header nav ul li {
-    display: inline;
-    margin: 0 10px;
+h2 {
+    color: #007bff;
 }
 
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-#hero {
-    text-align: center;
-    padding: 20px;
-}
-
-#about, #places, #culture, #weather {
-    padding: 20px;
-    margin: 10px;
-    background-color: white;
-    border-radius: 5px;
-}
-
-#weather {
-    background-color: var(--secondary-color);
-    color: white;
-    text-align: center;
-}
-
-#weather .weather-icon::after {
-    content: '⛅';
-    margin-left: 5px;
-}
-
-@media (max-width: 600px) {
-    header nav ul li {
-        display: block;
-        margin: 5px 0;
-    }
+.color-sample {
+    width: 100px;
+    height: 30px;
+    margin-bottom: 10px;
 }
 
 footer {
     text-align: center;
     padding: 10px 0;
-    background-color: var(--primary-color);
-    color: white;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    background-color: #f8f9fa;
+    margin-top: 20px;
 }
+
+.wireframe {
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input, textarea {
+    margin-top: 5px;
+    padding: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
