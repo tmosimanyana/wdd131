@@ -1,113 +1,69 @@
-``html
+<!-- index.html -->
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Site Plan</title>
-    <style>
-        /* General styles */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
-
-        header {
-            background-color: #007bff;
-            padding: 20px;
-            color: #fff;
-        }
-
-        main {
-            padding: 20px;
-        }
-
-        footer {
-            background-color: #007bff;
-            padding: 20px;
-            color: #fff;
-            text-align: center;
-        }
-    </style>
+    <title>Freelance Web Development Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <header>
-        <h1>Project Site Plan</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <section>
-            <h2>1. Naming Conventions</h2>
-            <p>Complete: All the files and folders referenced in this document follow the naming conventions of the course.</p>
+        <section id="home">
+            <h1>Welcome to My Freelance Web Development Portfolio</h1>
+            <p>Hi, I'm [Your Name], a freelance web developer passionate about creating beautiful and functional websites. Explore my portfolio to see some of my recent projects.</p>
         </section>
 
-        <section>
-            <h2>2. HTML Validation</h2>
-            <p>Complete: The website document's markup is verified following the HTML validity rules as prescribed by W3C. <a href="https://validator.w3.org/nu">Validation Report</a> reports no errors. Warnings and information are OK but should be fixed by the wise student.</p>
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+            <!-- Gallery showcasing previous web development projects -->
+            <!-- Each project should include a description and link to live website -->
         </section>
 
-        <section>
-            <h2>3. CSS Validation</h2>
-            <p>Complete: The website document's applied CSS is verified following the CSS validity rules as prescribed by W3C. <a href="https://jigsaw.w3.org/css-validator/">Validation Report</a> reports no errors. Warnings are typically OK but should be reviewed.</p>
+        <section id="services">
+            <h2>Services</h2>
+            <ul>
+                <li>Website Design</li>
+                <li>Website Development</li>
+                <li>Website Maintenance</li>
+                <li>Customization</li>
+            </ul>
+            <p>Need help with your website? Contact me for professional and affordable web development services tailored to your needs.</p>
         </section>
 
-        <section>
-            <h2>4. Site Name</h2>
-            <p>Complete: Site Name: Freelance Web Development Portfolio<br>
-                Reason: This name accurately reflects the purpose of the website, which is to showcase the user's freelance web development projects and skills.</p>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I'm a web developer with [X] years of experience in creating responsive and user-friendly websites. With a background in [mention relevant qualifications or experience], I bring a unique perspective to every project I undertake.</p>
         </section>
 
-        <section>
-            <h2>5. Site Purpose</h2>
-            <p>Complete: The site's purpose is to serve as a portfolio showcasing the user's freelance web development projects, skills, and expertise.</p>
-        </section>
-
-        <section>
-            <h2>6. Scenarios</h2>
-            <p>Complete:<br>
-                1. Scenario 1: A potential client looking for a web developer stumbles upon the website. They want to see examples of past projects to gauge the developer's skill level and expertise.<br>
-                2. Scenario 2: A small business owner needs a website for their business. They visit the website to learn about the services offered and to contact the developer for a consultation.</p>
-        </section>
-
-        <section>
-            <h2>7. Color Schema</h2>
-            <p>Complete:<br>
-                - Color 1: #007bff (Blue) - Used for the header and navigation.<br>
-                - Color 2: #333 (Dark Gray) - Used for text content.</p>
-        </section>
-
-        <section>
-            <h2>8. Color Schema Used on Document</h2>
-            <p>Complete: This site plan document uses the colors listed in the color schema section.</p>
-        </section>
-
-        <section>
-            <h2>9. Typography</h2>
-            <p>Complete:<br>
-                - Font: Arial, sans-serif - Used for body text.<br>
-                - Font: Open Sans, sans-serif - Used for headings.</p>
-        </section>
-
-        <section>
-            <h2>10. Typography Used on Document</h2>
-            <p>Complete: This site plan document uses the fonts listed in the typography section.</p>
-        </section>
-
-        <section>
-            <h2>11. Wireframes</h2>
-            <p>Complete: Two wireframe sketches are provided for the project's home page. One for mobile views and another for larger viewports.</p>
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>Ready to start your project? Fill out the form below or reach out to me via email or phone.</p>
+            <!-- Contact form -->
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Tinny Mosimanyana. All rights reserved.</p>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
         <p><a href="attributions.html">Attributions</a></p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
-```
