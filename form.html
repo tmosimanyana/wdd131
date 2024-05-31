@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,6 +17,7 @@
             <label for="productName">Product Name:</label>
             <select id="productName" name="productName" required>
                 <option value="" disabled selected>Select a Product ...</option>
+                <!-- Dynamic options can be added here using JavaScript -->
             </select>
 
             <fieldset>
@@ -33,16 +34,16 @@
 
             <fieldset>
                 <legend>Useful Features:</legend>
-                <label><input type="checkbox" id="feature1" name="features" value="Feature 1">Feature 1</label>
-                <label><input type="checkbox" id="feature2" name="features" value="Feature 2">Feature 2</label>
-                <label><input type="checkbox" id="feature3" name="features" value="Feature 3">Feature 3</label>
-                <label><input type="checkbox" id="feature4" name="features" value="Feature 4">Feature 4</label>
+                <label><input type="checkbox" id="feature1" name="features" value="Feature 1"> Feature 1</label>
+                <label><input type="checkbox" id="feature2" name="features" value="Feature 2"> Feature 2</label>
+                <label><input type="checkbox" id="feature3" name="features" value="Feature 3"> Feature 3</label>
+                <label><input type="checkbox" id="feature4" name="features" value="Feature 4"> Feature 4</label>
             </fieldset>
 
             <label for="writtenReview">Written Review:</label>
             <textarea id="writtenReview" name="writtenReview"></textarea>
 
-            <label for="userName">Tinny Mosimanyana:</label>
+            <label for="userName">Your Name:</label>
             <input type="text" id="userName" name="userName">
 
             <input type="submit" value="Submit">
@@ -58,3 +59,4 @@
     <script src="scripts/script.js" defer></script>
 </body>
 </html>
+
