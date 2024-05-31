@@ -1,18 +1,24 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const currentYear = new Date().getFullYear();
-    const lastModified = new Date(document.lastModified).toLocaleDateString();
+document.addEventListener("DOMContentLoaded", () => {
+    const products = [
+        { id: 1, name: "Product 1" },
+        { id: 2, name: "Product 2" },
+        { id: 3, name: "Product 3" },
+        // Add more products as needed
+    ];
 
-    document.getElementById('copyright-year').textContent = currentYear;
-    document.getElementById('last-modified').textContent = lastModified;
+    const productSelect = document.getElementById("productName");
+    products.forEach(product => {
+        const option = document.createElement("option");
+        option.value = product.name;
+        option.textContent = product.name;
+        productSelect.appendChild(option);
+    });
 
-    const temperature = 10; // Example temperature in Celsius
-    const windSpeed = 5; // Example wind speed in m/s
-
-    if (temperature <= 10 && windSpeed > 4.8) {
-        document.getElementById('wind-chill').textContent = calculateWindChill(temperature, windSpeed).toFixed(2);
-    }
+    // Local Storage for review count
+    const form = document.getElementById("reviewForm");
+    form.addEventListener("submit", () => {
+        let reviewCount = localStorage.getItem("reviewCount") || 0;
+        reviewCount++;
+        localStorage.setItem("reviewCount", reviewCount);
+    });
 });
-
-function calculateWindChill(temp, windSpeed) {
-    return 13.12 + 0.6215 * temp - 11.37 * Math.pow(windSpeed, 0.16) + 0.3965 * temp * Math.pow(windSpeed, 0.16);
-}
