@@ -1,20 +1,32 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const currentYear = new Date().getFullYear();
-    document.getElementById('current-year').textContent = currentYear;
-
-    const lastModified = document.lastModified;
-    document.getElementById('last-modified').textContent = lastModified;
-
-    const temperature = 10; // in °C
-    const windSpeed = 5; // in km/h
-
-    const calculateWindChill = (temp, speed) => {
-        if (temp <= 10 && speed > 4.8) {
-            return ((13.12 + (0.6215 * temp) - (11.37 * Math.pow(speed, 0.16)) + (0.3965 * temp * Math.pow(speed, 0.16)))).toFixed(2);
+document.addEventListener("DOMContentLoaded", function() {
+    // Calculate wind chill factor
+    function calculateWindChill(temperature, windSpeed) {
+        if (temperature <= 10 && windSpeed > 4.8) {
+            const windChill = 13.12 + 0.6215 * temperature - 11.37 * Math.pow(windSpeed, 0.16) + 0.3965 * temperature * Math.pow(windSpeed, 0.16);
+            return windChill.toFixed(1);
+        } else {
+            return "N/A";
         }
-        return "N/A";
-    };
+    }
+
+    // Update wind chill factor on the page
+    const temperatureElement = document.getElementById("temperature");
+    const windSpeedElement = document.getElementById("wind-speed");
+    const windChillElement = document.getElementById("wind-chill");
+
+    const temperature = parseFloat(temperatureElement.textContent);
+    const windSpeed = parseFloat(windSpeedElement.textContent);
 
     const windChill = calculateWindChill(temperature, windSpeed);
-    document.getElementById('wind-chill').textContent = windChill;
+    windChillElement.textContent = windChill;
+
+    // Update the footer with the current year and last modified date
+    const currentYearElement = document.getElementById("current-year");
+    const lastModifiedElement = document.getElementById("last-modified");
+
+    const currentYear = new Date().getFullYear();
+    currentYearElement.textContent = currentYear;
+
+    const lastModified = new Date(document.lastModified);
+    lastModifiedElement.textContent = lastModified.toDateString();
 });
