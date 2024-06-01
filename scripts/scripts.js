@@ -1,17 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const products = [
-        { id: '1', name: 'Product 1' },
-        { id: '2', name: 'Product 2' },
-        { id: '3', name: 'Product 3' },
-        { id: '4', name: 'Product 4' }
-    ];
+    const currentYear = new Date().getFullYear();
+    document.getElementById('current-year').textContent = currentYear;
 
-    const productSelect = document.getElementById('productName');
+    const lastModified = document.lastModified;
+    document.getElementById('last-modified').textContent = lastModified;
 
-    products.forEach(product => {
-        const option = document.createElement('option');
-        option.value = product.name;
-        option.textContent = product.name;
-        productSelect.appendChild(option);
-    });
+    const temperature = 10; // in °C
+    const windSpeed = 5; // in km/h
+
+    const calculateWindChill = (temp, speed) => {
+        if (temp <= 10 && speed > 4.8) {
+            return (13.12 + 0.6215 * temp - 11.37 * Math.pow(speed, 0.16) + 0.3965 * temp * Math.pow(speed, 0.16)).toFixed(2);
+        }
+        return "N/A";
+    };
+
+    const windChill = calculateWindChill(temperature, windSpeed);
+    document.getElementById('wind-chill').textContent = windChill;
 });
