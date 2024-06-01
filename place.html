@@ -1,35 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the beauty and culture of Botswana, a landlocked country in Southern Africa.">
+    <meta name="author" content="Tinny.B.Mosimanyana">
     <title>Explore Botswana</title>
-    <meta name="description" content="Explore the culture, nature, and wildlife of Botswana.">
-    <meta name="author" content="Tinny Bothepha Mosimanyana">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/mobile.css">
-    <link rel="stylesheet" href="styles/desktop.css">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#weather">Weather</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <h1>Explore Botswana</h1>
+        <h1>Welcome to Botswana</h1>
     </header>
     <main>
-        <section class="hero" id="home">
-            <img srcset="images/hero-mobile.webp 320w, images/hero-desktop.webp 1024w" 
-                 sizes="(max-width: 600px) 320px, 1024px" 
-                 src="images/hero-desktop.webp" 
-                 alt="Beautiful landscape of Botswana">
+        <section class="hero">
+            <picture>
+                <source srcset="images/hero-desktop.webp" media="(min-width: 768px)">
+                <source srcset="images/hero-mobile.webp" media="(max-width: 767px)">
+                <img src="images/hero-mobile.webp" alt="Scenic view of Botswana">
+            </picture>
         </section>
+<<<<<<< HEAD
         <section class="weather" id="weather">
             <h2>Weather</h2>
             <div class="weather-icon mobile-only">
@@ -42,12 +36,41 @@
             <div class="wind-chill">
                 Wind Chill: <span id="wind-chill">N/A</span>
             </div>
+=======
+        <section class="weather">
+            <h2>Weather <span class="weather-icon"></span></h2>
+            <p>Temperature: <span id="temperature">10°C</span></p>
+            <p>Wind Speed: <span id="wind-speed">5 km/h</span></p>
+            <p>Wind Chill: <span id="wind-chill">N/A</span></p>
+>>>>>>> e3ae35daca45cf76c946c1ed806291441594a3c2
         </section>
     </main>
     <footer>
-        &copy; <span id="copyright-year"></span> | Last modified: <span id="last-modified"></span>
-        <script src="scripts/script.js" defer></script>
+        <div class="footer-container">
+            <div class="footer-item">
+                <h3>About Botswana</h3>
+                <p>Botswana, a landlocked country in Southern Africa, is known for its diverse wildlife, stunning landscapes, and vibrant culture.</p>
+            </div>
+            <div class="footer-item">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Weather</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-item">
+                <h3>Contact Us</h3>
+                <p>Email: info@explorebotswana.com</p>
+                <p>Phone: +267 123 4567</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> Explore Botswana. All rights reserved.</p>
+            <p>Last Modified: <span id="last-modified"></span></p>
+        </div>
     </footer>
+    <script src="scripts/scripts.js" defer></script>
 </body>
 </html>
 

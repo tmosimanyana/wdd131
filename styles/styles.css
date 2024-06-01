@@ -1,61 +1,77 @@
-/* Root variables */
+/* styles/styles.css */
+
 :root {
-    --primary-color: #ffcc00;
-    --secondary-color: #0066cc;
-    --font-size: 16px;
+    --primary-color: #003366; /* Botswana flag blue */
+    --secondary-color: #FFFFFF; /* White */
+    --accent-color: #FFCC00; /* Accent color for highlights */
     --font-family: 'Roboto', sans-serif;
 }
 
-/* Basic styles */
 body {
     font-family: var(--font-family);
-    font-size: var(--font-size);
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     background-color: var(--secondary-color);
-    color: var(--primary-color);
 }
 
-header, main, footer {
-    padding: 20px;
+header {
     text-align: center;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 20px;
 }
 
-/* Hero section */
-.hero img {
+.hero {
     width: 100%;
     height: auto;
 }
 
-/* Weather section */
+.weather {
+    text-align: center;
+    margin: 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.footer-item {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+    background-color: #222;
+}
+
 .weather-icon {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
+    display: none;
 }
 
-.weather-emoticon::after {
-    content: "⛅";
-}
-
-/* Responsive design */
-@media (max-width: 600px) {
-    .weather-icon svg {
-        display: block;
-    }
-    .weather-emoticon {
-        display: none;
+/* Show SVG weather icon on mobile devices */
+@media (max-width: 767px) {
+    .weather-icon {
+        display: inline-block;
+        background-image: url('../images/weather-icon.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 24px;
+        height: 24px;
+        vertical-align: middle;
     }
 }
 
-@media (min-width: 601px) {
-    .weather-icon svg {
-        display: none;
-    }
-    .weather-emoticon {
-        display: inline;
-    }
+h1::after {
+    content: ' 😊';
 }
+
 
 
 
