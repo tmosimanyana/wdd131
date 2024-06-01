@@ -44,6 +44,12 @@ header {
     }
 }
 
+@media (min-width: 768px) {
+    .weather-icon {
+        display: none;
+    }
+}
+
 .footer-container {
     display: flex;
     justify-content: space-around;
@@ -66,12 +72,6 @@ header {
 .footer-item h3::after {
     content: var(--emoji-content);
     margin-left: 8px;
-}
-
-@media (min-width: 768px) {
-    .weather-icon {
-        display: none;
-    }
 }
 
 
