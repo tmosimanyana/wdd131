@@ -1,117 +1,24 @@
-:root {
-    --primary-color: #00a7e0; /* Light blue from Botswana's flag */
-    --secondary-color: #ffffff; /* White */
-    --accent-color: #000000; /* Black */
-}
-
-body {
-    font-family: 'Roboto', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: var(--secondary-color);
-    color: var(--accent-color);
-}
-
-header {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    text-align: center;
-    padding: 1em 0;
-}
-
-.hero {
-    text-align: center;
-}
-
-.hero img {
-    width: 100%;
-    height: auto;
-}
-
-.weather {
-    padding: 1em;
-    background-color: var(--secondary-color);
-    color: var(--accent-color);
-    border-top: 5px solid var(--primary-color);
-    border-bottom: 5px solid var(--primary-color);
-    text-align: center;
-}
-
-.weather h2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.weather-icon {
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    margin-left: 8px;
-    background: url('../images/weather-icon.svg') no-repeat center center;
-    background-size: contain;
-}
-
-.weather-icon::after {
-    content: '⛅'; /* Fallback emoji */
-    font-size: 1.5em;
-}
-
-footer {
-    background-color: var(--accent-color);
-    color: var(--secondary-color);
-}
-
-.footer-container {
-    display: flex;
-    justify-content: space-around;
-    padding: 1em 0;
-    flex-wrap: wrap;
-}
-
-.footer-item {
-    flex: 1;
-    padding: 1em;
-    min-width: 200px;
-}
-
-.footer-item h3 {
-    border-bottom: 1px solid var(--secondary-color);
-    padding-bottom: 0.5em;
-    margin-bottom: 0.5em;
-}
-
-.footer-item ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-item ul li {
-    margin: 0.5em 0;
-}
-
-.footer-item ul li a {
-    color: var(--secondary-color);
-    text-decoration: none;
-}
-
-.footer-bottom {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    text-align: center;
-    padding: 1em 0;
-}
-
 @media (max-width: 767px) {
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
+    .weather-icon {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-left: 8px;
+        background: url('../images/weather-icon.svg') no-repeat center center;
+        background-size: contain;
     }
 
-    .footer-item {
-        margin-bottom: 1em;
+    .weather-icon::after {
+        content: ''; /* Remove the content for the pseudo-element */
     }
 }
+
+@media (min-width: 768px) {
+    .weather-icon {
+        display: none; /* Hide the SVG icon in desktop view */
+    }
+}
+
 
 
 
