@@ -1,0 +1,97 @@
+:root {
+    --primary-color: #00a7e0; /* Light blue from Botswana's flag */
+    --secondary-color: #ffffff; /* White */
+    --accent-color: #000000; /* Black */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header, .footer-bottom {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 1em 0;
+}
+
+footer {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 1em 0;
+}
+
+.footer-item {
+    flex: 1;
+    padding: 0 1em;
+}
+
+.footer-item h3 {
+    border-bottom: 1px solid var(--secondary-color);
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.footer-item ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-item ul li {
+    margin: 0.5em 0;
+}
+
+.footer-item ul li a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.footer-bottom {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 1em 0;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.weather {
+    padding: 1em;
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+    border-top: 5px solid var(--primary-color);
+    border-bottom: 5px solid var(--primary-color);
+}
+
+.weather-icon::after {
+    content: '⛅'; /* Example pseudo-element for larger view */
+}
+
+@media (max-width: 767px) {
+    .weather-icon {
+        display: none;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-item {
+        margin-bottom: 1em;
+    }
+}
+
+
+
+
