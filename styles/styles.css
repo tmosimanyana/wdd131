@@ -1,15 +1,24 @@
 /* styles/styles.css */
 
+:root {
+    --primary-color: #003366; /* Botswana flag blue */
+    --secondary-color: #FFFFFF; /* White */
+    --accent-color: #FFCC00; /* Accent color for highlights */
+    --font-family: 'Roboto', sans-serif;
+}
+
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--font-family);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: var(--secondary-color);
 }
 
-.header {
+header {
     text-align: center;
-    background-color: #f4f4f4;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     padding: 20px;
 }
 
@@ -27,8 +36,8 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    background-color: #333;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .footer-item {
@@ -58,6 +67,11 @@ body {
         vertical-align: middle;
     }
 }
+
+h1::after {
+    content: ' 😊';
+}
+
 
 
 
