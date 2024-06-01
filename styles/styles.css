@@ -1,24 +1,67 @@
-@media (max-width: 767px) {
-    .weather-icon {
-        display: inline-block;
-        width: 24px;
-        height: 24px;
-        margin-left: 8px;
-        background: url('../images/weather-icon.svg') no-repeat center center;
-        background-size: contain;
-    }
+:root {
+    --primary-color: #00796B; /* Example primary color */
+    --secondary-color: #FFC107; /* Example secondary color */
+}
 
-    .weather-icon::after {
-        content: ''; /* Remove the content for the pseudo-element */
-    }
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.weather {
+    background-color: white;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.weather-icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url('../images/weather-icon.svg');
+    background-size: cover;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1em;
+}
+
+.footer-item {
+    width: 30%;
+}
+
+.footer-bottom {
+    background-color: #005b4f;
+    color: white;
+    text-align: center;
+    padding: 0.5em 0;
 }
 
 @media (min-width: 768px) {
     .weather-icon {
-        display: none; /* Hide the SVG icon in desktop view */
+        display: none;
     }
 }
-
 
 
 
