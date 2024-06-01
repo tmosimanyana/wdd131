@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* temples-large.css (Larger View) */
 
 /* General Styles */
@@ -99,3 +100,10 @@ footer {
 }
 
 
+=======
+@media (min-width: 600px) {
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+>>>>>>> 5a45045e09064543d12d373f1ae527269bc5bf73
