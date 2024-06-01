@@ -10,7 +10,50 @@ body {
     padding: 0;
 }
 
-header, footer {
+header, .footer-bottom {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 1em 0;
+}
+
+footer {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 1em 0;
+}
+
+.footer-item {
+    flex: 1;
+    padding: 0 1em;
+}
+
+.footer-item h3 {
+    border-bottom: 1px solid var(--secondary-color);
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.footer-item ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-item ul li {
+    margin: 0.5em 0;
+}
+
+.footer-item ul li a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.footer-bottom {
     background-color: var(--primary-color);
     color: var(--secondary-color);
     text-align: center;
@@ -37,6 +80,15 @@ header, footer {
 @media (max-width: 767px) {
     .weather-icon {
         display: none;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-item {
+        margin-bottom: 1em;
     }
 }
 
