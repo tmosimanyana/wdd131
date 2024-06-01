@@ -1,59 +1,94 @@
-/* Root variables */
 :root {
-    --primary-color: #ffcc00;
-    --secondary-color: #0066cc;
-    --font-size: 16px;
-    --font-family: 'Roboto', sans-serif;
+    --primary-color: #00a7e0; /* Light blue from Botswana's flag */
+    --secondary-color: #ffffff; /* White */
+    --accent-color: #000000; /* Black */
 }
 
-/* Basic styles */
 body {
-    font-family: var(--font-family);
-    font-size: var(--font-size);
+    font-family: 'Roboto', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
 }
 
-header, main, footer {
-    padding: 20px;
+header, .footer-bottom {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     text-align: center;
+    padding: 1em 0;
 }
 
-/* Hero section */
+footer {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 1em 0;
+}
+
+.footer-item {
+    flex: 1;
+    padding: 0 1em;
+}
+
+.footer-item h3 {
+    border-bottom: 1px solid var(--secondary-color);
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.footer-item ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-item ul li {
+    margin: 0.5em 0;
+}
+
+.footer-item ul li a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.footer-bottom {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 1em 0;
+}
+
 .hero img {
     width: 100%;
     height: auto;
 }
 
-/* Weather section */
-.weather-icon {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
+.weather {
+    padding: 1em;
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+    border-top: 5px solid var(--primary-color);
+    border-bottom: 5px solid var(--primary-color);
 }
 
-.weather-emoticon::after {
-    content: "⛅";
+.weather-icon::after {
+    content: '⛅'; /* Example pseudo-element for larger view */
 }
 
-/* Responsive design */
-@media (max-width: 600px) {
-    .weather-icon svg {
-        display: block;
-    }
-    .weather-emoticon {
+@media (max-width: 767px) {
+    .weather-icon {
         display: none;
     }
-}
 
-@media (min-width: 601px) {
-    .weather-icon svg {
-        display: none;
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
     }
-    .weather-emoticon {
-        display: inline;
+
+    .footer-item {
+        margin-bottom: 1em;
     }
 }
 
