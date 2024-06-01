@@ -1,6 +1,7 @@
 :root {
-    --primary-color: #004d61; /* Example color */
-    --secondary-color: #ffcb05; /* Example color */
+    --primary-color: #00a7e0; /* Light blue from Botswana's flag */
+    --secondary-color: #ffffff; /* White */
+    --accent-color: #000000; /* Black */
 }
 
 body {
@@ -11,7 +12,7 @@ body {
 
 header, footer {
     background-color: var(--primary-color);
-    color: white;
+    color: var(--secondary-color);
     text-align: center;
     padding: 1em 0;
 }
@@ -24,7 +25,9 @@ header, footer {
 .weather {
     padding: 1em;
     background-color: var(--secondary-color);
-    color: var(--primary-color);
+    color: var(--accent-color);
+    border-top: 5px solid var(--primary-color);
+    border-bottom: 5px solid var(--primary-color);
 }
 
 .weather-icon::after {
@@ -36,6 +39,7 @@ header, footer {
         display: none;
     }
 }
+
 
 
 
