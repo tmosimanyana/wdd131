@@ -1,6 +1,7 @@
 :root {
     --primary-color: #00796B; /* Example primary color */
     --secondary-color: #FFC107; /* Example secondary color */
+    --emoji-content: "\1F4A8"; /* Example emoji content for after pseudo-element */
 }
 
 body {
@@ -34,8 +35,13 @@ header {
     display: inline-block;
     width: 24px;
     height: 24px;
-    background-image: url('../images/weather-icon.svg');
-    background-size: cover;
+}
+
+@media (max-width: 767px) {
+    .weather-icon {
+        background-image: url('../images/weather-icon.svg');
+        background-size: cover;
+    }
 }
 
 .footer-container {
@@ -57,11 +63,17 @@ header {
     padding: 0.5em 0;
 }
 
+.footer-item h3::after {
+    content: var(--emoji-content);
+    margin-left: 8px;
+}
+
 @media (min-width: 768px) {
     .weather-icon {
         display: none;
     }
 }
+
 
 
 
