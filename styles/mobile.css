@@ -1,0 +1,72 @@
+:root {
+    --primary-color: #333;
+    --secondary-color: #fff;
+    --accent-color: yellow;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.hero {
+    text-align: center;
+    position: relative;
+}
+
+.hero::after {
+    content: "Discover the beauty of Botswana";
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--secondary-color);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.weather {
+    padding: 20px;
+    text-align: center;
+}
+
+.weather-icon {
+    display: inline-block;
+    margin: 10px 0;
+}
+
+.wind-chill {
+    font-size: 1.2em;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 10px 0;
+}

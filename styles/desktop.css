@@ -1,0 +1,51 @@
+@media (min-width: 600px) {
+    body {
+        font-size: 16px;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+    }
+
+    nav ul {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 0 20px;
+    }
+
+    .hero {
+        padding: 20px;
+    }
+
+    .hero::after {
+        font-size: 1.5em;
+    }
+
+    .weather {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .weather-icon {
+        margin: 0 20px;
+    }
+
+    .wind-chill {
+        font-size: 1.5em;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+    }
+}
+
+
