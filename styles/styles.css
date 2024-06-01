@@ -74,12 +74,20 @@ footer {
 }
 
 .weather-icon::after {
-    content: '⛅'; /* Example pseudo-element for larger view */
+    content: '⛅'; /* Fallback emoji */
 }
 
 @media (max-width: 767px) {
     .weather-icon {
-        display: none;
+        background: url('../images/weather-icon.svg') no-repeat center center;
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        vertical-align: middle;
+    }
+
+    .weather-icon::after {
+        content: ''; /* Remove fallback emoji for smaller view */
     }
 
     .footer-container {
