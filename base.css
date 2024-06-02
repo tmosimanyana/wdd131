@@ -1,7 +1,9 @@
 body {
-  font-family: 'Your Selected Font', sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #f0f0f0;
+  color: #333;
 }
 
 header, main, footer {
@@ -10,8 +12,8 @@ header, main, footer {
 }
 
 header {
-  background-color: #f8f8f8;
-  border-bottom: 1px solid #ddd;
+  background-color: #4CAF50;
+  color: white;
 }
 
 nav ul {
@@ -27,11 +29,12 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #333;
+  color: white;
+  padding: 5px 10px;
 }
 
 nav ul li a:hover {
-  color: #0073e6;
+  background-color: #45a049;
 }
 
 main {
@@ -42,6 +45,7 @@ main {
 }
 
 .card {
+  background-color: white;
   border: 1px solid #ddd;
   margin: 10px 0;
   padding: 20px;
@@ -54,11 +58,12 @@ main {
 }
 
 footer {
-  background-color: #f8f8f8;
-  border-top: 1px solid #ddd;
+  background-color: #4CAF50;
+  color: white;
   padding: 10px 0;
 }
 
 footer p {
   margin: 5px 0;
 }
+
