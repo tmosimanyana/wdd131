@@ -89,6 +89,10 @@ main {
     margin-right: 20px;
 }
 
+.about-me .location p:first-of-type {
+    margin-right: 20px;
+}
+
 .resources ul {
     list-style-type: none;
     padding: 0;
@@ -106,6 +110,7 @@ main {
 
 .resources ul li a:hover {
     text-decoration: underline;
+    color: #ffd700;
 }
 
 footer {
