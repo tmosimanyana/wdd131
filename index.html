@@ -3,45 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Tinny Mosimanyana">
-    <meta name="author" content="Tinny Mosimanyana">
-    <title>WDD 131 - Dynamic Web Fundamentals - Tinny Mosimanyana</title>
-    <link rel="stylesheet" href="base.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>WDD 131: Dynamic Web Fundamentals</title>
+    <link rel="stylesheet" href="styles.css">
     <script src="getdates.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>My Home Page</h1>
-        <nav>
-            <ul>
-                <li><a href="https://www.linkedin.com/">LinkedIn</a></li>
-                <li><a href="https://byui.instructure.com/">I-Learn</a></li>
-                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7">Scripture</a></li>
-                <li><a href="#">Final Project</a></li>
-            </ul>
-        </nav>
+        <h1>WDD 131: Dynamic Web Fundamentals - <span class="highlight">Rubia M. Francesco</span></h1>
     </header>
+    <nav>
+        <ul>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">I-Learn</a></li>
+            <li><a href="#">Scripture</a></li>
+            <li><a href="#">Final Project</a></li>
+        </ul>
+    </nav>
     <main>
-        <section class="card">
+        <section class="about-me">
             <h2>About Me</h2>
-            <img src="images/about_me.jpg.com/150." alt="Picture of Tinny Mosimanyana">
-            <p>My name is Tinny Mosimanyana. I am a web development enthusiast from Botswana.</p>
+            <div class="content">
+                <p>My name is Rubia and I go by Ruby. I was born in South Africa and live my family in Madagascar. I am currently working as administrative legal assistant at a law firm. My children are my world and I love spending time with them. I love to travel and I love to learn new things.</p>
+                <img src="https://byui-cse.github.io/wdd131-ww-course/images/homepage-example.png" alt="Rubia M. Francesco">
+            </div>
+            <h3>Toloria, Madagascar</h3>
+            <div class="location">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Madagascar.svg" alt="Official Flag of Madagascar">
+                <p>Madagascar is the 4th largest island in the world and is located in the Indian Ocean. It is home to 5% of the world's plant and animal species, of which more than 80% are endemic to Madagascar. The island is best known for its lemurs, baobab trees, and vanilla.</p>
+            </div>
         </section>
-        <section class="card">
-            <h2>Web Development Resources</h2>
-            <img src="https://via.placeholder.com/150" alt="Web Development Image">
-            <p>Here are some useful resources for web development:</p>
+        <aside class="resources">
+            <h2>Web Dev Resources</h2>
             <ul>
-                <li><a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a></li>
-                <li><a href="https://www.w3schools.com/">W3Schools</a></li>
-                <li><a href="https://stackoverflow.com/">Stack Overflow</a></li>
+                <li><a href="#">Dev.to Community</a></li>
+                <li><a href="#">Smashing Magazine</a></li>
+                <li><a href="#">CSS Tricks</a></li>
+                <li><a href="#">W3 Schools</a></li>
+                <li><a href="#">Udemy</a></li>
+                <li><a href="#">Lorem Picsum Image Placeholder</a></li>
             </ul>
-        </section>
+        </aside>
     </main>
     <footer>
-        <p>&copy; <span id="currentyear"></span> Tinny Mosimanyana. Botswana.</p>
-        <p id="lastModified"></p>
+        <p>&copy; <span id="year"></span> <span class="highlight">Rubia Magdelena Francesco</span> <span class="highlight">Madagascar</span></p>
+        <p>Last Modification: <span id="lastModified"></span></p>
     </footer>
 </body>
 </html>
