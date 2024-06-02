@@ -3,59 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Freelance Web Development Portfolio</title>
-    <meta name="description" content="Showcase of web development projects by a freelance developer. Explore services, portfolio, and contact details.">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Your Name">
+    <meta name="author" content="Tinny. B. Mosimanyana">
+    <title>WDD 131 - Dynamic Web Fundamentals - Your Name</title>
+    <link rel="stylesheet" href="base.css">
+    <link href="https://fonts.googleapis.com/css2?family=Your+Selected+Font&display=swap" rel="stylesheet">
+    <script src="getdates.js" defer></script>
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>Freelance Web Development Services</h1>
-            <nav>
-                <button id="nav-toggle" class="nav-toggle">Menu</button>
-                <ul id="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="about.html">About Me</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+        <h1>Home Page Heading</h1>
+        <nav>
+            <ul>
+                <li><a href="https://www.linkedin.com/">LinkedIn</a></li>
+                <li><a href="https://byui.instructure.com/">I-Learn</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures">Scripture</a></li>
+                <li><a href="#">Final Project</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
-        <section id="home" class="hero">
-            <div class="container">
-                <h2>Crafting Stunning and Functional Websites to Boost Your Online Presence</h2>
-                <a href="portfolio.html" class="btn">View My Work</a>
-            </div>
+        <section class="card">
+            <h2>Section 1 Heading</h2>
+            <img src="your-image1.jpg" alt="Image 1 Description">
+            <p>Content for the first section.</p>
+            <ul>
+                <li><a href="https://resource1.com">Resource 1</a></li>
+                <li><a href="https://resource2.com">Resource 2</a></li>
+                <li><a href="https://resource3.com">Resource 3</a></li>
+            </ul>
         </section>
-        <section id="featured-projects">
-            <div class="container">
-                <h2 class="section-title">Featured Projects</h2>
-                <div class="project-gallery">
-                    <div class="project" data-category="web-design">
-                        <img src="assets/images/project1.jpg" alt="Project 1">
-                        <h3>Project Title 1</h3>
-                        <p>Description of project 1, highlighting key features and technologies used.</p>
-                        <a href="https://www.example.com/project1" class="btn">View Project</a>
-                    </div>
-                    <div class="project" data-category="development">
-                        <img src="assets/images/project2.jpg" alt="Project 2">
-                        <h3>Project Title 2</h3>
-                        <p>Description of project 2, highlighting key features and technologies used.</p>
-                        <a href="https://www.example.com/project2" class="btn">View Project</a>
-                    </div>
-                    <!-- Add more projects as needed -->
-                </div>
-            </div>
+        <section class="card">
+            <h2>Section 2 Heading</h2>
+            <img src="your-image2.jpg" alt="Image 2 Description">
+            <p>Content for the second section.</p>
+            <ul>
+                <li><a href="https://resource4.com">Resource 4</a></li>
+                <li><a href="https://resource5.com">Resource 5</a></li>
+                <li><a href="https://resource6.com">Resource 6</a></li>
+            </ul>
         </section>
     </main>
     <footer>
-        <div class="container">
-            <p>&copy; 2024 Freelance Web Developer Portfolio. All rights reserved.</p>
-        </div>
+        <p>&copy; <span id="currentyear"></span> Your Name. Your Country.</p>
+        <p id="lastModified"></p>
     </footer>
-    <script src="assets/js/scripts.js"></script>
 </body>
 </html>
