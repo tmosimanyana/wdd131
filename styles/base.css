@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -5,10 +6,12 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #f0f0f0;
 }
 
+/* Header Styles */
 header {
-    background-color: #4CAF50;
+    background-color: #333;
     color: white;
     padding: 1em;
     width: 100%;
@@ -25,6 +28,7 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
+    gap: 1em;
 }
 
 nav ul li {
@@ -38,9 +42,10 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    color: #ff6347; /* Add hover color */
 }
 
+/* Main Styles */
 main {
     display: grid;
     grid-template-columns: 1fr;
@@ -52,7 +57,7 @@ main {
 }
 
 .card {
-    background-color: #f9f9f9;
+    background-color: #fff;
     padding: 1em;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -60,6 +65,7 @@ main {
 
 .card h2 {
     margin-top: 0;
+    color: #333;
 }
 
 .about-me-img, .botswana-flag {
@@ -69,6 +75,16 @@ main {
     margin: 1em 0;
 }
 
+.card a {
+    color: #ff6347;
+    text-decoration: none;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styles */
 footer {
     background-color: #333;
     color: white;
@@ -79,12 +95,16 @@ footer {
     bottom: 0;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .footer-content {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    flex-wrap: wrap;
 }
 
 .footer-left, .footer-right {
@@ -95,4 +115,16 @@ footer {
 .footer-left p, .footer-right p {
     margin: 0;
 }
+
+.footer-right {
+    text-align: right;
+}
+
+@media (max-width: 600px) {
+    .footer-right {
+        text-align: center;
+        margin-top: 1em;
+    }
+}
+
 
