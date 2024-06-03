@@ -6,7 +6,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #f9f9f9;
+    background-color: #f0f0f0;
 }
 
 /* Header Styles */
@@ -21,7 +21,7 @@ header {
 
 header h1 {
     margin: 0;
-    font-size: 1.8em;
+    font-size: 1.5em;
     letter-spacing: 1px;
 }
 
@@ -61,29 +61,21 @@ main {
 
 .card {
     background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .card h2 {
     margin-top: 0;
     color: #333;
-    font-size: 1.4em;
-    margin-bottom: 15px;
 }
 
 .about-me-img, .botswana-flag {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 1em auto;
-    border-radius: 10px;
-}
-
-.card p {
-    color: #555;
-    line-height: 1.6;
+    margin: 1em 0;
 }
 
 .card a {
