@@ -1,90 +1,93 @@
-/* Base CSS File */
-
+/* Global styles */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif; /* Using Google Font Roboto */
+    line-height: 1.6;
+    background-color: #f8f9fa; /* Light gray background */
+    color: #343a40; /* Dark gray text color */
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
 }
 
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header styles */
 header {
-    background: #2c3e50;
-    color: #ecf0f1;
-    padding: 20px 0;
-    text-align: center;
+    background-color: #343a40; /* Dark gray header background */
+    color: #ffffff; /* White text color */
+    padding: 20px;
 }
 
 header h1 {
     margin: 0;
-    font-size: 24px;
+    font-size: 2em; /* Larger font size for heading */
 }
 
-header nav {
-    margin-top: 10px;
+nav {
+    display: flex; /* Using Flexbox for navigation */
+    justify-content: center; /* Centering the navigation links */
 }
 
-header nav a {
-    color: #ecf0f1;
-    text-decoration: none;
-    padding: 10px;
-    margin: 0 10px;
-}
-
-header nav a:hover {
-    background: #34495e;
-    border-radius: 5px;
-}
-
-main {
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 20px;
-    background: #fff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.card {
-    margin-bottom: 20px;
-}
-
-.card h2 {
-    margin-top: 0;
-}
-
-.card img {
-    float: left;
-    margin-right: 20px;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-}
-
-#web-dev-resources ul {
-    list-style: none;
+nav ul {
+    list-style-type: none;
     padding: 0;
 }
 
-#web-dev-resources li {
-    margin-bottom: 10px;
+nav ul li {
+    margin-right: 20px;
 }
 
-#web-dev-resources a {
+nav ul li a {
     text-decoration: none;
-    color: #2980b9;
+    color: #ffffff; /* White text color */
+    transition: color 0.3s; /* Smooth transition for hover effect */
 }
 
-#web-dev-resources a:hover {
-    text-decoration: underline;
+nav ul li a:hover {
+    color: #ffd700; /* Yellow text color on hover */
 }
 
+/* Main styles */
+main {
+    width: 80%; /* Limited width for main content */
+    margin: 20px auto; /* Centering main content horizontally */
+    display: grid; /* Using CSS Grid for main content layout */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid layout */
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background-color: #ffffff; /* White card background */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    width: 300px; /* Set the image width */
+}
+
+.card ul {
+    margin-top: 10px;
+}
+
+.card ul li {
+    margin-bottom: 5px;
+}
+
+/* Footer styles */
 footer {
-    background: #2c3e50;
-    color: #ecf0f1;
+    background-color: #343a40; /* Dark gray footer background */
+    color: #ffffff; /* White text color */
     text-align: center;
-    padding: 10px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    padding: 20px;
 }
 
-
+footer p {
+    margin: 10px 0;
+}
