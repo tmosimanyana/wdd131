@@ -1,9 +1,13 @@
-// getdates.js
+// JavaScript File to get dates and modify the HTML dynamically
 
-document.addEventListener("DOMContentLoaded", function () {
-    var currentYear = new Date().getFullYear();
-    document.getElementById('currentyear').textContent = currentYear;
+document.addEventListener("DOMContentLoaded", () => {
+    // Set the current year in the footer
+    const currentYearSpan = document.getElementById('currentyear');
+    const currentYear = new Date().getFullYear();
+    currentYearSpan.textContent = currentYear;
 
-    var lastModified = document.lastModified;
-    document.getElementById('lastModified').textContent = "Last Modified: " + lastModified;
+    // Set the last modified date in the footer
+    const lastModifiedSpan = document.getElementById('lastModified');
+    const lastModified = document.lastModified;
+    lastModifiedSpan.textContent = `Last Modified: ${lastModified}`;
 });
