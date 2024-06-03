@@ -123,4 +123,12 @@ footer {
 @media (max-width: 600px) {
     .footer-right {
         text-align: center;
-       
+    }
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+}
