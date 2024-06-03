@@ -1,0 +1,26 @@
+<main>
+    <section class="card">
+        <h2>Contact Me</h2>
+        <form action="submit_form.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; <span id="currentyear"></span> Tinny Mosimanyana. Botswana.</p>
+        <p id="lastModified"></p>
+    </div>
+</footer>
+
+<script src="scripts/getdates.js" defer></script>
