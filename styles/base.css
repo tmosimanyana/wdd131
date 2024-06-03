@@ -1,33 +1,27 @@
-/* Global styles */
+/* styles/base.css */
+
 body {
-    font-family: 'Roboto', sans-serif; /* Using Google Font Roboto */
-    line-height: 1.6;
-    background-color: #f8f9fa; /* Light gray background */
-    color: #343a40; /* Dark gray text color */
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f2f2f2;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
-
-/* Header styles */
 header {
-    background-color: #343a40; /* Dark gray header background */
-    color: #ffffff; /* White text color */
+    background-color: #333;
+    color: #fff;
     padding: 20px;
+    text-align: center;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2em; /* Larger font size for heading */
+    font-size: 32px;
 }
 
 nav {
-    display: flex; /* Using Flexbox for navigation */
-    justify-content: center; /* Centering the navigation links */
+    display: flex;
+    justify-content: center;
 }
 
 nav ul {
@@ -36,58 +30,43 @@ nav ul {
 }
 
 nav ul li {
+    display: inline;
     margin-right: 20px;
 }
 
 nav ul li a {
+    color: #fff;
     text-decoration: none;
-    color: #ffffff; /* White text color */
-    transition: color 0.3s; /* Smooth transition for hover effect */
 }
 
-nav ul li a:hover {
-    color: #ffd700; /* Yellow text color on hover */
-}
-
-/* Main styles */
 main {
-    width: 80%; /* Limited width for main content */
-    margin: 20px auto; /* Centering main content horizontally */
-    display: grid; /* Using CSS Grid for main content layout */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid layout */
-    gap: 20px;
+    display: flex;
+    justify-content: center;
     padding: 20px;
 }
 
 .card {
-    background-color: #ffffff; /* White card background */
+    background-color: #fff;
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 400px;
 }
 
-.card img {
-    max-width: 100%;
-    height: auto;
-    width: 300px; /* Set the image width */
-}
-
-.card ul {
-    margin-top: 10px;
-}
-
-.card ul li {
-    margin-bottom: 5px;
-}
-
-/* Footer styles */
 footer {
-    background-color: #343a40; /* Dark gray footer background */
-    color: #ffffff; /* White text color */
+    background-color: #333;
+    color: #fff;
     text-align: center;
     padding: 20px;
 }
 
 footer p {
-    margin: 10px 0;
+    margin: 0;
 }
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
