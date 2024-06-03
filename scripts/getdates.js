@@ -1,7 +1,5 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const currentYear = new Date().getFullYear();
-    document.getElementById("currentyear").textContent = currentYear;
+// Get current year and populate in footer
+document.getElementById("currentyear").textContent = new Date().getFullYear();
 
-    const lastModified = document.lastModified;
-    document.getElementById("lastModified").textContent = `Last Modified: ${lastModified}`;
-});
+// Get document last modified date and populate in footer
+document.getElementById("lastModified").textContent = "Last Modified: " + document.lastModified;
