@@ -16,11 +16,13 @@ header {
     padding: 1em;
     width: 100%;
     text-align: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
     margin: 0;
     font-size: 1.5em;
+    letter-spacing: 1px;
 }
 
 nav ul {
@@ -39,10 +41,11 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #ff6347; /* Add hover color */
+    color: #ff6347;
 }
 
 /* Main Styles */
@@ -91,11 +94,9 @@ footer {
     padding: 1em;
     width: 100%;
     text-align: center;
-    position: relative;
+    position: fixed;
     bottom: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .footer-content {
@@ -104,7 +105,6 @@ footer {
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
-    flex-wrap: wrap;
 }
 
 .footer-left, .footer-right {
@@ -123,8 +123,4 @@ footer {
 @media (max-width: 600px) {
     .footer-right {
         text-align: center;
-        margin-top: 1em;
-    }
-}
-
-
+       
