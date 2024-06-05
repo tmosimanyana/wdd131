@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botswana</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Botswana</h1>
+    </header>
+    <main>
+        <section class="hero">
+            <picture>
+                <source srcset="images/hero-small.webp" media="(max-width: 600px)">
+                <source srcset="images/hero-large.webp" media="(min-width: 601px)">
+                <img src="images/hero-large.webp" alt="Botswana Landscape">
+            </picture>
+        </section>
+        <section class="content">
+            <h2>About Botswana</h2>
+            <p>Botswana, a landlocked country in Southern Africa, is known for its diverse wildlife and natural beauty, particularly the Okavango Delta and Chobe National Park.</p>
+            <div class="weather">
+                <h3>Weather <span class="weather-icon"></span></h3>
+                <svg class="weather-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <image href="https://byui-cse.github.io/wdd131-ww-course/images/iconfinder-svg.png" width="24" height="24" />
+                </svg>
+                <p id="windchill">Wind Chill: <span id="windchill-value"></span></p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> | Last modified: <span id="last-modified"></span></p>
+    </footer>
+    <script src="js/script.js" defer></script>
+</body>
+</html>
