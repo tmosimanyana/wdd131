@@ -1,109 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temple Album</title>
-    <link rel="stylesheet" href="styles/temples.css">
-    <link rel="stylesheet" href="styles/temples-large.css">
-    <script defer src="scripts/temples.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temples Picture Album</title>
+  <link rel="stylesheet" href="styles/temples.css">
+  <link rel="stylesheet" href="styles/temples-large.css">
+  <script defer src="scripts/temples.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Temple Album</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Old</a></li>
-                <li><a href="#">New</a></li>
-                <li><a href="#">Large</a></li>
-                <li><a href="#">Small</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h2>Current Selection: Home</h2>
-        <!-- Actual temple images and captions -->
-        <figure>
-            <img src="images/temple1.jpg" alt="Temple 1">
-            <figcaption>Temple 1</figcaption>
-        </figure>
-        <figure>
-            <img src="images/temple2.jpg" alt="Temple 2">
-            <figcaption>Temple 2</figcaption>
-        </figure>
-        <figure>
-            <img src="images/temple3.jpg" alt="Temple 3">
-            <figcaption>Temple 3</figcaption>
-        </figure>
-        <figure>
-            <img src="images/temple4.jpg" alt="Temple 4">
-            <figcaption>Temple 4</figcaption>
-        </figure>
-        <figure>
-            <img src="images/temple5.jpg" alt="Temple 5">
-            <figcaption>Temple 5</figcaption>
-        </figure>
-        <figure>
-            <img src="images/temple6.jpg" alt="Temple 6">
-            <figcaption>Temple 6</figcaption>
-        </figure>
-        <figure>
-            <img src="images/temple7.jpg" alt="Temple 7">
-            <figcaption>Temple 7</figcaption>
-        </figure>
-        <figure>
-            <img src="images/temple8.jpg" alt="Temple 8">
-            <figcaption>Temple 8</figcaption>
-        </figure>
-        <figure>
-            <img src="images/temple9.jpg" alt="Temple 9">
-            <figcaption>Temple 9</figcaption>
-        </figure>
-        <figure>
-            <img src="images/temple10.jpg" alt="Temple 10">
-            <figcaption>Temple 10</figcaption>
-        </figure>
-        <!-- Add more figure elements for temples 11 to 19 -->
-        <figure>
-            <img src="images/temple11.jpg" alt="Temple 11">
-            <figcaption>Temple 11</figcaption>
-        </figure>
-        <figure>
-            <img src="images/temple12.jpg" alt="Temple 12">
-            <figcaption>Temple 12</figcaption>
-        </figure>
-        <figure>
-            <img src="images/temple13.jpg" alt="Temple 13">
-            <figcaption>Temple 13</figcaption>
-        </figure>
-        <figure>
-            <img src="images/temple14.jpg" alt="Temple 14">
-            <figcaption>Temple 14</figcaption>
-        </figure>
-        <figure>
-            <img src="images/temple15.jpg" alt="Temple 15">
-            <figcaption>Temple 15</figcaption>
-        </figure>
-        <figure>
-            <img src="images/temple16.jpg" alt="Temple 16">
-            <figcaption>Temple 16</figcaption>
-        </figure>
-        <figure>
-            <img src="images/temple17.jpg" alt="Temple 17">
-            <figcaption>Temple 17</figcaption>
-        </figure>
-        <figure>
-            <img src="images/temple18.jpg" alt="Temple 18">
-            <figcaption>Temple 18</figcaption>
-        </figure>
-        <figure>
-            <img src="images/temple19.jpg" alt="Temple 19">
-            <figcaption>Temple 19</figcaption>
-        </figure>
-    </main>
-    <footer>
-        &copy; 2024 <Tinny class="B Mosimanyana"></Tinny> | Last modified: June 4, 2024
-    </footer>
+  <header>
+    <h1>Temples Picture Album</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Old</a></li>
+        <li><a href="#">New</a></li>
+        <li><a href="#">Large</a></li>
+        <li><a href="#">Small</a></li>
+      </ul>
+      <button id="hamburger-menu">☰</button>
+    </nav>
+  </header>
+  <main>
+    <h2>Temple Gallery</h2>
+    <div class="gallery">
+      <figure>
+        <img src="path/to/temple1.jpg" alt="Temple 1">
+        <figcaption>Temple 1</figcaption>
+      </figure>
+      <!-- Repeat for 9 figures -->
+    </div>
+  </main>
+  <footer>
+    <p>&copy; <span id="year"></span> My Website</p>
+    <p>Last updated: <span id="lastModified"></span></p>
+  </footer>
 </body>
 </html>
