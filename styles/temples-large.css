@@ -1,15 +1,24 @@
-/* temples-large.css */
-@media (min-width: 601px) {
-    nav ul {
-      display: flex !important;
-    }
-  
-    #hamburger-menu {
-      display: none;
-    }
-  
-    .gallery {
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
-  }
+/* CSS for larger screens */
+header {
+  padding: 20px; /* Increase header padding for larger screens */
+}
+
+nav li {
+  margin: 0 15px; /* Increase margin between navigation menu items */
+}
+
+nav a {
+  font-size: 18px; /* Increase font size of navigation menu items */
+}
+
+main {
+  max-width: 1200px; /* Set maximum width for main content */
+  margin: 20px auto; /* Center main content horizontally */
+  padding: 0 20px; /* Add padding to main content */
+}
+
+.gallery {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust grid layout for larger screens */
+}
+
   

@@ -1,39 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Filtered Temples Picture Album</title>
-  <meta name="description" content="A picture album showcasing various beautiful temples with dynamic filtering.">
-  <meta name="author" content="Your Name">
-  <link rel="stylesheet" href="styles/filtered-temples.css">
-  <link rel="stylesheet" href="styles/filtered-temples-large.css">
-  <script defer src="scripts/filtered-temples.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtered Temples</title>
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
 </head>
 <body>
-  <header>
-    <h1>Temples Picture Album</h1>
-    <nav>
-      <ul>
-        <li><a href="#" id="filter-home">Home</a></li>
-        <li><a href="#" id="filter-old">Old</a></li>
-        <li><a href="#" id="filter-new">New</a></li>
-        <li><a href="#" id="filter-large">Large</a></li>
-        <li><a href="#" id="filter-small">Small</a></li>
-      </ul>
-      <button id="hamburger-menu">☰</button>
-    </nav>
-  </header>
-  <main>
-    <h2>Temple Gallery</h2>
-    <div id="gallery" class="gallery">
-      <!-- Temple cards will be inserted here dynamically -->
-    </div>
-  </main>
-  <footer>
-    <p>&copy; <span id="year"></span> My Website</p>
-    <p>Last updated: <span id="lastModified"></span></p>
-    <p>Author: Your Name</p>
-  </footer>
+    <header>
+        <h1>Temples Picture Album</h1>
+        <button id="hamburger-menu">&#9776;</button>
+        <nav>
+            <ul>
+                <li><a href="#" data-filter="Old">Old</a></li>
+                <li><a href="#" data-filter="New">New</a></li>
+                <li><a href="#" data-filter="Large">Large</a></li>
+                <li><a href="#" data-filter="Small">Small</a></li>
+                <li><a href="#" data-filter="Home">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="gallery"></main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Your Name</p>
+        <p>Last modified: <span id="lastModified"></span></p>
+    </footer>
+
+    <script src="scripts/temples.js" defer></script>
 </body>
 </html>

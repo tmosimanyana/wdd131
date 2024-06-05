@@ -1,86 +1,80 @@
-/* temples.css */
+/* CSS for mobile view */
 body {
-    font-family: 'Your chosen font', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  header {
+}
+
+header {
     background-color: #333;
-    color: #fff;
+    color: white;
     padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  
-  nav ul {
+}
+
+nav ul {
     list-style: none;
-    display: flex;
-    padding: 0;
-  }
-  
-  nav li {
+    display: none; /* Hide the navigation menu by default */
+}
+
+nav li {
     margin: 0 10px;
-  }
-  
-  nav a {
-    color: #fff;
+}
+
+nav a {
+    color: white;
     text-decoration: none;
     font-size: 16px;
-  }
-  
-  nav a:hover {
+}
+
+nav a:hover {
     text-decoration: underline;
-  }
-  
-  #hamburger-menu {
-    display: none;
+}
+
+#hamburger-menu {
+    display: block;
     background: none;
     border: none;
-    color: #fff;
+    color: white;
     font-size: 24px;
-  }
-  
-  main {
+}
+
+main {
     padding: 20px;
-  }
-  
-  .gallery {
+}
+
+.gallery {
     display: grid;
     grid-template-columns: 1fr;
     gap: 10px;
-  }
-  
-  figure {
+}
+
+figure {
     margin: 0;
-  }
-  
-  figcaption {
+}
+
+figcaption {
     text-align: center;
     font-size: 14px;
-  }
-  
-  footer {
+}
+
+footer {
     background-color: #333;
-    color: #fff;
+    color: white;
     text-align: center;
     padding: 10px 0;
-  }
-  
-  @media (max-width: 600px) {
+}
+
+@media (min-width: 601px) {
     nav ul {
-      display: none;
-      flex-direction: column;
+        display: flex; /* Display the navigation menu in a horizontal layout */
     }
-  
-    nav ul.show {
-      display: flex;
-    }
-  
+
     #hamburger-menu {
-      display: block;
+        display: none; /* Hide the hamburger menu button on larger screens */
     }
-  }
-  
+}
+
