@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filtered Temples Picture Album</title>
+  <meta name="description" content="A picture album showcasing various beautiful temples with dynamic filtering.">
+  <meta name="author" content="Your Name">
+  <link rel="stylesheet" href="styles/filtered-temples.css">
+  <link rel="stylesheet" href="styles/filtered-temples-large.css">
+  <script defer src="scripts/filtered-temples.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Temples Picture Album</h1>
+    <nav>
+      <ul>
+        <li><a href="#" id="filter-home">Home</a></li>
+        <li><a href="#" id="filter-old">Old</a></li>
+        <li><a href="#" id="filter-new">New</a></li>
+        <li><a href="#" id="filter-large">Large</a></li>
+        <li><a href="#" id="filter-small">Small</a></li>
+      </ul>
+      <button id="hamburger-menu">☰</button>
+    </nav>
+  </header>
+  <main>
+    <h2>Temple Gallery</h2>
+    <div id="gallery" class="gallery">
+      <!-- Temple cards will be inserted here dynamically -->
+    </div>
+  </main>
+  <footer>
+    <p>&copy; <span id="year"></span> My Website</p>
+    <p>Last updated: <span id="lastModified"></span></p>
+    <p>Author: Your Name</p>
+  </footer>
+</body>
+</html>
