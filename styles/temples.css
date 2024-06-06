@@ -30,12 +30,17 @@ header h1 {
     text-decoration: none;
 }
 
+.nav-menu a:hover {
+    color: #fff; /* Change text color on hover */
+    background-color: #333; /* Change background color on hover */
+}
+
 .hamburger {
     display: none;
 }
 
 .temple-card {
-    border: 1px solid #ccc;
+    border: #ccc solid 1px;
     border-radius: 5px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     margin: 1em;
@@ -52,37 +57,14 @@ header h1 {
     .nav-menu {
         justify-content: space-between;
     }
-
-    .nav-menu li {
-        margin: 0 1em;
-    }
-
-    .nav-menu a {
-        padding: 1em 2em;
-        .nav-menu a:hover {
-            color: #fff; /* Change text color on hover */
-            background-color: #333; /* Change background color on hover */
-        }
-        
-    }
-
-    .hamburger {
-        display: none;
-    }
-
-    .temple-card {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1em;
-    }
-
-    .temple-card img {
-        max-width: 100%;
-        height: auto;
-    }
 }
 
-
+@media (min-width: 768px) {
+    .nav-menu {
+        display: flex;
+        justify-content: center;
+    }
+}
 
 
 

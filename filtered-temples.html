@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temple Album</title>
-    <meta name="description" content="A picture album of various temples.">
+    <title>Filtered Temple Album</title>
+    <meta name="description" content="A picture album of various temples with filtering options.">
     <meta name="author" content="Tinny B. Mosimanyana">
     <link rel="stylesheet" href="styles/temples.css">
     <link rel="stylesheet" href="styles/temples-large.css">
-    <script defer src="scripts/filtered-temples.js"></script>
+    <script defer src="scripts/temples.js"></script>
 </head>
 <body>
     <header>
-        <h1>Temple Album</h1>
+        <h1>Filtered Temple Album</h1>
         <nav>
             <button class="hamburger" aria-label="Toggle navigation">&#9776;</button>
             <ul class="nav-menu">
-                <li><a href="#" data-filter="home">Home</a></li>
+                <li><a href="#" data-filter="all">Home</a></li>
                 <li><a href="#" data-filter="old">Old</a></li>
                 <li><a href="#" data-filter="new">New</a></li>
                 <li><a href="#" data-filter="large">Large</a></li>
@@ -25,8 +25,6 @@
         </nav>
     </header>
     <main>
-        <h2 id="currentFilter">Home</h2>
-        <div id="temple-cards"></div>
     </main>
     <footer>
         <p>&copy; <span id="year"></span> Tinny B. Mosimanyana</p>
