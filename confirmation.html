@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #3a003d;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .confirmation-container {
+            background-color: #b0a1b9;
+            padding: 20px;
+            border-radius: 10px;
+            width: 400px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+    <div class="confirmation-container">
+        <h1>Review Confirmation</h1>
+        <p><strong>Product Name:</strong> <span id="productName"></span></p>
+        <p><strong>Overall Rating:</strong> <span id="rating"></span></p>
+        <p><strong>Date of Installation:</strong> <span id="date"></span></p>
+        <p><strong>Useful Features:</strong> <span id="features"></span></p>
+        <p><strong>Written Review:</strong> <span id="review"></span></p>
+        <p><strong>Your Name:</strong> <span id="name"></span></p>
+        <div class="footer">
+            &copy;2024 🌺 Tinny.B.Mosimanyana 🌺 Botswana<br>
+            Last Modification: 02/26/2024 13:56:10
+        </div>
+    </div>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        document.getElementById('productName').textContent = urlParams.get('productName');
+        document.getElementById('rating').textContent = urlParams.get('rating');
+        document.getElementById('date').textContent = urlParams.get('date');
+        document.getElementById('features').textContent = urlParams.getAll('features').join(', ');
+        document.getElementById('review').textContent = urlParams.get('review');
+        document.getElementById('name').textContent = urlParams.get('name');
+    </script>
+</body>
+</html>
