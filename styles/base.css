@@ -1,92 +1,57 @@
-/* General Styles */
+/* Base CSS */
 body {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    background-color: #f4f4f4;
-    color: #333;
 }
 
-/* Container */
 .container {
     width: 90%;
-    max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Header Styles */
 header {
-    background-color: #003366;
-    color: #fff;
-    padding: 1rem 0;
+    background-color: #f2f2f2;
+    padding: 20px 0;
 }
 
-header h1 {
+header nav ul {
+    list-style-type: none;
     margin: 0;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
     padding: 0;
-    text-align: center;
 }
 
-nav ul li {
+header nav ul li {
     display: inline;
-    margin: 0 1rem;
+    margin-right: 20px;
 }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Main Content Styles */
-main {
+.contact-form form {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 2rem 0;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
-.card {
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 1rem 0;
-    padding: 1rem;
-    border-radius: 5px;
-    width: 100%;
-    max-width: 800px;
+.contact-form label {
+    margin-bottom: 8px;
 }
 
-.card h2 {
-    margin-top: 0;
+.contact-form input,
+.contact-form textarea {
+    padding: 8px;
+    margin-bottom: 16px;
 }
 
-.card img {
-    max-width: 100%;
-    border-radius: 5px;
-}
-
-/* Footer Styles */
-footer {
-    background-color: #003366;
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #007bff;
     color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    border: none;
+    cursor: pointer;
 }
 
-footer p {
-    margin: 0.5rem 0;
+.contact-form button:hover {
+    background-color: #0056b3;
 }
 
