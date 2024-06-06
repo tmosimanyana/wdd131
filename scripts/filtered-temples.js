@@ -79,3 +79,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     displayTemples(temples); // Initial display of all temples
 });
+
+
