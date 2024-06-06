@@ -1,123 +1,56 @@
-/* Main CSS for mobile-first design */
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-  }
-  
-  header h1 {
-    margin: 0;
-    font-size: 1.5em;
-  }
-  
-  nav ul {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  nav li {
-    margin-bottom: 10px;
-  }
-  
-  nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2em;
-  }
-  
-  nav a:hover {
-    text-decoration: underline;
-  }
-  
-  #hamburger-menu {
-    display: block;
-    font-size: 1.5em;
-    cursor: pointer;
-  }
-  
-  #hamburger-menu.open + nav ul {
-    display: flex;
-  }
-  
-  main {
-    margin: 20px;
-  }
-  
-  .gallery {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  
-  figure {
-    margin: 0;
-    border: 1px solid #ccc;
-    padding: 10px;
-    background: #f9f9f9;
-  }
-  
-  figure img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
-  
-  figure figcaption {
-    text-align: center;
-    margin-top: 10px;
-  }
-  
-  footer {
-    text-align: center;
-    padding: 20px;
-    background: #333;
-    color: white;
-  }
-  
-  footer p {
-    margin: 5px 0;
-  }
-  
-  /* Media Query for Larger Screens */
-  @media (min-width: 768px) {
-    header h1 {
-      font-size: 2em;
-    }
-  
-    nav ul {
-      flex-direction: row;
-    }
-  
-    nav li {
-      margin-right: 15px;
-      margin-bottom: 0;
-    }
-  
-    #hamburger-menu {
-      display: none;
-    }
-  
-    main {
-      max-width: 1200px;
-      margin: 20px auto;
-      padding: 0 20px;
-    }
-  
-    .gallery {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-  
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1em 0;
+  text-align: center;
+}
+
+.nav-menu {
+  display: none;
+  list-style: none;
+  padding: 0;
+}
+
+.nav-menu.visible {
+  display: block;
+}
+
+.nav-menu li {
+  margin: 0.5em 0;
+}
+
+.nav-menu a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.hamburger {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5em;
+}
+
+main {
+  max-width: 800px;
+  margin: 2em auto;
+  padding: 1em;
+}
+
+.temple-card {
+  border: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 1em;
+  text-align: center;
+}
+
+.temple-card img {
+  max-width: 100%;
+  height: auto;
+}
+
   

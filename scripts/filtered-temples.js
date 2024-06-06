@@ -1,88 +1,123 @@
-// filtered-temples.js
 document.addEventListener('DOMContentLoaded', () => {
-    const yearSpan = document.getElementById('year');
-    const lastModifiedSpan = document.getElementById('lastModified');
-    const hamburgerMenu = document.getElementById('hamburger-menu');
-    const navUl = document.querySelector('nav ul');
-    const gallery = document.getElementById('gallery');
-  
-    // Set the current year
-    yearSpan.textContent = new Date().getFullYear();
-  
-    // Set the last modified date
-    lastModifiedSpan.textContent = document.lastModified;
-  
-    // Hamburger menu toggle
-    hamburgerMenu.addEventListener('click', () => {
-      navUl.classList.toggle('show');
-      if (navUl.classList.contains('show')) {
-        hamburgerMenu.textContent = '✖';
-      } else {
-        hamburgerMenu.textContent = '☰';
+  const yearSpan = document.getElementById('year');
+  const lastModifiedSpan = document.getElementById('lastModified');
+  const hamburger = document.querySelector('.hamburger');
+  const navMenu = document.querySelector('.nav-menu');
+  const templeCardsContainer = document.getElementById('temple-cards');
+  const temples = [
+      {
+          name: 'Salt Lake Temple',
+          location: 'Salt Lake City, Utah, USA',
+          dedicated: '1893-04-06',
+          area: 253015,
+          image: 'https://path/to/salt-lake-temple.jpg',
+      },
+      {
+          name: 'Laie Hawaii Temple',
+          location: 'Laie, Hawaii, USA',
+          dedicated: '1919-11-27',
+          area: 47475,
+          image: 'https://path/to/laie-hawaii-temple.jpg',
+      },
+      {
+          name: 'Manila Philippines Temple',
+          location: 'Manila, Philippines',
+          dedicated: '1984-09-25',
+          area: 26980,
+          image: 'https://path/to/manila-philippines-temple.jpg',
+      },
+      {
+          name: 'Provo City Center Temple',
+          location: 'Provo, Utah, USA',
+          dedicated: '2016-03-20',
+          area: 85000,
+          image: 'https://path/to/provo-city-center-temple.jpg',
+      },
+      {
+          name: 'Kyiv Ukraine Temple',
+          location: 'Kyiv, Ukraine',
+          dedicated: '2010-08-29',
+          area: 22100,
+          image: 'https://path/to/kyiv-ukraine-temple.jpg',
+      },
+      {
+          name: 'Paris France Temple',
+          location: 'Le Chesnay, France',
+          dedicated: '2017-05-21',
+          area: 44124,
+          image: 'https://path/to/paris-france-temple.jpg',
+      },
+      {
+          name: 'Rome Italy Temple',
+          location: 'Rome, Italy',
+          dedicated: '2019-03-10',
+          area: 40169,
+          image: 'https://path/to/rome-italy-temple.jpg',
       }
-    });
-  
-    // Temple data array
-    const temples = [
-      { name: "Temple 1", location: "Location 1", dedication: "1900-01-01", area: 50000, imgSrc: "https://example.com/images/temple1.jpg" },
-      { name: "Temple 2", location: "Location 2", dedication: "1910-01-01", area: 120000, imgSrc: "https://example.com/images/temple2.jpg" },
-      { name: "Temple 3", location: "Location 3", dedication: "2005-01-01", area: 80000, imgSrc: "https://example.com/images/temple3.jpg" },
-      { name: "Temple 4", location: "Location 4", dedication: "1980-01-01", area: 95000, imgSrc: "https://example.com/images/temple4.jpg" },
-      { name: "Temple 5", location: "Location 5", dedication: "2015-01-01", area: 110000, imgSrc: "https://example.com/images/temple5.jpg" },
-      { name: "Temple 6", location: "Location 6", dedication: "1890-01-01", area: 40000, imgSrc: "https://example.com/images/temple6.jpg" },
-      { name: "Temple 7", location: "Location 7", dedication: "2020-01-01", area: 150000, imgSrc: "https://example.com/images/temple7.jpg" },
-      { name: "Temple 8", location: "Location 8", dedication: "2022-01-01", area: 30000, imgSrc: "https://example.com/images/temple8.jpg" },
-      { name: "Temple 9", location: "Location 9", dedication: "1990-01-01", area: 60000, imgSrc: "https://example.com/images/temple9.jpg" },
-      { name: "Temple 10", location: "Location 10", dedication: "2023-01-01", area: 70000, imgSrc: "https://example.com/images/temple10.jpg" }
-    ];
-  
-    // Function to create and display temple cards
-    const displayTemples = (temples) => {
-      gallery.innerHTML = '';
-      temples.forEach(temple => {
-        const figure = document.createElement('figure');
-        const img = document.createElement('img');
-        const figcaption = document.createElement('figcaption');
-        
-        img.src = temple.imgSrc;
-        img.alt = temple.name;
-        img.loading = 'lazy';
-        figcaption.innerHTML = `
-          <h3>${temple.name}</h3>
-          <p>Location: ${temple.location}</p>
-          <p>Dedicated: ${temple.dedication}</p>
-          <p>Area: ${temple.area.toLocaleString()} sq ft</p>
-        `;
-        
-        figure.appendChild(img);
-        figure.appendChild(figcaption);
-        gallery.appendChild(figure);
+  ];
+
+  // Set the current year in the footer
+  yearSpan.textContent = new Date().getFullYear();
+
+  // Set the last modified date in the footer
+  lastModifiedSpan.textContent = document.lastModified;
+
+  // Toggle navigation menu
+  hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('visible');
+  });
+
+  // Function to create and display temple cards
+  function displayTemples(filteredTemples) {
+      templeCardsContainer.innerHTML = ''; // Clear previous content
+      filteredTemples.forEach(temple => {
+          const card = document.createElement('div');
+          card.classList.add('temple-card');
+          card.innerHTML = `
+              <figure>
+                  <img src="${temple.image}" alt="${temple.name}" loading="lazy">
+                  <figcaption>${temple.name}</figcaption>
+              </figure>
+              <p>Location: ${temple.location}</p>
+              <p>Dedicated: ${temple.dedicated}</p>
+              <p>Area: ${temple.area} sq ft</p>
+          `;
+          templeCardsContainer.appendChild(card);
       });
-    };
-  
-    // Display all temples initially
-    displayTemples(temples);
-  
-    // Filter functions
-    const filterOld = () => {
-      const filtered = temples.filter(temple => new Date(temple.dedication) < new Date('1900-01-01'));
-      displayTemples(filtered);
-    };
-  
-    const filterNew = () => {
-      const filtered = temples.filter(temple => new Date(temple.dedication) > new Date('2000-01-01'));
-      displayTemples(filtered);
-    };
-  
-    const filterLarge = () => {
-      const filtered = temples.filter(temple => temple.area > 90000);
-      displayTemples(filtered);
-    };
-  
-    const filterSmall = () => {
-      const filtered = temples.filter(temple => temple.area < 10000);
-      displayTemples(filtered);
-    };
-  
-    const filterHome
-  
+  }
+
+  // Function to filter temples
+  function filterTemples(criteria) {
+      let filteredTemples;
+      switch (criteria) {
+          case 'old':
+              filteredTemples = temples.filter(temple => new Date(temple.dedicated) < new Date('1900-01-01'));
+              break;
+          case 'new':
+              filteredTemples = temples.filter(temple => new Date(temple.dedicated) > new Date('2000-01-01'));
+              break;
+          case 'large':
+              filteredTemples = temples.filter(temple => temple.area > 90000);
+              break;
+          case 'small':
+              filteredTemples = temples.filter(temple => temple.area < 10000);
+              break;
+          default:
+              filteredTemples = temples;
+      }
+      displayTemples(filteredTemples);
+  }
+
+  // Event listeners for filter buttons
+  document.querySelectorAll('.nav-menu a').forEach(link => {
+      link.addEventListener('click', (event) => {
+          event.preventDefault();
+          const filter = event.target.getAttribute('data-filter');
+          filterTemples(filter);
+      });
+  });
+
+  // Display all temples on initial load
+  filterTemples('home');
+});
+

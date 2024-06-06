@@ -3,34 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Filtered Temples</title>
-    <meta name="description" content="This page displays a filtered picture album of temples, allowing users to view temples built before 1900, after 2000, large temples, small temples, and all temples.">
-    <meta name="author" content="Tinny.B.Mosimanyana">
-    <link rel="stylesheet" href="styles/temples.css">
-    <link rel="stylesheet" href="styles/temples-large.css">
+    <title>Filtered Temple Album</title>
+    <meta name="description" content="A picture album of various temples with filtering options.">
+    <meta name="author" content="Tinny B. Mosimanyana">
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css">
+    <script defer src="scripts/filtered-temples.js"></script>
 </head>
 <body>
     <header>
-        <h1>Temples Picture Album</h1>
-        <button id="hamburger-menu">&#9776;</button>
+        <h1>Temple Album</h1>
         <nav>
-            <ul>
-                <li><a href="#" data-filter="Old">Old</a></li>
-                <li><a href="#" data-filter="New">New</a></li>
-                <li><a href="#" data-filter="Large">Large</a></li>
-                <li><a href="#" data-filter="Small">Small</a></li>
-                <li><a href="#" data-filter="Home">Home</a></li>
+            <button class="hamburger" aria-label="Toggle navigation">&#9776;</button>
+            <ul class="nav-menu">
+                <li><a href="#" data-filter="home">Home</a></li>
+                <li><a href="#" data-filter="old">Old</a></li>
+                <li><a href="#" data-filter="new">New</a></li>
+                <li><a href="#" data-filter="large">Large</a></li>
+                <li><a href="#" data-filter="small">Small</a></li>
             </ul>
         </nav>
     </header>
-
-    <main class="gallery"></main>
-
+    <main>
+        <h2>Home</h2>
+        <div id="temple-cards"></div>
+    </main>
     <footer>
-        <p>&copy; <span id="year"></span> Tinny.B.Mosimanyana</p>
+        <p>&copy; <span id="year"></span> Tinny B. Mosimanyana</p>
         <p>Last modified: <span id="lastModified"></span></p>
     </footer>
-
-    <script src="scripts/temples.js" defer></script>
 </body>
 </html>
