@@ -1,82 +1,93 @@
+/* styles.css */
+
+/* Body styles */
 body {
-    font-family: 'Open Sans', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
     color: #333;
-}
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
-header {
-    background-color: #0073e6;
-    color: white;
-    padding: 20px 0;
-}
-header h1 {
-    text-align: center;
     margin: 0;
-}
-nav ul {
-    list-style: none;
     padding: 0;
-    text-align: center;
 }
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
+
+/* Form container */
 main {
-    padding: 20px 0;
-}
-.card {
-    background-color: white;
+    max-width: 600px;
+    margin: 0 auto;
     padding: 20px;
-    margin: 20px 0;
+    background-color: #fff;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-.card h2 {
-    margin-top: 0;
+
+/* Form labels */
+label {
+    font-weight: bold;
 }
-.card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-footer {
-    background-color: #0073e6;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-}
-form {
-    display: flex;
-    flex-direction: column;
-}
-form label {
-    margin-top: 10px;
-}
-form input, form textarea {
-    padding: 10px;
-    margin-top: 5px;
-    border-radius: 5px;
+
+/* Form inputs */
+input[type="text"],
+input[type="date"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
     border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
-form button {
-    margin-top: 10px;
+
+/* Select input */
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 30 10" xmlns="http://www.w3.org/2000/svg"><path d="M 5 5 L 25 5 L 15 10 Z"></path></svg>');
+    background-repeat: no-repeat;
+    background-position-x: 98%;
+    background-position-y: center;
+}
+
+/* Submit button */
+input[type="submit"] {
+    width: 100%;
     padding: 10px;
+    background-color: #007bff;
+    color: #fff;
     border: none;
-    border-radius: 5px;
-    background-color: #0073e6;
-    color: white;
+    border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
-form button:hover {
-    background-color: #005bb5;
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
 }
+
+/* Footer styles */
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Confirmation page styles (review.html) */
+.confirmation {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.counter {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+

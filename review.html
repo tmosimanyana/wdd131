@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Submission Confirmation</title>
+    <!-- Add your CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<main class="confirmation">
+    <h2>Thank you for your review!</h2>
+    <p>Your review has been submitted successfully.</p>
+    
+    <!-- Counter for number of reviews submitted -->
+    <div class="counter" id="counter"></div>
+</main>
+
+<!-- Add your JavaScript file to increment the counter -->
+<script src="script.js"></script>
+<script>
+    // Increment counter using localStorage
+    if(localStorage.getItem('reviewCounter')) {
+        let counter = parseInt(localStorage.getItem('reviewCounter'));
+        counter++;
+        localStorage.setItem('reviewCounter', counter);
+        document.getElementById('counter').textContent = `Total Reviews Submitted: ${counter}`;
+    } else {
+        localStorage.setItem('reviewCounter', 1);
+        document.getElementById('counter').textContent = `Total Reviews Submitted: 1`;
+    }
+</script>
+
+</body>
+</html>
