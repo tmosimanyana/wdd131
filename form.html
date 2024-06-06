@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Review</title>
+    <meta name="description" content="Form for submitting product reviews">
+    <meta name="author" content="Tinny.B.Mosimanyan">
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
@@ -25,10 +27,10 @@
             <label for="date">Date of Installation *</label>
             <input type="date" id="date" name="date" required>
             <label>Which features did you find useful in the product? (Check all that apply)</label>
-            <label><input type="checkbox" name="features" value="Durability"> Durability</label>
-            <label><input type="checkbox" name="features" value="Ease of Use"> Ease of Use</label>
-            <label><input type="checkbox" name="features" value="Performance"> Performance</label>
-            <label><input type="checkbox" name="features" value="Design"> Design</label>
+            <label><input type="checkbox" id="feature1" name="features" value="Durability"> Durability</label>
+            <label><input type="checkbox" id="feature2" name="features" value="Ease of Use"> Ease of Use</label>
+            <label><input type="checkbox" id="feature3" name="features" value="Performance"> Performance</label>
+            <label><input type="checkbox" id="feature4" name="features" value="Design"> Design</label>
             <label for="review">Written Review</label>
             <textarea id="review" name="review" rows="4"></textarea>
             <label for="name">Your Name</label>
@@ -38,10 +40,11 @@
             </div>
         </form>
         <div class="footer">
-            &copy;2024 🌺 <TinnY class="B Mosimanyana"></TinnY> 🌺Botswana<br>
+            &copy;2024 🌺 Tinny.B.Mosimanyana 🌺 Botswana<br>
             Last Modification: 02/26/2024 13:56:10
         </div>
     </div>
     <script src="scripts/script.js"></script>
 </body>
 </html>
+
