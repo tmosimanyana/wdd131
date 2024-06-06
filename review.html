@@ -12,25 +12,13 @@
 
 <main>
     <h1>Review Submission Confirmation</h1>
-    <!-- Counter for number of reviews submitted -->
-    <div class="counter" id="counter"></div>
+    <form method="get" action="review.html">
+        <!-- Form fields will be added next -->
+    </form>
 </main>
 
-<script src="scripts/script.js" defer></script>
-<script>
-    // Increment counter using localStorage
-    if(localStorage.getItem('reviewCounter')) {
-        let counter = parseInt(localStorage.getItem('reviewCounter'));
-        counter++;
-        localStorage.setItem('reviewCounter', counter);
-        document.getElementById('counter').textContent = `Total Reviews Submitted: ${counter}`;
-    } else {
-        localStorage.setItem('reviewCounter', 1);
-        document.getElementById('counter').textContent = `Total Reviews Submitted: 1`;
-    }
-</script>
+<script src="scripts/script.js"></script>
 
 </body>
 </html>
-
 
