@@ -1,15 +1,21 @@
-/* CSS for larger screens */
-header {
-  padding: 20px; /* Increase header padding for larger screens */
-}
+@media (min-width: 600px) {
+  .nav-menu {
+      display: flex;
+      justify-content: space-around;
+  }
 
-nav li {
-  margin: 0 15px; /* Increase margin between navigation menu items */
-}
+  .hamburger {
+      display: none;
+  }
 
-nav a {
-  font-size: 18px; /* Increase font size of navigation menu items */
-}
+  main {
+      max-width: 1200px;
+      margin: 0 auto;
+  }
 
-main {
-  max-width: 1200
+  figure {
+      display: inline-block;
+      width: 30%;
+      margin: 1%;
+  }
+}

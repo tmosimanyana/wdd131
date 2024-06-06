@@ -1,6 +1,5 @@
-/* CSS for mobile view */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,73 +8,62 @@ body {
 header {
     background-color: #333;
     color: white;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 1em;
+    text-align: center;
 }
 
-nav ul {
-    list-style: none;
-    display: none; /* Hide the navigation menu by default */
-}
-
-nav li {
-    margin: 0 10px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-#hamburger-menu {
+.hamburger {
     display: block;
+    cursor: pointer;
+    font-size: 2em;
     background: none;
     border: none;
     color: white;
-    font-size: 24px;
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    display: none;
+}
+
+.nav-menu li {
+    padding: 0.5em;
+}
+
+.nav-menu li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.nav-menu li a:hover {
+    background-color: #555;
 }
 
 main {
-    padding: 20px;
+    padding: 1em;
 }
 
-.gallery {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
+main h2 {
+    text-align: center;
 }
 
 figure {
-    margin: 0;
+    margin: 0 auto;
+    text-align: center;
 }
 
-figcaption {
-    text-align: center;
-    font-size: 14px;
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px 0;
-}
-
-@media (min-width: 601px) {
-    nav ul {
-        display: flex; /* Display the navigation menu in a horizontal layout */
-    }
-
-    #hamburger-menu {
-        display: none; /* Hide the hamburger menu button on larger screens */
-    }
+    padding: 1em;
 }
 
 
