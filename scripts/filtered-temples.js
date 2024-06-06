@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const hamburger = document.querySelector('.hamburger');
   const navMenu = document.querySelector('.nav-menu');
   const templeCardsContainer = document.getElementById('temple-cards');
+  const currentFilterHeading = document.getElementById('currentFilter');
+
   const temples = [
       {
           name: 'Salt Lake Temple',
@@ -53,6 +55,27 @@ document.addEventListener('DOMContentLoaded', () => {
           dedicated: '2019-03-10',
           area: 40169,
           image: 'https://path/to/rome-italy-temple.jpg',
+      },
+      {
+          name: 'Additional Temple 1',
+          location: 'Location 1',
+          dedicated: '2001-01-01',
+          area: 100000,
+          image: 'https://path/to/additional-temple-1.jpg',
+      },
+      {
+          name: 'Additional Temple 2',
+          location: 'Location 2',
+          dedicated: '1899-01-01',
+          area: 9000,
+          image: 'https://path/to/additional-temple-2.jpg',
+      },
+      {
+          name: 'Additional Temple 3',
+          location: 'Location 3',
+          dedicated: '1999-01-01',
+          area: 50000,
+          image: 'https://path/to/additional-temple-3.jpg',
       }
   ];
 
@@ -92,18 +115,23 @@ document.addEventListener('DOMContentLoaded', () => {
       switch (criteria) {
           case 'old':
               filteredTemples = temples.filter(temple => new Date(temple.dedicated) < new Date('1900-01-01'));
+              currentFilterHeading.textContent = 'Old Temples';
               break;
           case 'new':
               filteredTemples = temples.filter(temple => new Date(temple.dedicated) > new Date('2000-01-01'));
+              currentFilterHeading.textContent = 'New Temples';
               break;
           case 'large':
               filteredTemples = temples.filter(temple => temple.area > 90000);
+              currentFilterHeading.textContent = 'Large Temples';
               break;
           case 'small':
               filteredTemples = temples.filter(temple => temple.area < 10000);
+              currentFilterHeading.textContent = 'Small Temples';
               break;
           default:
               filteredTemples = temples;
+              currentFilterHeading.textContent = 'Home';
       }
       displayTemples(filteredTemples);
   }

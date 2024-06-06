@@ -1,5 +1,7 @@
 body {
   font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 header {
@@ -13,6 +15,8 @@ header {
   display: none;
   list-style: none;
   padding: 0;
+  margin: 0;
+  background-color: #444;
 }
 
 .nav-menu.visible {
@@ -26,6 +30,8 @@ header {
 .nav-menu a {
   color: #fff;
   text-decoration: none;
+  padding: 0.5em 1em;
+  display: block;
 }
 
 .hamburger {
@@ -33,6 +39,7 @@ header {
   border: none;
   color: #fff;
   font-size: 1.5em;
+  cursor: pointer;
 }
 
 main {
@@ -51,6 +58,28 @@ main {
 .temple-card img {
   max-width: 100%;
   height: auto;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1em 0;
+}
+
+@media (min-width: 768px) {
+  .nav-menu {
+      display: flex;
+      justify-content: center;
+  }
+
+  .nav-menu li {
+      margin: 0;
+  }
+
+  .nav-menu a {
+      padding: 1em;
+  }
 }
 
   
