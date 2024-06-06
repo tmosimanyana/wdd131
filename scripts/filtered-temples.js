@@ -76,75 +76,138 @@ document.addEventListener('DOMContentLoaded', () => {
             dedicated: "2010, August, 29",
             area: 22943,
             imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/kyiv-ukraine/400x250/kyiv-ukraine-temple-lds-1014892-wallpaper.jpg"
+        },
+        {
+            templeName: "Paris France",
+            location: "Le Chesnay, France",
+            dedicated: "2017, May, 21",
+            area: 44500,
+            imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/paris-france/400x250/paris-france-temple-exterior.jpg"
+        },
+        {
+            templeName: "Tokyo Japan",
+            location: "Tokyo, Japan",
+            dedicated: "1980, October, 27",
+            area: 52000,
+            imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/tokyo-japan/400x250/tokyo-japan-temple-exterior.jpg"
+        },
+        {
+            templeName: "São Paulo Brazil",
+            location: "São Paulo, Brazil",
+            dedicated: "1978, October, 30",
+            area: 54500,
+            imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/sao-paulo-brazil/400x250/sao-paulo-brazil-temple-exterior.jpg"
+        },
+        {
+            templeName: "Johannesburg South Africa",
+            location: "Johannesburg, South Africa",
+            dedicated: "1985, August, 24",
+            area: 55556,
+            imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/johannesburg-south-africa/400x250/johannesburg-south-africa-temple-exterior.jpg"
+        },
+        {
+            templeName: "Laie Hawaii",
+            location: "Laie, Hawaii, United States",
+            dedicated: "1919, November, 27",
+            area: 40000,
+            imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/laie-hawaii/400x250/laie-hawaii-temple-exterior.jpg"
+        },
+        {
+            templeName: "Frankfurt Germany",
+            location: "Friedrichsdorf, Germany",
+            dedicated: "1987, August, 28",
+            area: 45000,
+            imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/frankfurt-germany/400x250/frankfurt-germany-temple-exterior.jpg"
+        },
+        {
+            templeName: "Accra Ghana",
+            location: "Accra, Ghana",
+            dedicated: "2004, January, 11",
+            area: 17300,
+            imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/accra-ghana/400x250/accra-ghana-temple-exterior.jpg"
+        },
+        {
+            templeName: "Santiago Chile",
+            location: "Santiago, Chile",
+            dedicated: "1983, September, 15",
+            area: 23633,
+            imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/santiago-chile/400x250/santiago-chile-temple-exterior.jpg"
+        },
+        {
+            templeName: "Cardston Alberta",
+            location: "Cardston, Alberta, Canada",
+            dedicated: "1923, August, 26",
+            area: 88000,
+            imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/cardston-alberta/400x250/cardston-alberta-temple-exterior.jpg"
+        },
+        {
+            templeName: "Palmyra New York",
+            location: "Palmyra, New York, United States",
+            dedicated: "2000, April, 6",
+            area: 10700,
+            imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/palmyra-new-york/400x250/palmyra-new-york-temple-exterior.jpg"
+        },
+        {
+            templeName: "Cebu City Philippines",
+            location: "Cebu City, Philippines",
+            dedicated: "2010, June, 13",
+            area: 21500,
+            imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/cebu-city-philippines/400x250/cebu-city-philippines-temple-exterior.jpg"
         }
     ];
 
-    // Set the current year in the footer
-    yearSpan.textContent = new Date().getFullYear();
-
-    // Set the last modified date in the footer
-    lastModifiedSpan.textContent = document.lastModified;
-
-    // Toggle navigation menu
-    hamburger.addEventListener('click', () => {
-        navMenu.classList.toggle('visible');
-    });
-
-    // Function to create and display temple cards
     function displayTemples(filteredTemples) {
-        templeCardsContainer.innerHTML = ''; // Clear previous content
+        templeCardsContainer.innerHTML = '';
         filteredTemples.forEach(temple => {
-            const card = document.createElement('div');
-            card.classList.add('temple-card');
-            card.innerHTML = `
-                <figure>
-                    <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
-                    <figcaption>${temple.templeName}</figcaption>
-                </figure>
+            const templeCard = document.createElement('div');
+            templeCard.classList.add('temple-card');
+            
+            templeCard.innerHTML = `
+                <h3>${temple.templeName}</h3>
                 <p>Location: ${temple.location}</p>
                 <p>Dedicated: ${temple.dedicated}</p>
                 <p>Area: ${temple.area} sq ft</p>
+                <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
             `;
-            templeCardsContainer.appendChild(card);
+            
+            templeCardsContainer.appendChild(templeCard);
         });
     }
 
-    // Function to filter temples
     function filterTemples(criteria) {
         let filteredTemples;
         switch (criteria) {
             case 'old':
-                filteredTemples = temples.filter(temple => new Date(temple.dedicated) < new Date('1900-01-01'));
-                currentFilterHeading.textContent = 'Old Temples';
+                filteredTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() < 1900);
                 break;
             case 'new':
-                filteredTemples = temples.filter(temple => new Date(temple.dedicated) > new Date('2000-01-01'));
-                currentFilterHeading.textContent = 'New Temples';
+                filteredTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() > 2000);
                 break;
             case 'large':
                 filteredTemples = temples.filter(temple => temple.area > 90000);
-                currentFilterHeading.textContent = 'Large Temples';
                 break;
             case 'small':
                 filteredTemples = temples.filter(temple => temple.area < 10000);
-                currentFilterHeading.textContent = 'Small Temples';
                 break;
             default:
                 filteredTemples = temples;
-                currentFilterHeading.textContent = 'Home';
         }
+        currentFilterHeading.textContent = criteria.charAt(0).toUpperCase() + criteria.slice(1);
         displayTemples(filteredTemples);
     }
 
-    // Event listeners for filter buttons
-    document.querySelectorAll('.nav-menu a').forEach(link => {
-        link.addEventListener('click', (event) => {
-            event.preventDefault();
-            const filter = event.target.getAttribute('data-filter');
-            filterTemples(filter);
-        });
+    yearSpan.textContent = new Date().getFullYear();
+    lastModifiedSpan.textContent = document.lastModified;
+    
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('show');
     });
 
-    // Display all temples on initial load
-    filterTemples('home');
+    navMenu.addEventListener('click', (e) => {
+        if (e.target.tagName === 'A') {
+            filterTemples(e.target.dataset.filter);
+        }
+    });
+
+    displayTemples(temples); // Initial display of all temples
 });
