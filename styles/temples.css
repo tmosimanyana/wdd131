@@ -66,6 +66,13 @@ header h1 {
     }
 }
 
+@media (min-width: 768px) {
+    .nav-menu {
+        display: flex;
+        justify-content: center;
+    }
+}
+
 
 
 
