@@ -59,6 +59,11 @@ header h1 {
 
     .nav-menu a {
         padding: 1em 2em;
+        .nav-menu a:hover {
+            color: #fff; /* Change text color on hover */
+            background-color: #333; /* Change background color on hover */
+        }
+        
     }
 
     .hamburger {
