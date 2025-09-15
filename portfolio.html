@@ -1,467 +1,31 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - Tinny Mosimanyana</title>
-  <meta name="description" content="Portfolio of Tinny Mosimanyana, showcasing web development projects.">
+  <title>Tinny Mosimanyana - Freelance Web Developer</title>
+  <meta name="description" content="Freelance Web Developer Portfolio - Tinny Mosimanyana. Creating responsive, user-friendly websites in Botswana.">
   <meta name="author" content="Tinny Mosimanyana">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      line-height: 1.6;
-      color: #333;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      min-height: 100vh;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    /* Header */
-    header {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      animation: slideDown 0.8s ease-out;
-    }
-
-    header .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 20px;
-    }
-
-    header h1 {
-      color: white;
-      font-size: 1.8rem;
-      font-weight: 700;
-      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    }
-
-    nav ul {
-      display: flex;
-      list-style: none;
-      gap: 2rem;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-      padding: 0.5rem 1rem;
-      border-radius: 25px;
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-
-    nav a::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-      transition: left 0.5s;
-    }
-
-    nav a:hover::before {
-      left: 100%;
-    }
-
-    nav a:hover,
-    nav a.active {
-      background: rgba(255, 255, 255, 0.2);
-      transform: translateY(-2px);
-    }
-
-    /* Main Content */
-    main {
-      padding: 4rem 0;
-      animation: fadeInUp 1s ease-out 0.3s both;
-    }
-
-    .portfolio-intro {
-      text-align: center;
-      margin-bottom: 4rem;
-      color: white;
-    }
-
-    .portfolio-intro h2 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      background: linear-gradient(45deg, #fff, #f0f8ff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    }
-
-    .portfolio-intro p {
-      font-size: 1.2rem;
-      max-width: 800px;
-      margin: 0 auto;
-      opacity: 0.9;
-      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    }
-
-    /* Filter Buttons */
-    .filter-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-bottom: 3rem;
-      flex-wrap: wrap;
-    }
-
-    .filter-btn {
-      background: rgba(255, 255, 255, 0.1);
-      color: white;
-      border: 2px solid rgba(255, 255, 255, 0.3);
-      padding: 0.8rem 1.5rem;
-      border-radius: 50px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      font-weight: 500;
-      backdrop-filter: blur(10px);
-    }
-
-    .filter-btn:hover,
-    .filter-btn.active {
-      background: rgba(255, 255, 255, 0.2);
-      border-color: rgba(255, 255, 255, 0.6);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-    }
-
-    /* Projects Grid */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 2rem;
-      margin-bottom: 4rem;
-    }
-
-    .project-card {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(15px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      border-radius: 20px;
-      overflow: hidden;
-      transition: all 0.4s ease;
-      cursor: pointer;
-      position: relative;
-      animation: fadeInUp 0.8s ease-out both;
-    }
-
-    .project-card:nth-child(2) { animation-delay: 0.1s; }
-    .project-card:nth-child(3) { animation-delay: 0.2s; }
-    .project-card:nth-child(4) { animation-delay: 0.3s; }
-    .project-card:nth-child(5) { animation-delay: 0.4s; }
-
-    .project-card:hover {
-      transform: translateY(-10px) scale(1.02);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-      border-color: rgba(255, 255, 255, 0.4);
-    }
-
-    .project-image {
-      width: 100%;
-      height: 200px;
-      background: linear-gradient(45deg, #6a11cb 0%, #2575fc 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 1.2rem;
-      font-weight: 600;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .project-image::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-      transition: left 0.8s;
-    }
-
-    .project-card:hover .project-image::before {
-      left: 100%;
-    }
-
-    .project-content {
-      padding: 1.5rem;
-      color: white;
-    }
-
-    .project-content h3 {
-      font-size: 1.4rem;
-      margin-bottom: 0.8rem;
-      color: #fff;
-    }
-
-    .project-content p {
-      margin-bottom: 1rem;
-      opacity: 0.9;
-      line-height: 1.5;
-    }
-
-    .tech-stack {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin: 1rem 0;
-    }
-
-    .tech-tag {
-      background: rgba(255, 255, 255, 0.2);
-      color: white;
-      padding: 0.3rem 0.8rem;
-      border-radius: 15px;
-      font-size: 0.8rem;
-      font-weight: 500;
-    }
-
-    .project-link {
-      display: inline-block;
-      color: #fff;
-      text-decoration: none;
-      font-weight: 600;
-      padding: 0.8rem 1.5rem;
-      background: linear-gradient(45deg, #ff6b6b, #feca57);
-      border-radius: 25px;
-      transition: all 0.3s ease;
-      margin-top: 1rem;
-    }
-
-    .project-link:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-      background: linear-gradient(45deg, #ff5252, #ff9800);
-    }
-
-    /* More Projects Card */
-    .more-projects {
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
-      backdrop-filter: blur(15px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      border-radius: 20px;
-      padding: 2rem;
-      color: white;
-      animation: fadeInUp 0.8s ease-out 0.5s both;
-    }
-
-    .more-projects h3 {
-      font-size: 1.4rem;
-      margin-bottom: 1rem;
-      text-align: center;
-    }
-
-    .more-projects ul {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.8rem;
-    }
-
-    .more-projects li {
-      display: flex;
-      align-items: center;
-      padding: 0.8rem;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 10px;
-      transition: all 0.3s ease;
-    }
-
-    .more-projects li:hover {
-      background: rgba(255, 255, 255, 0.2);
-      transform: translateX(10px);
-    }
-
-    .more-projects a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 600;
-      margin-right: 1rem;
-    }
-
-    .more-projects a:hover {
-      text-decoration: underline;
-    }
-
-    /* Modal */
-    .modal {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.8);
-      backdrop-filter: blur(5px);
-      z-index: 2000;
-      animation: fadeIn 0.3s ease-out;
-    }
-
-    .modal-content {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(20px);
-      border-radius: 20px;
-      padding: 2rem;
-      max-width: 600px;
-      width: 90%;
-      max-height: 80vh;
-      overflow-y: auto;
-      animation: slideIn 0.4s ease-out;
-    }
-
-    .close-btn {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      background: none;
-      border: none;
-      font-size: 1.5rem;
-      cursor: pointer;
-      color: #666;
-      width: 30px;
-      height: 30px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-      transition: all 0.3s ease;
-    }
-
-    .close-btn:hover {
-      background: rgba(0, 0, 0, 0.1);
-      transform: rotate(90deg);
-    }
-
-    /* Footer */
-    footer {
-      background: rgba(0, 0, 0, 0.2);
-      backdrop-filter: blur(10px);
-      color: white;
-      text-align: center;
-      padding: 2rem 0;
-      margin-top: 4rem;
-    }
-
-    footer p {
-      margin-bottom: 0.5rem;
-      opacity: 0.9;
-    }
-
-    /* Animations */
-    @keyframes slideDown {
-      from {
-        transform: translateY(-100%);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
-
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes slideIn {
-      from {
-        opacity: 0;
-        transform: translate(-50%, -60%);
-      }
-      to {
-        opacity: 1;
-        transform: translate(-50%, -50%);
-      }
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      .portfolio-intro h2 {
-        font-size: 2.5rem;
-      }
-
-      .projects-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-      }
-
-      nav ul {
-        gap: 1rem;
-      }
-
-      nav a {
-        padding: 0.4rem 0.8rem;
-        font-size: 0.9rem;
-      }
-
-      .filter-buttons {
-        gap: 0.5rem;
-      }
-
-      .filter-btn {
-        padding: 0.6rem 1rem;
-        font-size: 0.9rem;
-      }
-    }
-
-    /* Hidden class for filtering */
-    .hidden {
-      display: none !important;
-    }
-  </style>
+  <meta name="keywords" content="web developer, freelance, Botswana, responsive design, frontend, fullstack">
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="scripts/scripts.js" defer></script>
 </head>
 <body>
   <header>
     <div class="container">
-      <h1>My Portfolio</h1>
+      <div class="logo">
+        <h1>Tinny Mosimanyana</h1>
+        <span class="tagline">Web Developer</span>
+      </div>
       <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="portfolio.html" class="active">Portfolio</a></li>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -469,328 +33,175 @@
   </header>
 
   <main>
-    <div class="container">
-      <section class="portfolio-intro">
-        <h2>Projects Showcase</h2>
-        <p>Here are some of the projects I have worked on. Each project highlights different skills — from front-end design and responsive layouts to React, Next.js, and full-stack development.</p>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h2 class="hero-title">
+            <span class="text-gradient">Crafting Digital</span>
+            <span class="text-gradient">Experiences</span>
+          </h2>
+          <p class="hero-description">
+            Passionate freelance web developer from Botswana, specializing in creating 
+            modern, responsive websites that bring your vision to life.
+          </p>
+          <div class="hero-buttons">
+            <a href="portfolio.html" class="btn btn-primary">View My Work</a>
+            <a href="contact.html" class="btn btn-secondary">Get In Touch</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="profile-container">
+            <div class="profile-glow"></div>
+            <img src="images/profile.webp" alt="Portrait of Tinny Mosimanyana" loading="lazy" class="profile-img">
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <div class="scroll-arrow"></div>
+      </div>
+    </section>
+
+    <div class="cards-container">
+      <!-- Skills Card -->
+      <section class="card skills-card">
+        <h2>Skills & Technologies</h2>
+        <div class="skills-grid">
+          <div class="skill-item">
+            <div class="skill-icon">🌐</div>
+            <h3>Frontend</h3>
+            <p>HTML5, CSS3, JavaScript, React, Next.js</p>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon">⚙️</div>
+            <h3>Backend</h3>
+            <p>Node.js, Express, APIs, Databases</p>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon">📱</div>
+            <h3>Design</h3>
+            <p>Responsive Design, UI/UX, Accessibility</p>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon">🚀</div>
+            <h3>Tools</h3>
+            <p>Git, GitHub, VS Code, Figma</p>
+          </div>
+        </div>
       </section>
 
-      <div class="filter-buttons">
-        <button class="filter-btn active" data-filter="all">All Projects</button>
-        <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
-        <button class="filter-btn" data-filter="react">React</button>
-        <button class="filter-btn" data-filter="frontend">Frontend</button>
-        <button class="filter-btn" data-filter="coursework">Coursework</button>
-      </div>
-
-      <section class="projects-grid">
+      <!-- About Me Card -->
+      <section class="card about-me">
+        <h2>About Me</h2>
+        <p>Hello! My name is Tinny Mosimanyana, a passionate freelance web developer based in Botswana. With several years of experience in web design and development, I specialize in creating responsive, user-friendly websites for clients across various industries.</p>
         
-        <!-- Project 1 -->
-        <article class="project-card" data-category="fullstack" data-project="handcrafted-haven">
-          <div class="project-image">
-            <div>🏺 Handcrafted Haven<br>Marketplace Platform</div>
+        <div class="stats-container">
+          <div class="stat-item">
+            <span class="stat-number" data-target="50">0</span>
+            <span class="stat-label">Projects</span>
           </div>
-          <div class="project-content">
-            <h3>Handcrafted Haven</h3>
-            <p>A full-stack marketplace platform for artisans to sell handmade goods. Features user profiles, product listings, and review system.</p>
-            <div class="tech-stack">
-              <span class="tech-tag">HTML</span>
-              <span class="tech-tag">CSS</span>
-              <span class="tech-tag">JavaScript</span>
-              <span class="tech-tag">Node.js</span>
-              <span class="tech-tag">Express</span>
-            </div>
-            <a href="https://github.com/Mikelesnr/handcrafted-haven" target="_blank" class="project-link">GitHub Repo</a>
+          <div class="stat-item">
+            <span class="stat-number" data-target="3">0</span>
+            <span class="stat-label">Years Experience</span>
           </div>
-        </article>
+          <div class="stat-item">
+            <span class="stat-number" data-target="100">0</span>
+            <span class="stat-label">Client Satisfaction</span>
+          </div>
+        </div>
 
-        <!-- Project 2 -->
-        <article class="project-card" data-category="react" data-project="nextjs-dashboard">
-          <div class="project-image" style="background: linear-gradient(45deg, #2196F3 0%, #21CBF3 100%);">
-            <div>📊 Next.js Dashboard<br>Admin Interface</div>
+        <div class="profile-wrapper">
+          <div class="glow-border">
+            <img src="images/profile.webp" alt="Portrait of Tinny Mosimanyana" loading="lazy" class="profile-img">
           </div>
-          <div class="project-content">
-            <h3>Next.js Dashboard</h3>
-            <p>A modern admin dashboard built with Next.js App Router. Demonstrates dynamic routing, server components, and API integration.</p>
-            <div class="tech-stack">
-              <span class="tech-tag">Next.js</span>
-              <span class="tech-tag">React</span>
-              <span class="tech-tag">Tailwind CSS</span>
-            </div>
-            <a href="https://github.com/tmosimanyana/nextjs-dashboard" target="_blank" class="project-link">GitHub Repo</a>
-          </div>
-        </article>
+        </div>
+      </section>
 
-        <!-- Project 3 -->
-        <article class="project-card" data-category="react" data-project="react-todo">
-          <div class="project-image" style="background: linear-gradient(45deg, #4CAF50 0%, #8BC34A 100%);">
-            <div>✅ React Todo App<br>Task Management</div>
+      <!-- Services Card -->
+      <section class="card services-card">
+        <h2>What I Offer</h2>
+        <div class="services-grid">
+          <div class="service-item">
+            <div class="service-icon">💻</div>
+            <h3>Web Development</h3>
+            <p>Custom websites built with modern technologies and best practices.</p>
           </div>
-          <div class="project-content">
-            <h3>React Todo App</h3>
-            <p>A task management app built with React. Features component-based architecture, state management, and a clean UI.</p>
-            <div class="tech-stack">
-              <span class="tech-tag">React</span>
-              <span class="tech-tag">JavaScript</span>
-              <span class="tech-tag">CSS</span>
-            </div>
-            <a href="https://github.com/tmosimanyana/react-todo-app" target="_blank" class="project-link">GitHub Repo</a>
+          <div class="service-item">
+            <div class="service-icon">📱</div>
+            <h3>Responsive Design</h3>
+            <p>Mobile-first designs that work perfectly on all devices.</p>
           </div>
-        </article>
+          <div class="service-item">
+            <div class="service-icon">🎨</div>
+            <h3>UI/UX Design</h3>
+            <p>User-centered design focused on great user experiences.</p>
+          </div>
+          <div class="service-item">
+            <div class="service-icon">⚡</div>
+            <h3>Performance</h3>
+            <p>Fast-loading, optimized websites for better user engagement.</p>
+          </div>
+        </div>
+      </section>
 
-        <!-- Project 4 -->
-        <article class="project-card" data-category="frontend coursework" data-project="wdd131">
-          <div class="project-image" style="background: linear-gradient(45deg, #FF9800 0%, #FF5722 100%);">
-            <div>🎓 WDD131 Project<br>Course Portfolio</div>
+      <!-- About Botswana Card -->
+      <section class="card about-botswana">
+        <h2>About Botswana</h2>
+        <p>Botswana is a landlocked country in Southern Africa. It is known for its diverse ecosystems, including the Okavango Delta, which becomes a lush animal habitat during the seasonal floods. Botswana is also known for its diamond mines and wildlife safaris.</p>
+        
+        <div class="botswana-facts">
+          <div class="fact-item">
+            <span class="fact-icon">🏛️</span>
+            <span>Capital: Gaborone</span>
           </div>
-          <div class="project-content">
-            <h3>WDD131 Project</h3>
-            <p>A multi-page site built during WDD131 coursework. Includes responsive navigation, forms, and interactive JavaScript elements.</p>
-            <div class="tech-stack">
-              <span class="tech-tag">HTML</span>
-              <span class="tech-tag">CSS</span>
-              <span class="tech-tag">JavaScript</span>
-            </div>
-            <a href="https://github.com/tmosimanyana/wdd131" target="_blank" class="project-link">GitHub Repo</a>
+          <div class="fact-item">
+            <span class="fact-icon">🗣️</span>
+            <span>Languages: English, Setswana</span>
           </div>
-        </article>
+          <div class="fact-item">
+            <span class="fact-icon">💎</span>
+            <span>Known for: Diamonds & Wildlife</span>
+          </div>
+        </div>
 
-        <!-- More Projects Card -->
-        <article class="more-projects" data-category="coursework">
-          <h3>🚀 More Projects</h3>
-          <ul>
-            <li>
-              <a href="https://github.com/tmosimanyana/wdd130" target="_blank">WDD130</a>
-              <span>– Introductory web design projects.</span>
-            </li>
-            <li>
-              <a href="https://github.com/tmosimanyana/Wdd330" target="_blank">WDD330</a>
-              <span>– Advanced web development exercises.</span>
-            </li>
-            <li>
-              <a href="https://github.com/tmosimanyana/wdd231" target="_blank">WDD231</a>
-              <span>– Coursework showcasing layouts and interactivity.</span>
-            </li>
-          </ul>
-        </article>
+        <div class="profile-wrapper small">
+          <div class="glow-border">
+            <img src="https://icons.iconarchive.com/icons/wikipedia/flags/1024/BW-Botswana-Flag-icon.png" alt="Flag of Botswana" loading="lazy" class="profile-img">
+          </div>
+        </div>
+      </section>
 
+      <!-- Contact CTA Card -->
+      <section class="card contact-cta">
+        <h2>Ready to Work Together?</h2>
+        <p>Let's bring your ideas to life with modern, professional web solutions.</p>
+        <div class="cta-buttons">
+          <a href="contact.html" class="btn btn-primary">Start a Project</a>
+          <a href="portfolio.html" class="btn btn-outline">View Portfolio</a>
+        </div>
       </section>
     </div>
   </main>
 
-  <!-- Modal for project details -->
-  <div id="project-modal" class="modal">
-    <div class="modal-content">
-      <button class="close-btn" onclick="closeModal()">&times;</button>
-      <div id="modal-body">
-        <!-- Dynamic content will be inserted here -->
-      </div>
-    </div>
-  </div>
-
   <footer>
-    <p>&copy; <span id="current-year"></span> 🌺 Tinny Mosimanyana 🌺 Botswana</p>
-    <p id="last-modified">Last Modified: </p>
+    <div class="footer-content">
+      <div class="footer-main">
+        <p>&copy; <span id="current-year"></span> 🌺 Tinny Mosimanyana 🌺 Botswana</p>
+        <div class="social-links">
+          <a href="mailto:tinnymosimanyana@gmail.com" class="social-link" aria-label="Email">📧</a>
+          <a href="tel:+26776376661" class="social-link" aria-label="Phone">📱</a>
+          <a href="https://github.com/tmosimanyana" target="_blank" class="social-link" aria-label="GitHub">🔗</a>
+        </div>
+      </div>
+      <p id="last-modified">Last Modified: </p>
+    </div>
   </footer>
 
-  <script>
-    // Project data for modal content
-    const projectData = {
-      'handcrafted-haven': {
-        title: 'Handcrafted Haven',
-        description: 'A comprehensive full-stack marketplace platform designed specifically for artisans to showcase and sell their handmade goods. The platform provides a complete ecosystem for both sellers and buyers.',
-        features: [
-          'User authentication and profile management',
-          'Product listing with image galleries',
-          'Shopping cart and checkout system',
-          'Review and rating system',
-          'Order tracking and management',
-          'Payment integration',
-          'Responsive design for all devices'
-        ],
-        tech: ['HTML5', 'CSS3', 'JavaScript ES6+', 'Node.js', 'Express.js', 'MongoDB', 'JWT Authentication'],
-        challenges: 'Implementing secure payment processing and creating an intuitive seller dashboard.',
-        github: 'https://github.com/Mikelesnr/handcrafted-haven'
-      },
-      'nextjs-dashboard': {
-        title: 'Next.js Dashboard',
-        description: 'A modern, responsive admin dashboard built with Next.js 13+ App Router, showcasing the latest React patterns and server-side rendering capabilities.',
-        features: [
-          'Server and client components integration',
-          'Dynamic routing with layouts',
-          'API route handlers',
-          'Real-time data visualization',
-          'User authentication',
-          'Dark/light theme toggle',
-          'Responsive design with Tailwind CSS'
-        ],
-        tech: ['Next.js 13+', 'React 18', 'TypeScript', 'Tailwind CSS', 'Prisma', 'PostgreSQL'],
-        challenges: 'Learning the new App Router paradigm and optimizing performance with server components.',
-        github: 'https://github.com/tmosimanyana/nextjs-dashboard'
-      },
-      'react-todo': {
-        title: 'React Todo App',
-        description: 'A feature-rich task management application built with React, demonstrating modern React patterns including hooks, context API, and component composition.',
-        features: [
-          'Add, edit, and delete tasks',
-          'Mark tasks as complete',
-          'Filter tasks by status',
-          'Local storage persistence',
-          'Drag and drop reordering',
-          'Priority levels',
-          'Due date reminders'
-        ],
-        tech: ['React 18', 'JavaScript ES6+', 'CSS Modules', 'React Hooks', 'Context API'],
-        challenges: 'Implementing smooth animations and managing complex state without external libraries.',
-        github: 'https://github.com/tmosimanyana/react-todo-app'
-      },
-      'wdd131': {
-        title: 'WDD131 Project',
-        description: 'A comprehensive web development project created during the WDD131 course, demonstrating proficiency in modern web technologies and responsive design principles.',
-        features: [
-          'Multi-page responsive website',
-          'Interactive forms with validation',
-          'JavaScript DOM manipulation',
-          'CSS Grid and Flexbox layouts',
-          'Accessible design principles',
-          'SEO optimization',
-          'Cross-browser compatibility'
-        ],
-        tech: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Design', 'Web Accessibility'],
-        challenges: 'Creating a fully responsive design that works across all device sizes and browsers.',
-        github: 'https://github.com/tmosimanyana/wdd131'
-      }
-    };
-
-    // DOM elements
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const projectCards = document.querySelectorAll('.project-card, .more-projects');
-    const modal = document.getElementById('project-modal');
-    const modalBody = document.getElementById('modal-body');
-
-    // Initialize
-    document.addEventListener('DOMContentLoaded', function() {
-      // Set current year
-      document.getElementById('current-year').textContent = new Date().getFullYear();
-      
-      // Set last modified date
-      document.getElementById('last-modified').textContent += document.lastModified;
-      
-      // Add click listeners to project cards
-      document.querySelectorAll('[data-project]').forEach(card => {
-        card.addEventListener('click', function() {
-          const projectKey = this.getAttribute('data-project');
-          showModal(projectKey);
-        });
-      });
-      
-      // Add stagger animation to cards
-      setTimeout(() => {
-        projectCards.forEach((card, index) => {
-          card.style.animationDelay = `${index * 0.1}s`;
-        });
-      }, 100);
-    });
-
-    // Filter functionality
-    filterButtons.forEach(button => {
-      button.addEventListener('click', function() {
-        const filter = this.getAttribute('data-filter');
-        
-        // Update active button
-        filterButtons.forEach(btn => btn.classList.remove('active'));
-        this.classList.add('active');
-        
-        // Filter projects
-        projectCards.forEach(card => {
-          const categories = card.getAttribute('data-category') || '';
-          
-          if (filter === 'all' || categories.includes(filter)) {
-            card.classList.remove('hidden');
-            card.style.animation = 'fadeInUp 0.6s ease-out both';
-          } else {
-            card.classList.add('hidden');
-          }
-        });
-      });
-    });
-
-    // Modal functionality
-    function showModal(projectKey) {
-      const project = projectData[projectKey];
-      if (!project) return;
-      
-      modalBody.innerHTML = `
-        <h2>${project.title}</h2>
-        <p style="margin-bottom: 1.5rem; color: #666; line-height: 1.6;">${project.description}</p>
-        
-        <h3 style="color: #333; margin: 1.5rem 0 1rem 0;">Key Features:</h3>
-        <ul style="margin-bottom: 1.5rem; padding-left: 1.5rem;">
-          ${project.features.map(feature => `<li style="margin-bottom: 0.5rem; color: #555;">${feature}</li>`).join('')}
-        </ul>
-        
-        <h3 style="color: #333; margin: 1.5rem 0 1rem 0;">Technologies Used:</h3>
-        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem;">
-          ${project.tech.map(tech => `<span style="background: linear-gradient(45deg, #667eea, #764ba2); color: white; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.8rem;">${tech}</span>`).join('')}
-        </div>
-        
-        <h3 style="color: #333; margin: 1.5rem 0 1rem 0;">Challenges & Solutions:</h3>
-        <p style="margin-bottom: 2rem; color: #666; line-height: 1.6;">${project.challenges}</p>
-        
-        <a href="${project.github}" target="_blank" style="display: inline-block; background: linear-gradient(45deg, #ff6b6b, #feca57); color: white; padding: 1rem 2rem; text-decoration: none; border-radius: 25px; font-weight: 600; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">View on GitHub</a>
-      `;
-      
-      modal.style.display = 'block';
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeModal() {
-      modal.style.display = 'none';
-      document.body.style.overflow = 'auto';
-    }
-
-    // Close modal when clicking outside
-    modal.addEventListener('click', function(e) {
-      if (e.target === modal) {
-        closeModal();
-      }
-    });
-
-    // Close modal with Escape key
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape' && modal.style.display === 'block') {
-        closeModal();
-      }
-    });
-
-    // Smooth scrolling for navigation
-    document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }
-      });
-    });
-
-    // Add scroll effects
-    window.addEventListener('scroll', function() {
-      const scrolled = window.pageYOffset;
-      const parallax = document.querySelector('body');
-      const speed = scrolled * 0.5;
-      
-      // Subtle parallax effect
-      parallax.style.backgroundPosition = `center ${speed}px`;
-    });
-
-    // Loading animation
-    window.addEventListener('load', function() {
-      document.body.classList.add('loaded');
-    });
-  </script>
+  <!-- Background Elements -->
+  <div class="bg-elements">
+    <div class="bg-circle bg-circle-1"></div>
+    <div class="bg-circle bg-circle-2"></div>
+    <div class="bg-circle bg-circle-3"></div>
+  </div>
 </body>
 </html>
