@@ -20,8 +20,8 @@
   }
   
   /* Modern backdrop-filter */
-  backdrop-filter: blur(15px) saturate(180%);
   -webkit-backdrop-filter: blur(15px) saturate(180%);
+  backdrop-filter: blur(15px) saturate(180%);
   
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: var(--radius-2xl, 1rem);
@@ -165,8 +165,8 @@
   height: 100%;
   
   /* Modern object-fit */
-  object-fit: cover;
   -o-object-fit: cover;
+  object-fit: cover;
   
   /* IE/Edge fallback using background */
   background-size: cover;
@@ -286,6 +286,7 @@ html {
     /* Disable gradient text in Edge Legacy */
     background: none;
     -webkit-background-clip: initial;
+    background-clip: initial;
     -webkit-text-fill-color: initial;
     color: #667eea;
   }
