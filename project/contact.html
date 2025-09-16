@@ -1,47 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Tinny Mosimanyana</title>
-    <meta name="description" content="Contact page for Tinny Mosimanyana. Get in touch for web development inquiries.">
-    <meta name="author" content="Tinny Mosimanyana">
-    <link rel="stylesheet" href="styles/styles.css">
-    <script src="scripts/scripts.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Tinny Mosimanyana</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Freelance Web Development Portfolio - Tinny Mosimanyana</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <main>
-        <section class="card contact">
-            <h2>Contact</h2>
-            <p>If you would like to get in touch or discuss a project, please fill out the form below or reach out via email or phone.</p>
-            <form id="contact-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">Submit</button>
-            </form>
-            <p>Email: tinnymosimanyana@gmail.com</p>
-            <p>Phone: +267 76376661</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; <span id="current-year"></span> 🌺 Tinny Mosimanyana 🌺 Botswana</p>
-        <p id="last-modified">Last Modification: </p>
-    </footer>
+  <header>
+    <div class="container">
+      <h1>My Portfolio</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="enhanced_portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="portfolio-intro">
+      <h2>Contact Me</h2>
+      <p>Feel free to reach out via the form below:</p>
+
+      <!-- Replace the action URL with your real Formspree endpoint -->
+      <form id="contact-form" action="https://formspree.io/f/your-form-id" method="POST" style="max-width:600px; margin:2rem auto; text-align:left;">
+        <label>Name:</label><br>
+        <input type="text" name="name" required style="width:100%; padding:0.5rem; margin-bottom:1rem;"><br>
+
+        <label>Email:</label><br>
+        <input type="email" name="email" required style="width:100%; padding:0.5rem; margin-bottom:1rem;"><br>
+
+        <label>Message:</label><br>
+        <textarea name="message" rows="5" required style="width:100%; padding:0.5rem; margin-bottom:1rem;"></textarea><br>
+
+        <button type="submit" class="filter-btn">Send</button>
+      </form>
+
+      <!-- Success/Error Message -->
+      <p id="form-status" style="margin-top:1rem; font-weight:bold; color:white;"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="current-year"></span> 🌺 Tinny Mosimanyana 🌺 Botswana</p>
+    <p id="last-modified">Last Modified: </p>
+  </footer>
+
+  <script>
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+    document.getElementById("last-modified").textContent += document.lastModified;
+
+    // Form submission with AJAX + Thank You message
+    const form = document.getElementById("contact-form");
+    const status = document.getElementById("form-status");
+
+    form.addEventListener("submit", async function(e) {
+      e.preventDefault();
+      const data = new FormData(form);
+
+      try {
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          status.textContent = "✅ Message sent successfully! Thank you for reaching out.";
+          status.style.color = "lightgreen";
+          form.reset();
+        } else {
+          status.textContent = "❌ Oops! Something went wrong. Please try again.";
+          status.style.color = "red";
+        }
+      } catch (error) {
+        status.textContent = "❌ Network error. Please check your connection.";
+        status.style.color = "red";
+      }
+    });
+  </script>
 </body>
 </html>
